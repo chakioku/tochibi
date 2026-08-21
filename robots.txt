@@ -1,0 +1,8 @@
+# 本サイトは tochibi-oc-vercel.vercel.app 上の検証用サイトです。
+# 公式サイト (https://tochibi.ac.jp/) との重複インデックスを避けるため、
+# 検索エンジンのクロールを全面的に停止しています。
+# 一般公開する際は Disallow を Allow に変更してください。
+User-agent: *
+Disallow: /
+
+Sitemap: https://tochibi-oc-vercel.vercel.app/sitemap.xml

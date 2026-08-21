@@ -1,7 +1,12 @@
-.vercel
-node_modules/
-.next/
+# Vercel
 .vercel/
+
+# Node
+node_modules/
+
+# Env
 .env
 .env.local
+
+# macOS
 .DS_Store

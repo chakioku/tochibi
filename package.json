@@ -1,8 +1,10 @@
 {
-  "name": "tochibi-oc-wireframe",
+  "name": "tochibi-oc-vercel",
   "version": "1.0.0",
   "private": true,
+  "description": "栃木県美容専門学校 オープンキャンパス特設サイト（静的サイト / Vercel ホスティング）",
   "scripts": {
+    "dev": "npx --yes serve . -l 3000",
     "build": "echo static site"
   }
 }
