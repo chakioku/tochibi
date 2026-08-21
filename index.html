@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>栃木県美容専門学校 オープンキャンパス</title>
+</head>
+<body>
+<div id="tochibi-oc-wireframe">
+  <style>
+    body:has(#tochibi-oc-wireframe) {
+      margin: 0;
+      background: #f4f4f0;
+    }
+    #tochibi-oc-wireframe {
+      --to-bg: light-dark(#f4f4f0, #151515);
+      --to-ink: light-dark(#111111, #f7f7f2);
+      --to-muted: light-dark(#626262, #bdbdb7);
+      --to-panel: light-dark(#ffffff, #242424);
+      --to-line: light-dark(#d8d8d3, #53534d);
+      --to-blue: #1f6fb9;
+      --to-deep: #0f3272;
+      --to-pink: #e94686;
+      --to-orange: #ff8c42;
+      --to-yellow: #ffd857;
+      --to-mint: #36c0b1;
+      --to-shadow: 0 18px 46px rgba(20, 20, 20, .12);
+      color: var(--to-ink);
+      background: var(--to-bg);
+      font-family: "Arial Narrow", "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      overflow: hidden;
+    }
+    #tochibi-oc-wireframe * { box-sizing: border-box; }
+    #tochibi-oc-wireframe img { max-width: 100%; }
+    #tochibi-oc-wireframe a,
+    #tochibi-oc-wireframe button {
+      color: inherit;
+      font: inherit;
+    }
+    #tochibi-oc-wireframe a { text-decoration: none; }
+    #tochibi-oc-wireframe .page {
+      position: relative;
+      min-height: 760px;
+      padding-left: 86px;
+      background:
+        linear-gradient(90deg, #ffffff 0 86px, transparent 86px),
+        radial-gradient(circle at 86% 12%, rgba(233, 70, 134, .16), transparent 26%),
+        radial-gradient(circle at 28% 42%, rgba(54, 192, 177, .12), transparent 25%),
+        var(--to-bg);
+    }
+    #tochibi-oc-wireframe .side-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      width: 86px;
+      height: 100vh;
+      background: #fff;
+      border-right: 1px solid var(--to-line);
+      display: grid;
+      grid-template-rows: 118px 1fr 116px;
+    }
+    #tochibi-oc-wireframe .logo-rail {
+      display: grid;
+      place-items: center;
+      padding: 13px 8px;
+    }
+    #tochibi-oc-wireframe .logo-rail img {
+      width: 68px;
+      height: auto;
+    }
+    #tochibi-oc-wireframe .side-menu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--to-line);
+      display: grid;
+      grid-auto-rows: minmax(50px, 1fr);
+    }
+    #tochibi-oc-wireframe .menu-check,
+    #tochibi-oc-wireframe .menu-toggle {
+      display: none;
+    }
+    #tochibi-oc-wireframe .side-menu li {
+      writing-mode: vertical-rl;
+      display: grid;
+      place-items: center;
+      border-bottom: 1px solid var(--to-line);
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: .05em;
+    }
+    #tochibi-oc-wireframe .side-menu a {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+    #tochibi-oc-wireframe .rail-cta {
+      background: var(--to-pink);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 1.45;
+      padding: 8px;
+    }
+    #tochibi-oc-wireframe .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 7;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 32px;
+      background: rgba(244,244,240,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    #tochibi-oc-wireframe .topbar img {
+      width: 210px;
+      height: auto;
+      display: block;
+    }
+    #tochibi-oc-wireframe .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    #tochibi-oc-wireframe .top-actions .mini {
+      border: 1px solid var(--to-line);
+      background: #fff;
+      padding: 10px 14px;
+    }
+    #tochibi-oc-wireframe .top-actions .reserve {
+      background: var(--to-pink);
+      color: #fff;
+      border: 0;
+      padding: 12px 18px;
+      box-shadow: 0 8px 18px rgba(233,70,134,.28);
+    }
+    #tochibi-oc-wireframe .hero {
+      min-height: 680px;
+      padding: 44px 34px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    #tochibi-oc-wireframe .hero-frame {
+      min-height: 590px;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--to-shadow);
+    }
+    #tochibi-oc-wireframe .hero-photo {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.86) 0 32%, rgba(255,255,255,.1) 48%, rgba(255,255,255,.32) 100%),
+        url("assets/tochibi/kv-open-campus-collage.png") center / cover no-repeat;
+      animation: toHeroPan 16s ease-in-out infinite;
+    }
+    #tochibi-oc-wireframe .hero-copy {
+      position: absolute;
+      left: 58px;
+      bottom: 96px;
+      width: min(690px, calc(100% - 104px));
+      z-index: 2;
+    }
+    #tochibi-oc-wireframe .outline {
+      display: block;
+      font-size: clamp(42px, 5.5vw, 76px);
+      line-height: .9;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--to-ink);
+      text-stroke: 1.5px var(--to-ink);
+      font-weight: 900;
+      letter-spacing: .02em;
+      margin-bottom: 12px;
+    }
+    #tochibi-oc-wireframe .hero-copy h1 {
+      display: inline;
+      background: #fff;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 2px 18px 8px;
+      font-size: clamp(36px, 5.2vw, 66px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: .01em;
+      margin: 0;
+    }
+    #tochibi-oc-wireframe .hero-cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    #tochibi-oc-wireframe .btn {
+      min-height: 58px;
+      border: 0;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      font-weight: 900;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: left;
+      line-height: 1.25;
+    }
+    #tochibi-oc-wireframe .btn.primary {
+      background: var(--to-pink);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(233,70,134,.28);
+    }
+    #tochibi-oc-wireframe .btn.dark {
+      background: #060606;
+      color: #fff;
+    }
+    #tochibi-oc-wireframe .btn.light {
+      background: #fff;
+      border: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .scroll {
+      position: absolute;
+      right: 30px;
+      bottom: 80px;
+      z-index: 2;
+      writing-mode: vertical-rl;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: .08em;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .scroll::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 70px;
+      margin: 10px auto 0;
+      background: currentColor;
+      animation: toScroll 1.8s infinite;
+    }
+    #tochibi-oc-wireframe .next-oc {
+      position: absolute;
+      right: 48px;
+      top: 88px;
+      z-index: 3;
+      width: 250px;
+      background: #fff;
+      box-shadow: var(--to-shadow);
+      padding: 24px;
+    }
+    #tochibi-oc-wireframe .next-oc small {
+      display: block;
+      color: var(--to-pink);
+      font-weight: 900;
+      letter-spacing: .1em;
+      margin-bottom: 8px;
+    }
+    #tochibi-oc-wireframe .next-oc strong {
+      display: block;
+      font-size: 58px;
+      line-height: .95;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .next-oc span {
+      display: block;
+      margin-top: 8px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+    #tochibi-oc-wireframe .section {
+      position: relative;
+      padding: 78px 6% 96px;
+    }
+    #tochibi-oc-wireframe .section::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 360px;
+      background:
+        linear-gradient(90deg, transparent 0 12%, rgba(31,111,185,.06) 12% 28%, transparent 28% 38%, rgba(233,70,134,.06) 38% 55%, transparent 55% 66%, rgba(54,192,177,.07) 66% 82%, transparent 82%);
+      pointer-events: none;
+    }
+    #tochibi-oc-wireframe .label {
+      position: relative;
+      display: inline-block;
+      background: #fff;
+      padding: 18px 50px;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      font-weight: 900;
+      margin: 0 0 38px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.05);
+    }
+    #tochibi-oc-wireframe .keyword {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 42px;
+    }
+    #tochibi-oc-wireframe .keyword strong {
+      font-size: 18px;
+      font-weight: 900;
+      margin-right: 12px;
+    }
+    #tochibi-oc-wireframe .keyword strong::after {
+      content: "";
+      display: inline-block;
+      width: 56px;
+      height: 1px;
+      background: var(--to-ink);
+      margin-left: 14px;
+      vertical-align: middle;
+    }
+    #tochibi-oc-wireframe .tag {
+      background: #fff;
+      border: 1px solid var(--to-line);
+      padding: 8px 12px;
+      color: var(--to-muted);
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s, transform .2s;
+    }
+    #tochibi-oc-wireframe .tag.big {
+      font-size: 25px;
+      padding: 9px 18px;
+    }
+    #tochibi-oc-wireframe .tag.is-active,
+    #tochibi-oc-wireframe .tag:hover {
+      background: var(--to-pink);
+      border-color: var(--to-pink);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    #tochibi-oc-wireframe .filter-status {
+      position: relative;
+      margin: -24px 0 34px;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .card-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 44px;
+      align-items: start;
+    }
+    #tochibi-oc-wireframe .card-grid > *,
+    #tochibi-oc-wireframe .news-row > *,
+    #tochibi-oc-wireframe .concept-panel > *,
+    #tochibi-oc-wireframe .info-panel > *,
+    #tochibi-oc-wireframe .access > *,
+    #tochibi-oc-wireframe .contact-item > *,
+    #tochibi-oc-wireframe .footer > * {
+      min-width: 0;
+    }
+    #tochibi-oc-wireframe .card {
+      display: block;
+      position: relative;
+      min-height: 458px;
+      padding: 0 18px 24px;
+      background: var(--to-panel);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 1px 0 rgba(0,0,0,.05);
+      animation: toRise both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 34%;
+    }
+    #tochibi-oc-wireframe .card.is-hidden {
+      display: none;
+    }
+    #tochibi-oc-wireframe .card:nth-child(2) { margin-top: 36px; }
+    #tochibi-oc-wireframe .card:nth-child(3) { margin-top: 72px; }
+    #tochibi-oc-wireframe .card::before,
+    #tochibi-oc-wireframe .info-panel::before,
+    #tochibi-oc-wireframe .contact-box::before {
+      display: none;
+    }
+    #tochibi-oc-wireframe .card-img {
+      height: 222px;
+      margin: 0 -18px 20px;
+      background: #ddd center / cover no-repeat;
+    }
+    #tochibi-oc-wireframe .card-img.hairshow { background-image: url("assets/tochibi/img_hairshow.png"); background-position: center top; }
+    #tochibi-oc-wireframe .card-img.curriculum { background-image: url("assets/tochibi/img_curriculum.png"); }
+    #tochibi-oc-wireframe .card-img.points { background-image: url("assets/tochibi/img_5point.png"); }
+    #tochibi-oc-wireframe .card-img.life { background-image: url("assets/tochibi/img_campuslife.png"); }
+    #tochibi-oc-wireframe .card-img.adinfo { background-image: url("assets/tochibi/img_adinfo.png"); }
+    #tochibi-oc-wireframe .category {
+      position: absolute;
+      left: -30px;
+      top: 118px;
+      writing-mode: vertical-rl;
+      background: #fff;
+      border-left: 1px solid var(--to-line);
+      padding: 12px 7px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .card h3 {
+      margin: 16px 0 14px;
+      font-size: 24px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .card p {
+      margin: 0;
+      color: var(--to-muted);
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: 700;
+      line-height: 1.75;
+      font-size: 14px;
+    }
+    #tochibi-oc-wireframe .corner-arrow {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 54px;
+      border-top: 1px solid var(--to-ink);
+    }
+    #tochibi-oc-wireframe .corner-arrow::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: rotate(45deg);
+    }
+    #tochibi-oc-wireframe .schedule-mask {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 18px;
+    }
+    #tochibi-oc-wireframe .schedule-track {
+      display: flex;
+      gap: 48px;
+      width: max-content;
+      animation: toSlideCards 20s linear infinite;
+    }
+    #tochibi-oc-wireframe .schedule-card {
+      display: block;
+      width: 306px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+      padding: 0 18px 58px;
+      min-height: 430px;
+    }
+    #tochibi-oc-wireframe .schedule-card::before {
+      display: none;
+    }
+    #tochibi-oc-wireframe .date {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 10px;
+      margin: 18px 0 10px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .date b {
+      font-size: 54px;
+      line-height: 1;
+    }
+    #tochibi-oc-wireframe .date span {
+      color: var(--to-muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    #tochibi-oc-wireframe .news-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 230px 1fr 220px;
+      gap: 36px;
+      align-items: center;
+      padding: 34px 0;
+      border-top: 1px solid var(--to-line);
+      border-bottom: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .news-list {
+      display: grid;
+      gap: 12px;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: 700;
+    }
+    #tochibi-oc-wireframe .concept {
+      min-height: 570px;
+      padding: 90px 7%;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+    #tochibi-oc-wireframe .concept-bg {
+      position: absolute;
+      inset: 0;
+      width: 300%;
+      display: flex;
+      animation: toConcept 22s ease-in-out infinite;
+    }
+    #tochibi-oc-wireframe .concept-bg span {
+      width: 33.333%;
+      background: url("assets/tochibi/img_curriculum.png") center / cover no-repeat;
+      opacity: .36;
+      filter: saturate(.9);
+    }
+    #tochibi-oc-wireframe .concept-bg span:nth-child(2) {
+      background-image: url("assets/tochibi/img_campuslife.png");
+    }
+    #tochibi-oc-wireframe .concept-bg span:nth-child(3) {
+      background-image: url("assets/tochibi/img_hairshow.png");
+    }
+    #tochibi-oc-wireframe .concept-panel {
+      position: relative;
+      z-index: 2;
+      width: min(820px, 92%);
+      margin: 0 auto;
+      background: rgba(255,255,255,.94);
+      padding: 58px 70px;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 44px;
+      align-items: center;
+      box-shadow: var(--to-shadow);
+    }
+    #tochibi-oc-wireframe .concept-panel h2 {
+      margin: 0 0 18px;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .concept-panel p {
+      margin: 0;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: 700;
+      line-height: 1.9;
+    }
+    #tochibi-oc-wireframe .reason {
+      padding: 84px 6% 98px;
+      background: var(--to-bg);
+    }
+    #tochibi-oc-wireframe .feature-lead {
+      width: min(820px, 100%);
+      margin: -14px 0 44px;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.9;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      align-items: stretch;
+    }
+    #tochibi-oc-wireframe .info-panel {
+      position: relative;
+      min-height: 440px;
+      margin: 0;
+      padding: 34px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 24px;
+      align-items: end;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0,0,0,.54), rgba(0,0,0,.54)),
+        url("assets/tochibi/img_5point.png") center / cover no-repeat;
+    }
+    #tochibi-oc-wireframe .info-panel.curric {
+      background-image: linear-gradient(rgba(0,0,0,.54), rgba(0,0,0,.54)), url("assets/tochibi/img_curriculum.png");
+    }
+    #tochibi-oc-wireframe .info-panel.life {
+      background-image: linear-gradient(rgba(0,0,0,.54), rgba(0,0,0,.54)), url("assets/tochibi/img_campuslife.png");
+    }
+    #tochibi-oc-wireframe .info-panel h3 {
+      margin: 0;
+      font-size: 52px;
+      line-height: .94;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .info-panel strong {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+    #tochibi-oc-wireframe .info-panel p {
+      margin: 0 0 20px;
+      line-height: 1.75;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: 700;
+    }
+    #tochibi-oc-wireframe .access {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 42px;
+      align-items: center;
+      padding: 76px 6%;
+      background: #fff;
+    }
+    #tochibi-oc-wireframe .access h2,
+    #tochibi-oc-wireframe .contact h2 {
+      margin: 0 0 28px;
+      font-size: 58px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .map-box {
+      position: relative;
+      min-height: 360px;
+      background:
+        linear-gradient(90deg, transparent 0 17%, rgba(255,255,255,.64) 17% 19%, transparent 19% 52%, rgba(255,255,255,.64) 52% 54%, transparent 54%),
+        linear-gradient(0deg, transparent 0 23%, rgba(255,255,255,.64) 23% 25%, transparent 25% 62%, rgba(255,255,255,.64) 62% 64%, transparent 64%),
+        #dce7ec;
+      border: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .map-box::before {
+      content: "宇都宮市宿郷2-10-11";
+      position: absolute;
+      left: 28px;
+      top: 26px;
+      background: #fff;
+      padding: 12px 18px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .pin {
+      position: absolute;
+      left: 54%;
+      top: 40%;
+      width: 34px;
+      height: 34px;
+      background: var(--to-pink);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+    }
+    #tochibi-oc-wireframe .contact {
+      padding: 82px 8% 98px;
+      text-align: center;
+    }
+    #tochibi-oc-wireframe .contact > p {
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: 800;
+      margin: 0;
+    }
+    #tochibi-oc-wireframe .contact-box {
+      position: relative;
+      text-align: left;
+      max-width: 900px;
+      margin: 38px auto 0;
+      background: #fff;
+      padding: 42px 48px;
+      box-shadow: var(--to-shadow);
+    }
+    #tochibi-oc-wireframe .contact-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 92px;
+      align-items: center;
+      gap: 18px;
+      min-height: 88px;
+      border-bottom: 1px solid var(--to-line);
+      font-weight: 900;
+      color: var(--to-ink);
+    }
+    #tochibi-oc-wireframe .contact-item:last-child { border-bottom: 0; }
+    #tochibi-oc-wireframe .contact-item img {
+      width: 42px;
+      height: auto;
+      display: block;
+    }
+    #tochibi-oc-wireframe .pdf-card-row {
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    #tochibi-oc-wireframe .pdf-card {
+      min-height: 160px;
+      background: #fff center / cover no-repeat;
+      border: 1px solid var(--to-line);
+      box-shadow: var(--to-shadow);
+    }
+    #tochibi-oc-wireframe .pdf-card.guide { background-image: url("assets/tochibi/img_cta01.png"); }
+    #tochibi-oc-wireframe .pdf-card.admission { background-image: url("assets/tochibi/img_cta02.png"); }
+    #tochibi-oc-wireframe .footer {
+      background: #0f0f0f;
+      color: #fff;
+      padding: 50px 7%;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .footer img {
+      width: 220px;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 18px;
+    }
+    #tochibi-oc-wireframe .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 26px;
+      align-content: start;
+    }
+    @keyframes toHeroPan {
+      0%, 100% { transform: scale(1) translateX(0); }
+      50% { transform: scale(1.045) translateX(-18px); }
+    }
+    @keyframes toScroll {
+      0% { transform: scaleY(0); transform-origin: top; }
+      45% { transform: scaleY(1); transform-origin: top; }
+      46% { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+    @keyframes toRise {
+      from { opacity: 0; transform: translateY(44px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes toSlideCards {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-356px); }
+    }
+    @keyframes toConcept {
+      0%, 26% { transform: translateX(0); }
+      33%, 59% { transform: translateX(-33.333%); }
+      66%, 92% { transform: translateX(-66.666%); }
+      100% { transform: translateX(0); }
+    }
+    @media (max-width: 1080px) {
+      #tochibi-oc-wireframe {
+        max-width: 100%;
+      }
+      #tochibi-oc-wireframe .page {
+        padding-left: 76px;
+        background:
+          linear-gradient(90deg, #ffffff 0 76px, transparent 76px),
+          radial-gradient(circle at 86% 12%, rgba(233, 70, 134, .16), transparent 26%),
+          radial-gradient(circle at 28% 42%, rgba(54, 192, 177, .12), transparent 25%),
+          var(--to-bg);
+      }
+      #tochibi-oc-wireframe .side-nav {
+        left: 0;
+        width: 76px;
+        grid-template-rows: 104px 1fr 104px;
+      }
+      #tochibi-oc-wireframe .logo-rail img {
+        width: 62px;
+      }
+      #tochibi-oc-wireframe .side-menu li {
+        font-size: 11px;
+      }
+      #tochibi-oc-wireframe .topbar {
+        padding: 0 22px;
+      }
+      #tochibi-oc-wireframe .topbar img {
+        width: 180px;
+      }
+      #tochibi-oc-wireframe .top-actions .mini {
+        display: none;
+      }
+      #tochibi-oc-wireframe .hero {
+        min-height: 620px;
+        padding: 32px 24px 40px;
+      }
+      #tochibi-oc-wireframe .hero-frame {
+        min-height: 548px;
+      }
+      #tochibi-oc-wireframe .hero-copy {
+        left: 42px;
+        bottom: 70px;
+        width: min(620px, calc(100% - 84px));
+      }
+      #tochibi-oc-wireframe .next-oc {
+        right: 30px;
+        top: 72px;
+        width: 218px;
+      }
+      #tochibi-oc-wireframe .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+      #tochibi-oc-wireframe .card:nth-child(2),
+      #tochibi-oc-wireframe .card:nth-child(3) {
+        margin-top: 0;
+      }
+      #tochibi-oc-wireframe .news-row,
+      #tochibi-oc-wireframe .concept-panel,
+      #tochibi-oc-wireframe .access {
+        grid-template-columns: 1fr;
+      }
+      #tochibi-oc-wireframe .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      #tochibi-oc-wireframe .news-row {
+        align-items: start;
+      }
+      #tochibi-oc-wireframe .concept-panel {
+        width: 100%;
+        padding: 48px;
+      }
+      #tochibi-oc-wireframe .info-panel {
+        min-height: 360px;
+        padding: 44px;
+      }
+    }
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .page {
+        padding-left: 0;
+        background:
+          radial-gradient(circle at 86% 12%, rgba(233, 70, 134, .16), transparent 26%),
+          radial-gradient(circle at 28% 42%, rgba(54, 192, 177, .12), transparent 25%),
+          var(--to-bg);
+      }
+      #tochibi-oc-wireframe .side-nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 72px;
+        grid-template-columns: 112px 56px minmax(0, 1fr) 112px;
+        grid-template-rows: none;
+      }
+      #tochibi-oc-wireframe .logo-rail {
+        padding: 8px 10px;
+      }
+      #tochibi-oc-wireframe .logo-rail img { width: 94px; }
+      #tochibi-oc-wireframe .menu-toggle {
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 72px;
+        border-left: 1px solid var(--to-line);
+        border-right: 1px solid var(--to-line);
+        cursor: pointer;
+      }
+      #tochibi-oc-wireframe .menu-toggle span,
+      #tochibi-oc-wireframe .menu-toggle span::before,
+      #tochibi-oc-wireframe .menu-toggle span::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--to-ink);
+        transition: transform .25s, opacity .25s;
+      }
+      #tochibi-oc-wireframe .menu-toggle span::before {
+        transform: translateY(-8px);
+      }
+      #tochibi-oc-wireframe .menu-toggle span::after {
+        transform: translateY(6px);
+      }
+      #tochibi-oc-wireframe .side-menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 72px;
+        z-index: 8;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        background: #fff;
+        border-top: 1px solid var(--to-line);
+        box-shadow: 0 18px 46px rgba(0,0,0,.16);
+      }
+      #tochibi-oc-wireframe .menu-check:checked ~ .side-menu {
+        display: grid;
+      }
+      #tochibi-oc-wireframe .menu-check:checked + .menu-toggle span {
+        transform: rotate(45deg);
+      }
+      #tochibi-oc-wireframe .menu-check:checked + .menu-toggle span::before {
+        transform: translateY(0) rotate(90deg);
+      }
+      #tochibi-oc-wireframe .menu-check:checked + .menu-toggle span::after {
+        opacity: 0;
+      }
+      #tochibi-oc-wireframe .side-menu li {
+        writing-mode: horizontal-tb;
+        min-width: 0;
+        min-height: 58px;
+        border-right: 1px solid var(--to-line);
+        border-bottom: 1px solid var(--to-line);
+        font-size: 12px;
+      }
+      #tochibi-oc-wireframe .rail-cta {
+        font-size: 12px;
+        grid-column: 4;
+      }
+      #tochibi-oc-wireframe .topbar { display: none; }
+      #tochibi-oc-wireframe .hero {
+        min-height: auto;
+        padding: 18px 14px 34px;
+      }
+      #tochibi-oc-wireframe .hero-frame {
+        min-height: 640px;
+      }
+      #tochibi-oc-wireframe .hero-photo {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.12) 0 34%, rgba(255,255,255,.92) 61% 100%),
+          url("assets/tochibi/kv-open-campus-collage.png") center top / cover no-repeat;
+      }
+      #tochibi-oc-wireframe .next-oc {
+        top: 18px;
+        right: 18px;
+        width: 178px;
+        padding: 16px;
+      }
+      #tochibi-oc-wireframe .next-oc strong {
+        font-size: 42px;
+      }
+      #tochibi-oc-wireframe .hero-copy {
+        left: 22px;
+        bottom: 48px;
+        width: calc(100% - 44px);
+      }
+      #tochibi-oc-wireframe .hero-cta-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      #tochibi-oc-wireframe .btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 0 18px;
+        font-size: 16px;
+      }
+      #tochibi-oc-wireframe .scroll {
+        display: none;
+      }
+      #tochibi-oc-wireframe .section,
+      #tochibi-oc-wireframe .reason,
+      #tochibi-oc-wireframe .contact {
+        padding: 58px 5% 68px;
+      }
+      #tochibi-oc-wireframe .label {
+        padding: 14px 24px;
+        margin-bottom: 28px;
+      }
+      #tochibi-oc-wireframe .keyword {
+        gap: 8px;
+      }
+      #tochibi-oc-wireframe .keyword strong {
+        flex-basis: 100%;
+      }
+      #tochibi-oc-wireframe .tag.big {
+        font-size: 20px;
+      }
+      #tochibi-oc-wireframe .card-grid,
+      #tochibi-oc-wireframe .news-row,
+      #tochibi-oc-wireframe .concept-panel,
+      #tochibi-oc-wireframe .access,
+      #tochibi-oc-wireframe .pdf-card-row,
+      #tochibi-oc-wireframe .footer {
+        grid-template-columns: 1fr;
+      }
+      #tochibi-oc-wireframe .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      #tochibi-oc-wireframe .card {
+        min-height: 0;
+        padding-bottom: 64px;
+      }
+      #tochibi-oc-wireframe .category {
+        position: static;
+        writing-mode: horizontal-tb;
+        display: inline-block;
+        margin-top: 12px;
+        border-left: 0;
+        border: 1px solid var(--to-line);
+      }
+      #tochibi-oc-wireframe .schedule-mask {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      #tochibi-oc-wireframe .schedule-track {
+        animation: none;
+        gap: 18px;
+        padding-right: 5%;
+      }
+      #tochibi-oc-wireframe .schedule-card {
+        width: min(82vw, 320px);
+        flex: 0 0 auto;
+      }
+      #tochibi-oc-wireframe .concept {
+        min-height: auto;
+        padding: 58px 5%;
+      }
+      #tochibi-oc-wireframe .concept-panel {
+        width: 100%;
+        padding: 34px 24px;
+      }
+      #tochibi-oc-wireframe .info-panel {
+        min-height: 0;
+        padding: 34px 24px;
+      }
+      #tochibi-oc-wireframe .info-panel h3 {
+        font-size: 42px;
+      }
+      #tochibi-oc-wireframe .access {
+        padding: 58px 5%;
+      }
+      #tochibi-oc-wireframe .map-box {
+        min-height: 300px;
+      }
+      #tochibi-oc-wireframe .contact-box {
+        padding: 18px;
+      }
+      #tochibi-oc-wireframe .contact-item {
+        grid-template-columns: 44px minmax(0, 1fr) 32px;
+        gap: 12px;
+        min-height: 76px;
+      }
+      #tochibi-oc-wireframe .contact-item img {
+        width: 34px;
+      }
+      #tochibi-oc-wireframe .footer {
+        gap: 26px;
+      }
+    }
+    @media (max-width: 560px) {
+      #tochibi-oc-wireframe .side-nav {
+        height: 64px;
+        grid-template-columns: 92px 52px minmax(0, 1fr) 90px;
+      }
+      #tochibi-oc-wireframe .logo-rail img {
+        width: 78px;
+      }
+      #tochibi-oc-wireframe .side-menu li {
+        font-size: 11px;
+      }
+      #tochibi-oc-wireframe .menu-toggle {
+        width: 52px;
+        height: 64px;
+      }
+      #tochibi-oc-wireframe .side-menu {
+        top: 64px;
+      }
+      #tochibi-oc-wireframe .rail-cta {
+        font-size: 11px;
+      }
+      #tochibi-oc-wireframe .hero {
+        padding: 12px 10px 28px;
+      }
+      #tochibi-oc-wireframe .hero-frame {
+        min-height: 620px;
+      }
+      #tochibi-oc-wireframe .hero-photo {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.08) 0 29%, rgba(255,255,255,.96) 58% 100%),
+          url("assets/tochibi/kv-open-campus-collage.png") center top / auto 58% no-repeat;
+      }
+      #tochibi-oc-wireframe .next-oc {
+        left: 14px;
+        right: 14px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 4px 12px;
+        align-items: end;
+      }
+      #tochibi-oc-wireframe .next-oc small,
+      #tochibi-oc-wireframe .next-oc span {
+        grid-column: 1;
+      }
+      #tochibi-oc-wireframe .next-oc strong {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        font-size: 44px;
+      }
+      #tochibi-oc-wireframe .hero-copy {
+        left: 16px;
+        right: 16px;
+        bottom: 28px;
+        width: auto;
+      }
+      #tochibi-oc-wireframe .outline {
+        font-size: clamp(34px, 12vw, 48px);
+      }
+      #tochibi-oc-wireframe .hero-copy h1 {
+        font-size: clamp(30px, 10vw, 42px);
+        padding: 2px 10px 6px;
+      }
+      #tochibi-oc-wireframe .section,
+      #tochibi-oc-wireframe .reason,
+      #tochibi-oc-wireframe .contact,
+      #tochibi-oc-wireframe .access {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      #tochibi-oc-wireframe .label {
+        font-size: clamp(32px, 12vw, 42px);
+        width: 100%;
+      }
+      #tochibi-oc-wireframe .keyword strong::after {
+        width: 38px;
+      }
+      #tochibi-oc-wireframe .card-img {
+        height: 190px;
+      }
+      #tochibi-oc-wireframe .date {
+        grid-template-columns: 1fr;
+      }
+      #tochibi-oc-wireframe .date b {
+        font-size: 44px;
+      }
+      #tochibi-oc-wireframe .concept-panel h2,
+      #tochibi-oc-wireframe .access h2,
+      #tochibi-oc-wireframe .contact h2 {
+        font-size: 40px;
+      }
+      #tochibi-oc-wireframe .feature-lead {
+        font-size: 15px;
+        margin-bottom: 26px;
+      }
+      #tochibi-oc-wireframe .map-box::before {
+        left: 12px;
+        right: 12px;
+        top: 12px;
+        text-align: center;
+        font-size: 13px;
+      }
+      #tochibi-oc-wireframe .contact-item {
+        grid-template-columns: 36px minmax(0, 1fr) 24px;
+        font-size: 14px;
+      }
+      #tochibi-oc-wireframe .contact-item img {
+        width: 30px;
+      }
+      #tochibi-oc-wireframe .pdf-card {
+        min-height: 118px;
+      }
+      #tochibi-oc-wireframe .footer img {
+        width: 180px;
+      }
+    }
+  </style>
+  <div class="page">
+    <nav class="side-nav" aria-label="ページナビゲーション">
+      <div class="logo-rail"><img src="assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></div>
+      <input class="menu-check" type="checkbox" id="tochibi-sp-menu">
+      <label class="menu-toggle" for="tochibi-sp-menu" aria-label="メニューを開閉"><span></span></label>
+      <ul class="side-menu">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#oc">OC</a></li>
+        <li><a href="/topics">TOPICS</a></li>
+        <li><a href="#schedule">SCHEDULE</a></li>
+        <li><a href="#why">WHY</a></li>
+        <li><a href="/curriculum">COURSE</a></li>
+        <li><a href="#access">ACCESS</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+      </ul>
+      <a class="rail-cta" href="https://r-shingaku.com/ce/form/3522/input">8/18<br>OC予約</a>
+    </nav>
+    <header class="topbar">
+      <img src="assets/tochibi/logo_main.png" alt="栃木県美容専門学校">
+      <div class="top-actions">
+        <a class="mini" href="https://r-shingaku.com/ce/form/3028/input">資料請求</a>
+        <a class="mini" href="/admissions">学費・奨学金</a>
+        <a class="mini" href="/admissions">保護者の方へ</a>
+        <a class="reserve" href="https://r-shingaku.com/ce/form/3522/input">オープンキャンパス予約</a>
+      </div>
+    </header>
+    <section class="hero" id="home">
+      <div class="hero-frame">
+        <div class="hero-photo"></div>
+        <div class="next-oc">
+          <small>NEXT OPEN CAMPUS</small>
+          <strong>8/18</strong>
+          <span>オープンキャンパス<br>予約受付中</span>
+        </div>
+        <div class="hero-copy">
+          <span class="outline">OPEN CAMPUS</span>
+          <h1>栃美で、<br>美容の楽しさを体験。</h1>
+          <div class="hero-cta-row">
+            <a class="btn primary" href="https://r-shingaku.com/ce/form/3522/input">8/18 OCを予約する <span>→</span></a>
+            <a class="btn dark" href="/opencampus">開催内容を見る <span>→</span></a>
+            <a class="btn light" href="https://r-shingaku.com/ce/form/3028/input">資料請求 <span>→</span></a>
+          </div>
+        </div>
+        <div class="scroll">SCROLL</div>
+      </div>
+    </section>
+    <section class="section" id="oc">
+      <h2 class="label">OPEN CAMPUS</h2>
+      <div class="keyword">
+        <strong>KEYWORD</strong>
+        <button class="tag big is-active" type="button" data-filter="all">#ALL</button>
+        <button class="tag big" type="button" data-filter="open-campus">#OPEN CAMPUS</button>
+        <button class="tag big" type="button" data-filter="tochibi">#TOCHIBI</button>
+        <button class="tag" type="button" data-filter="hair">#ヘア</button>
+        <button class="tag" type="button" data-filter="makeup">#メイク</button>
+        <button class="tag" type="button" data-filter="nail">#ネイル</button>
+        <button class="tag" type="button" data-filter="parent">#保護者相談</button>
+        <button class="tag" type="button" data-filter="tuition">#学費支援</button>
+      </div>
+      <p class="filter-status" aria-live="polite">すべてのおすすめコンテンツを表示しています。</p>
+      <div class="card-grid" data-filter-grid>
+        <a class="card" href="/opencampus" data-tags="all open-campus tochibi hair makeup nail">
+          <span class="category">#OC</span>
+          <div class="card-img hairshow"></div>
+          <span class="tag">#SPECIAL</span>
+          <h3>栃美ビューティーフェスタ</h3>
+          <p>年に一度のビッグイベント。ヘアメイクやステージを通して、美容の楽しさを体験できます。</p>
+          <span class="corner-arrow"></span>
+        </a>
+        <a class="card" href="/curriculum" data-tags="all open-campus tochibi hair makeup nail">
+          <span class="category">#LESSON</span>
+          <div class="card-img curriculum"></div>
+          <span class="tag">#CURRICULUM</span>
+          <h3>実習の雰囲気がわかる体験授業</h3>
+          <p>カット、カラー、シャンプー、メイクなど、美容学校ならではの体験ができます。</p>
+          <span class="corner-arrow"></span>
+        </a>
+        <a class="card" href="/admissions" data-tags="all open-campus parent tuition tochibi">
+          <span class="category">#PARENT</span>
+          <div class="card-img adinfo"></div>
+          <span class="tag">#SUPPORT</span>
+          <h3>保護者向け相談を同時開催</h3>
+          <p>学費、奨学金、修学支援制度、就職まで、親子で気軽に相談できます。</p>
+          <span class="corner-arrow"></span>
+        </a>
+      </div>
+    </section>
+    <section class="section" id="schedule">
+      <h2 class="label">SCHEDULE</h2>
+      <div class="schedule-mask">
+        <div class="schedule-track">
+          <a class="schedule-card" href="/opencampus">
+            <span class="category">#OC</span>
+            <div class="card-img curriculum"></div>
+            <div class="date"><b>8/18</b><span>OPEN CAMPUS</span></div>
+            <h3>直近のオープンキャンパス</h3>
+            <p>授業の雰囲気や先生、在校生の様子を一日で知ることができます。</p>
+            <span class="corner-arrow"></span>
+          </a>
+          <a class="schedule-card" href="/admissions">
+            <span class="category">#GUIDE</span>
+            <div class="card-img adinfo"></div>
+            <div class="date"><b>AO</b><span>ENTRY</span></div>
+            <h3>2026 AO入試2次エントリー</h3>
+            <p>出願までの流れや必要書類をわかりやすく確認できます。</p>
+            <span class="corner-arrow"></span>
+          </a>
+          <a class="schedule-card" href="/campuslife">
+            <span class="category">#EVENT</span>
+            <div class="card-img hairshow"></div>
+            <div class="date"><b>FES</b><span>BEAUTY</span></div>
+            <h3>栃美 Beauty Festa</h3>
+            <p>美容の楽しさを伝える象徴的なイベント枠。</p>
+            <span class="corner-arrow"></span>
+          </a>
+          <a class="schedule-card" href="/admissions">
+            <span class="category">#PARENT</span>
+            <div class="card-img points"></div>
+            <div class="date"><b>相談</b><span>SUPPORT</span></div>
+            <h3>学費・就職・資格相談</h3>
+            <p>保護者の意思決定に必要な安心材料をまとめる。</p>
+            <span class="corner-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="topics">
+      <div class="news-row">
+        <h2 class="label">TOPICS</h2>
+        <div class="news-list">
+          <span>2026.08.06 夏季休業日のご案内</span>
+          <span>2026.07.21 2026 AO入試2次エントリー 開始</span>
+          <span>2026.06.26 接遇・マナーディレクター検定</span>
+        </div>
+        <a class="btn dark" href="/topics">MORE <span>→</span></a>
+      </div>
+    </section>
+    <section class="concept" id="why">
+      <div class="concept-bg"><span></span><span></span><span></span></div>
+      <div class="concept-panel">
+        <div>
+          <h2>WHY TOCHIBI</h2>
+          <p>栃木県で唯一の組合立の学校。美容のためだけの専門学校として、国家試験、就職、現場につながる実践的な授業を大切にしています。</p>
+        </div>
+        <a class="btn primary" href="https://r-shingaku.com/ce/form/3522/input">OCで確かめる <span>→</span></a>
+      </div>
+    </section>
+    <section class="reason" id="course">
+      <h2 class="label">FEATURES</h2>
+      <p class="feature-lead">オープンキャンパス後に知りたくなる、授業・資格就職・学校生活をまとめて紹介します。</p>
+      <div class="feature-grid">
+        <div class="info-panel curric">
+          <h3>SKILL</h3>
+          <div>
+            <strong>4つのカリキュラム</strong>
+            <p>ヘア、エキスパート、ビューティー、クリエイティブ。美容師国家試験の基礎から撮影・ヘアメイクまで幅広く体験。</p>
+          <a class="btn dark" href="/curriculum">VIEW DETAIL <span>→</span></a>
+          </div>
+        </div>
+        <div class="info-panel">
+          <h3>CAREER</h3>
+          <div>
+            <strong>希望者就職率100%</strong>
+            <p>栃木県下約500店舗の組合加盟サロンとのパイプ。国家試験合格率97から100%の安心材料も明確に表示。</p>
+            <a class="btn dark" href="/shikaku">VIEW DETAIL <span>→</span></a>
+          </div>
+        </div>
+        <div class="info-panel life">
+          <h3>LIFE</h3>
+          <div>
+            <strong>キャンパスライフ</strong>
+            <p>入学式、レクリエーション、校外研修、栃美 Beauty Festa、校内美容技術コンクールなど、学校生活の楽しさを可視化。</p>
+            <a class="btn dark" href="/campuslife">VIEW DETAIL <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="access" id="access">
+      <div>
+        <h2>ACCESS</h2>
+        <p>栃木県美容専門学校<br>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.028-651-5210</p>
+        <a class="btn dark" href="/contact">VIEW DETAIL <span>→</span></a>
+      </div>
+      <div class="map-box"><span class="pin"></span></div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>CONTACT</h2>
+      <p>オープンキャンパス予約、資料請求、学費資料、個別相談はこちらから。</p>
+      <div class="contact-box">
+        <a class="contact-item" href="https://r-shingaku.com/ce/form/3522/input"><img src="assets/tochibi/icon_opcampus.png" alt=""><span>8/18 オープンキャンパスを予約する</span><span>→</span></a>
+        <a class="contact-item" href="https://r-shingaku.com/ce/form/3028/input"><img src="assets/tochibi/icon_shiryo.png" alt=""><span>資料請求をする</span><span>→</span></a>
+        <a class="contact-item" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/bosyuyouko.pdf"><img src="assets/tochibi/icon_shiryo.png" alt=""><span>募集要項PDFを見る</span><span>↗</span></a>
+        <a class="contact-item" href="https://tochibi.ac.jp/contact/"><img src="assets/tochibi/icon_contact.png" alt=""><span>個別相談・お問い合わせ</span><span>→</span></a>
+      </div>
+      <div class="pdf-card-row">
+        <a class="pdf-card guide" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/school_guide.pdf" aria-label="学校案内パンフレット"></a>
+        <a class="pdf-card admission" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/bosyuyouko.pdf" aria-label="募集要項"></a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <img src="assets/tochibi/logo_main.png" alt="栃木県美容専門学校">
+        <p>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.028-651-5210</p>
+      </div>
+      <div class="footer-nav">
+        <a href="/">HOME</a><a href="/opencampus">OC</a><a href="/topics">TOPICS</a><a href="#schedule">SCHEDULE</a><a href="#why">WHY</a><a href="/curriculum">COURSE</a><a href="#access">ACCESS</a><a href="/contact">CONTACT</a><a href="#top">PAGE TOP</a>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const root = document.getElementById("tochibi-oc-wireframe");
+        const buttons = [...root.querySelectorAll(".keyword .tag[data-filter]")];
+        const cards = [...root.querySelectorAll("[data-filter-grid] .card")];
+        const status = root.querySelector(".filter-status");
+        const labels = {
+          all: "すべてのおすすめコンテンツを表示しています。",
+          "open-campus": "オープンキャンパス関連のコンテンツを表示しています。",
+          tochibi: "栃美の特徴がわかるコンテンツを表示しています。",
+          hair: "ヘア体験・カリキュラムに関するコンテンツを表示しています。",
+          makeup: "メイク体験にもつながるコンテンツを表示しています。",
+          nail: "ネイル体験にもつながるコンテンツを表示しています。",
+          parent: "保護者相談に関するコンテンツを表示しています。",
+          tuition: "学費支援・入学相談に関するコンテンツを表示しています。"
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+            buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+            cards.forEach((card) => {
+              const tags = (card.dataset.tags || "").split(/\s+/);
+              card.classList.toggle("is-hidden", filter !== "all" && !tags.includes(filter));
+            });
+            if (status) status.textContent = labels[filter] || labels.all;
+            if (matchMedia("(max-width: 860px)").matches) {
+              root.querySelector("[data-filter-grid]")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+      })();
+    </script>
+  </div>
+</div>
+</body>
+</html>
