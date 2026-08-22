@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="栃木県美容専門学校（栃美）のオープンキャンパス特設サイト。8/18開催のオープンキャンパスの内容、カリキュラム、資格・就職、キャンパスライフ、学費支援の情報をまとめて確認できます。">
+  <meta name="description" content="栃木県美容専門学校（栃美）のオープンキャンパス特設サイト。開催日程、体験できる内容、当日の流れ、参加特典、学費・奨学金まで。参加費無料・1人参加OK・保護者同伴OK。">
   <link rel="canonical" href="https://tochibi-oc-vercel.vercel.app/">
   <meta name="theme-color" content="#1f6fb9">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -13,12 +13,38 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://tochibi-oc-vercel.vercel.app/">
   <meta property="og:title" content="栃木県美容専門学校 オープンキャンパス">
-  <meta property="og:description" content="栃木県美容専門学校（栃美）のオープンキャンパス特設サイト。8/18開催のオープンキャンパスの内容、カリキュラム、資格・就職、キャンパスライフ、学費支援の情報をまとめて確認できます。">
+  <meta property="og:description" content="栃木県美容専門学校（栃美）のオープンキャンパス特設サイト。開催日程、体験できる内容、当日の流れ、参加特典、学費・奨学金まで。参加費無料・1人参加OK・保護者同伴OK。">
   <meta property="og:image" content="https://tochibi-oc-vercel.vercel.app/assets/tochibi/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="栃木県美容専門学校 オープンキャンパス">
+  <meta name="twitter:description" content="栃木県美容専門学校（栃美）のオープンキャンパス特設サイト。開催日程、体験できる内容、当日の流れ、参加特典、学費・奨学金まで。参加費無料・1人参加OK・保護者同伴OK。">
+  <meta name="twitter:image" content="https://tochibi-oc-vercel.vercel.app/assets/tochibi/ogp.jpg">
   <title>栃木県美容専門学校 オープンキャンパス</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "栃木県美容専門学校",
+    "alternateName": "栃美",
+    "url": "https://tochibi.ac.jp/",
+    "telephone": "+81-28-651-5210",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "321-0945",
+      "addressRegion": "栃木県",
+      "addressLocality": "宇都宮市",
+      "streetAddress": "宿郷2-10-11",
+      "addressCountry": "JP"
+    },
+    "sameAs": ["https://www.instagram.com/tochibi1958"]
+  }
+  </script>
+
+  <script src="/data/oc-schedule.js" defer></script>
+  <script src="/assets/js/oc.js" defer></script>
 </head>
 <body>
 <div id="tochibi-oc-wireframe">
@@ -1169,7 +1195,653 @@
         width: 180px;
       }
     }
+    /* ===========================================================
+       STEP2 追加分 — 2026.08.21
+       安心バー / 開催日程 / 当日の流れ / 参加特典 /
+       保護者の方へ / FAQ / SP固定CTA
+       =========================================================== */
+
+    #tochibi-oc-wireframe .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+    #tochibi-oc-wireframe .ico {
+      width: 1em; height: 1em; flex: none;
+      fill: none; stroke: currentColor;
+      stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+    }
+    #tochibi-oc-wireframe .is-disabled {
+      opacity: .5; pointer-events: none; filter: grayscale(1);
+    }
+
+    /* ---------- 共通の節見出し（.label より小さい版） ---------- */
+    #tochibi-oc-wireframe .sec-title {
+      position: relative;
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3.4vw, 40px);
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: .01em;
+    }
+    #tochibi-oc-wireframe .sec-eyebrow {
+      position: relative;
+      display: block;
+      margin: 0 0 8px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .22em;
+      color: var(--to-pink);
+    }
+    #tochibi-oc-wireframe .sec-lead {
+      position: relative;
+      margin: 0 0 34px;
+      max-width: 60ch;
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--to-muted);
+    }
+
+    /* ---------- 02 安心バー ---------- */
+    #tochibi-oc-wireframe .assure {
+      position: relative;
+      padding: 0 6%;
+      margin: -34px 0 0;
+      z-index: 4;
+    }
+    #tochibi-oc-wireframe .assure-list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: var(--to-line);
+      border: 1px solid var(--to-line);
+      box-shadow: var(--to-shadow);
+    }
+    #tochibi-oc-wireframe .assure-list li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 22px 10px;
+      background: var(--to-panel);
+      text-align: center;
+    }
+    #tochibi-oc-wireframe .assure-list .ico {
+      font-size: 30px;
+      color: var(--to-pink);
+      stroke-width: 1.5;
+    }
+    #tochibi-oc-wireframe .assure-list b {
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+    #tochibi-oc-wireframe .assure-list small {
+      font-size: 12px;
+      color: var(--to-muted);
+      line-height: 1.5;
+    }
+
+    /* ---------- 03 開催日程 ---------- */
+    #tochibi-oc-wireframe .oc-list {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+    #tochibi-oc-wireframe .oc-card {
+      display: grid;
+      grid-template-columns: 132px 1fr 210px;
+      align-items: center;
+      gap: 24px;
+      padding: 22px 26px;
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    #tochibi-oc-wireframe a.oc-card:hover,
+    #tochibi-oc-wireframe a.oc-card:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: var(--to-shadow);
+      border-color: var(--to-pink);
+    }
+    #tochibi-oc-wireframe .oc-card.is-next {
+      border-width: 2px;
+      border-color: var(--to-pink);
+    }
+    #tochibi-oc-wireframe .oc-card.is-next { padding-top: 44px; }
+    #tochibi-oc-wireframe .oc-next-flag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--to-pink);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      padding: 5px 14px;
+    }
+    #tochibi-oc-wireframe .oc-card-date {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      line-height: 1;
+    }
+    #tochibi-oc-wireframe .oc-card-date b {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      font-variant-numeric: tabular-nums;
+    }
+    #tochibi-oc-wireframe .oc-card-date .oc-wd {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .oc-card-type {
+      display: inline-block;
+      margin-bottom: 6px;
+      padding: 3px 10px;
+      background: rgba(31, 111, 185, .1);
+      color: var(--to-blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+    #tochibi-oc-wireframe .oc-card-body h3 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    #tochibi-oc-wireframe .oc-card-time {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    #tochibi-oc-wireframe .oc-card-time .ico { font-size: 17px; margin-right: 7px; vertical-align: -3px; color: var(--to-muted); }
+    #tochibi-oc-wireframe .oc-card-note {
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: var(--to-muted);
+      line-height: 1.7;
+    }
+    #tochibi-oc-wireframe .oc-card-foot {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    #tochibi-oc-wireframe .oc-status {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      padding: 4px 10px;
+    }
+    #tochibi-oc-wireframe .oc-status.is-open   { background: rgba(54,192,177,.16); color: #12766b; }
+    #tochibi-oc-wireframe .oc-status.is-few    { background: rgba(255,140,66,.18); color: #a2500d; }
+    #tochibi-oc-wireframe .oc-status.is-full   { background: rgba(233,70,134,.14); color: #b01f5c; }
+    #tochibi-oc-wireframe .oc-status.is-closed { background: rgba(0,0,0,.07);      color: var(--to-muted); }
+    #tochibi-oc-wireframe .oc-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 48px;
+      width: 100%;
+      padding: 0 20px;
+      background: var(--to-pink);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .oc-card-btn.is-off {
+      background: rgba(0,0,0,.06);
+      color: var(--to-muted);
+      justify-content: center;
+    }
+    #tochibi-oc-wireframe .oc-empty {
+      padding: 40px;
+      background: var(--to-panel);
+      border: 1px dashed var(--to-line);
+      text-align: center;
+      color: var(--to-muted);
+      font-weight: 700;
+    }
+    #tochibi-oc-wireframe .oc-foot-note {
+      position: relative;
+      margin: 22px 0 0;
+      font-size: 13px;
+      color: var(--to-muted);
+      line-height: 1.9;
+    }
+
+    /* ---------- 05 当日の流れ ---------- */
+    #tochibi-oc-wireframe .flow-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: flow;
+    }
+    #tochibi-oc-wireframe .flow-list li {
+      position: relative;
+      padding: 24px 20px 22px;
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+      counter-increment: flow;
+    }
+    #tochibi-oc-wireframe .flow-list li::before {
+      content: counter(flow, decimal-leading-zero);
+      display: block;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      color: var(--to-pink);
+    }
+    #tochibi-oc-wireframe .flow-list li::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      width: 12px;
+      height: 2px;
+      background: var(--to-line);
+    }
+    #tochibi-oc-wireframe .flow-list li:last-child::after { display: none; }
+    #tochibi-oc-wireframe .flow-time {
+      display: block;
+      font-size: 20px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 4px;
+    }
+    #tochibi-oc-wireframe .flow-list h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+    #tochibi-oc-wireframe .flow-list p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--to-muted);
+    }
+
+    /* ---------- 06 参加特典 ---------- */
+    #tochibi-oc-wireframe .perks {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    #tochibi-oc-wireframe .perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 24px 22px;
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .perk .ico {
+      font-size: 28px;
+      color: var(--to-mint);
+      margin-top: 2px;
+    }
+    #tochibi-oc-wireframe .perk b {
+      display: block;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+    #tochibi-oc-wireframe .perk span {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--to-muted);
+    }
+
+    /* ---------- 08 保護者の方へ ---------- */
+    #tochibi-oc-wireframe .parent {
+      position: relative;
+      padding: 78px 6% 90px;
+      background: var(--to-deep);
+      color: #fff;
+    }
+    #tochibi-oc-wireframe .parent .sec-eyebrow { color: var(--to-yellow); }
+    #tochibi-oc-wireframe .parent .sec-lead { color: rgba(255,255,255,.78); }
+    #tochibi-oc-wireframe .parent-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.2);
+      margin-bottom: 28px;
+    }
+    #tochibi-oc-wireframe .parent-cell {
+      padding: 26px 24px;
+      background: var(--to-deep);
+    }
+    #tochibi-oc-wireframe .parent-cell h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      color: var(--to-yellow);
+    }
+    #tochibi-oc-wireframe .parent-cell .num {
+      display: block;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.15;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 6px;
+    }
+    #tochibi-oc-wireframe .parent-cell .num small {
+      font-size: 15px;
+      font-weight: 700;
+      margin-left: 2px;
+    }
+    #tochibi-oc-wireframe .parent-cell p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.76);
+    }
+    #tochibi-oc-wireframe .parent-cell ul {
+      margin: 0;
+      padding-left: 1.1em;
+      font-size: 13px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.86);
+    }
+    #tochibi-oc-wireframe .parent-note {
+      margin: 0 0 26px;
+      font-size: 12px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.6);
+    }
+
+    /* ---------- 10 FAQ ---------- */
+    #tochibi-oc-wireframe .faq {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      max-width: 900px;
+    }
+    #tochibi-oc-wireframe .faq details {
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .faq summary {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 24px;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.5;
+      cursor: pointer;
+      list-style: none;
+    }
+    #tochibi-oc-wireframe .faq summary::-webkit-details-marker { display: none; }
+    #tochibi-oc-wireframe .faq summary::before {
+      content: "Q";
+      flex: none;
+      width: 30px; height: 30px;
+      display: grid; place-items: center;
+      background: var(--to-pink);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    #tochibi-oc-wireframe .faq summary::after {
+      content: "";
+      flex: none;
+      margin-left: auto;
+      width: 12px; height: 12px;
+      border-right: 2px solid var(--to-ink);
+      border-bottom: 2px solid var(--to-ink);
+      transform: rotate(45deg) translate(-3px, -3px);
+      transition: transform .2s ease;
+    }
+    #tochibi-oc-wireframe .faq details[open] summary::after {
+      transform: rotate(-135deg) translate(-3px, -3px);
+    }
+    #tochibi-oc-wireframe .faq .answer {
+      display: flex;
+      gap: 14px;
+      padding: 0 24px 22px 24px;
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .faq .answer::before {
+      content: "A";
+      flex: none;
+      width: 30px; height: 30px;
+      display: grid; place-items: center;
+      background: rgba(0,0,0,.06);
+      color: var(--to-ink);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    /* ---------- 13 SP固定フッターCTA ---------- */
+    #tochibi-oc-wireframe .sticky-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 40;
+      display: none;
+      gap: 1px;
+      background: var(--to-line);
+      transform: translateY(100%);
+      transition: transform .26s ease;
+      box-shadow: 0 -8px 24px rgba(0,0,0,.14);
+    }
+    #tochibi-oc-wireframe .sticky-cta.is-shown { transform: translateY(0); }
+    #tochibi-oc-wireframe .sticky-cta a {
+      flex: 1;
+      min-height: 62px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 8px 6px;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: center;
+    }
+    #tochibi-oc-wireframe .sticky-cta small {
+      font-size: 11px;
+      font-weight: 700;
+      opacity: .82;
+    }
+    #tochibi-oc-wireframe .sticky-cta .sc-main { background: var(--to-pink); color: #fff; flex: 1.6; }
+    #tochibi-oc-wireframe .sticky-cta .sc-sub  { background: var(--to-panel); color: var(--to-ink); }
+
+    /* ---------- フォーカス可視化 ---------- */
+    #tochibi-oc-wireframe a:focus-visible,
+    #tochibi-oc-wireframe button:focus-visible,
+    #tochibi-oc-wireframe summary:focus-visible {
+      outline: 3px solid var(--to-blue);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #tochibi-oc-wireframe .hero-photo { animation: none; }
+      #tochibi-oc-wireframe * { transition-duration: .01ms !important; }
+    }
+
+    /* ---------- レスポンシブ ---------- */
+    @media (max-width: 1080px) {
+      #tochibi-oc-wireframe .assure-list { grid-template-columns: repeat(3, 1fr); }
+      #tochibi-oc-wireframe .flow-list { grid-template-columns: repeat(3, 1fr); }
+      #tochibi-oc-wireframe .flow-list li:nth-child(3)::after { display: none; }
+      #tochibi-oc-wireframe .oc-card { grid-template-columns: 110px 1fr 180px; gap: 18px; padding: 20px; }
+      #tochibi-oc-wireframe .oc-card-date b { font-size: 38px; }
+    }
+
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .assure { margin-top: 0; padding: 0 5%; }
+      #tochibi-oc-wireframe .assure-list { grid-template-columns: repeat(2, 1fr); }
+      #tochibi-oc-wireframe .oc-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 20px 18px;
+      }
+      #tochibi-oc-wireframe .oc-card-date { align-items: baseline; }
+      #tochibi-oc-wireframe .oc-card-foot {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #tochibi-oc-wireframe .oc-card-btn { width: auto; min-width: 160px; }
+      #tochibi-oc-wireframe .flow-list { grid-template-columns: 1fr 1fr; }
+      #tochibi-oc-wireframe .flow-list li::after { display: none; }
+      #tochibi-oc-wireframe .sticky-cta { display: flex; }
+      #tochibi-oc-wireframe .footer { padding-bottom: 90px; }
+      #tochibi-oc-wireframe .parent { padding: 60px 5% 70px; }
+    }
+
+    @media (max-width: 560px) {
+      #tochibi-oc-wireframe .assure-list li { padding: 16px 8px; }
+      #tochibi-oc-wireframe .assure-list .ico { font-size: 25px; }
+      #tochibi-oc-wireframe .assure-list b { font-size: 13.5px; }
+      #tochibi-oc-wireframe .flow-list { grid-template-columns: 1fr; }
+      #tochibi-oc-wireframe .faq summary { font-size: 15.5px; padding: 16px 18px; gap: 10px; }
+      #tochibi-oc-wireframe .faq .answer { padding: 0 18px 18px; font-size: 14px; gap: 10px; }
+      #tochibi-oc-wireframe .oc-card-btn { width: 100%; }
+      #tochibi-oc-wireframe .oc-card-foot { flex-direction: column; align-items: stretch; }
+    }
+
+    /* ---------- 01 ヒーロー可読性の修正 ---------- */
+    #tochibi-oc-wireframe .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0) 0 38%,
+        rgba(255,255,255,.55) 62%,
+        rgba(255,255,255,.86) 100%
+      );
+    }
+    #tochibi-oc-wireframe .hero-copy { z-index: 3; }
+    #tochibi-oc-wireframe .outline { margin-bottom: 18px; }
+    #tochibi-oc-wireframe .hero-sub {
+      display: inline-block;
+      margin: 16px 0 22px;
+      padding: 7px 16px;
+      background: rgba(6,6,6,.9);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.6;
+      letter-spacing: .01em;
+    }
+    #tochibi-oc-wireframe .hero-sub b {
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      color: var(--to-yellow);
+    }
+    /* 主CTAと副CTAの主従をはっきりさせる */
+    #tochibi-oc-wireframe .hero-cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+    #tochibi-oc-wireframe .hero-cta-row .btn.primary { min-height: 66px; font-size: 20px; flex: 0 0 auto; }
+    #tochibi-oc-wireframe .hero-cta-row .btn.light {
+      min-height: 66px;
+      font-size: 15px;
+      gap: 14px;
+      background: rgba(255,255,255,.94);
+    }
+
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .outline { font-size: clamp(30px, 8vw, 44px); margin-bottom: 14px; }
+      #tochibi-oc-wireframe .hero-scrim {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0 22%, rgba(255,255,255,.72) 44%, rgba(255,255,255,.95) 70%);
+      }
+      #tochibi-oc-wireframe .hero-sub { margin: 12px 0 18px; font-size: 13.5px; padding: 6px 12px; }
+      #tochibi-oc-wireframe .hero-cta-row .btn.primary { min-height: 60px; font-size: 17px; width: 100%; }
+      #tochibi-oc-wireframe .hero-cta-row .btn.light { min-height: 54px; font-size: 14px; width: 100%; }
+    }
+
+
+    /* ---------- モバイルのヒーローは重ねずに積む ----------
+       絶対配置のままだと next-oc / outline / h1 が衝突するため、
+       860px以下では写真・情報パネル・コピーを縦に並べます。 */
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .hero { padding: 10px 10px 24px; }
+      #tochibi-oc-wireframe .hero-frame {
+        min-height: 0;
+        display: block;
+        overflow: hidden;
+      }
+      #tochibi-oc-wireframe .hero-photo {
+        position: relative;
+        inset: auto;
+        height: 260px;
+        background: url("/assets/tochibi/kv-open-campus-collage.webp") center 22% / cover no-repeat;
+        animation: none;
+      }
+      #tochibi-oc-wireframe .hero-scrim { display: none; }
+      #tochibi-oc-wireframe .next-oc {
+        position: static;
+        left: auto; right: auto; top: auto;
+        width: auto;
+        box-shadow: none;
+        border-bottom: 1px solid var(--to-line);
+        padding: 16px 18px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 2px 14px;
+      }
+      #tochibi-oc-wireframe .next-oc small { grid-column: 1; grid-row: 1; margin-bottom: 0; font-size: 11px; }
+      #tochibi-oc-wireframe .next-oc span  { grid-column: 1; grid-row: 2; font-size: 14px; line-height: 1.5; }
+      #tochibi-oc-wireframe .next-oc strong {
+        grid-column: 2; grid-row: 1 / span 2;
+        font-size: 40px; line-height: 1;
+      }
+      #tochibi-oc-wireframe .hero-copy {
+        position: static;
+        left: auto; bottom: auto;
+        width: auto;
+        padding: 24px 18px 26px;
+      }
+      #tochibi-oc-wireframe .outline { font-size: clamp(26px, 7.2vw, 38px); margin-bottom: 10px; }
+      #tochibi-oc-wireframe .hero-copy h1 { padding: 2px 10px 6px; font-size: clamp(28px, 7.4vw, 40px); }
+      #tochibi-oc-wireframe .scroll { display: none; }
+    }
+
+    /* 濃紺セクション内の白ボタンは文字色を戻す（白地に白文字を防ぐ） */
+    #tochibi-oc-wireframe .parent .btn.light { color: var(--to-ink); }
+    /* KV画像に OPEN CAMPUS! の文字が入っているため、モバイルでは見出しの重複を避ける */
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .hero-copy .outline { display: none; }
+    }
   </style>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7.8" r="3.3"/><path d="M5.5 20.2c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></symbol>
+    <symbol id="i-friends" viewBox="0 0 24 24"><circle cx="9" cy="7.6" r="3"/><circle cx="17.3" cy="9.4" r="2.4"/><path d="M2.8 19.6c0-3.4 2.8-6.2 6.2-6.2s6.2 2.8 6.2 6.2"/><path d="M16 14.1c2.7.3 4.7 2.6 4.7 5.4"/></symbol>
+    <symbol id="i-family" viewBox="0 0 24 24"><circle cx="8.2" cy="7.2" r="3"/><path d="M2.7 19.8c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/><circle cx="17.4" cy="11.2" r="2.2"/><path d="M14 19.8c0-1.9 1.5-3.5 3.4-3.5s3.4 1.6 3.4 3.5"/></symbol>
+    <symbol id="i-yen" viewBox="0 0 24 24"><path d="m7 5 5 6.2L17 5"/><path d="M12 11.2V19"/><path d="M8.2 13.2h7.6"/><path d="M8.2 16.4h7.6"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3.4" width="12" height="12.6" rx="3.2"/><path d="M6 10.8h12"/><circle cx="9.3" cy="13.4" r=".95"/><circle cx="14.7" cy="13.4" r=".95"/><path d="m8.6 16-2.1 4.2"/><path d="m15.4 16 2.1 4.2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.2 15.4a1.6 1.6 0 0 1-1.6 1.6H8.2L4 20.4V5.9a1.6 1.6 0 0 1 1.6-1.6h13a1.6 1.6 0 0 1 1.6 1.6Z"/><path d="M8.4 9.1h7.2"/><path d="M8.4 12.3h4.6"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6.2 3h7.6l4 4v14H6.2Z"/><path d="M13.8 3v4h4"/><path d="M9.2 12.2h5.6"/><path d="M9.2 15.5h5.6"/><path d="M9.2 18.8h3.4"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6.4" cy="17.6" r="2.6"/><circle cx="6.4" cy="6.4" r="2.6"/><path d="M8.6 8.1 19 18.4"/><path d="M8.6 15.9 19 5.6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.9v5.4l3.3 2"/></symbol>
+  </svg>
   <div class="page" id="top">
     <nav class="side-nav" aria-label="ページナビゲーション">
       <div class="logo-rail"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></div>
@@ -1177,15 +1849,15 @@
       <label class="menu-toggle" for="tochibi-sp-menu" aria-label="メニューを開閉"><span></span></label>
       <ul class="side-menu">
         <li><a href="#home">HOME</a></li>
-        <li><a href="#oc">OC</a></li>
-        <li><a href="/topics">TOPICS</a></li>
         <li><a href="#schedule">SCHEDULE</a></li>
+        <li><a href="#flow">FLOW</a></li>
+        <li><a href="#parent">PARENT</a></li>
         <li><a href="#why">WHY</a></li>
-        <li><a href="/curriculum">COURSE</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#access">ACCESS</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
-      <a class="rail-cta" href="https://r-shingaku.com/ce/form/3522/input">8/18<br>OC予約</a>
+      <a class="rail-cta" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc="date-md">OC</span><br>OC予約</a>
     </nav>
     <header class="topbar">
       <img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校">
@@ -1199,22 +1871,74 @@
     <section class="hero" id="home">
       <div class="hero-frame">
         <div class="hero-photo"></div>
+        <div class="hero-scrim"></div>
         <div class="next-oc">
           <small>NEXT OPEN CAMPUS</small>
-          <strong>8/18</strong>
-          <span>オープンキャンパス<br>予約受付中</span>
+          <strong data-oc="date-md">&nbsp;</strong>
+          <span><span data-oc="title">オープンキャンパス</span><br><span data-oc="status">予約受付中</span></span>
         </div>
         <div class="hero-copy">
           <span class="outline">OPEN CAMPUS</span>
           <h1>栃美で、<br>美容の楽しさを体験。</h1>
+          <p class="hero-sub">次回 <b data-oc="date-full">&nbsp;</b>　<span data-oc="time">&nbsp;</span>／参加費無料</p>
           <div class="hero-cta-row">
-            <a class="btn primary" href="https://r-shingaku.com/ce/form/3522/input">8/18 OCを予約する <span>→</span></a>
-            <a class="btn dark" href="/opencampus">開催内容を見る <span>→</span></a>
-            <a class="btn light" href="https://r-shingaku.com/ce/form/3028/input">資料請求 <span>→</span></a>
+            <a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span><span aria-hidden="true">→</span></a>
+            <a class="btn light" href="#schedule"><span>日程をすべて見る</span><span aria-hidden="true">→</span></a>
+            <a class="btn light" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><span>資料請求</span><span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="scroll">SCROLL</div>
       </div>
+    </section>
+    <section class="assure" aria-label="オープンキャンパスの参加条件">
+      <ul class="assure-list">
+        <li><svg class="ico"><use href="#i-yen"></use></svg><b>参加費無料</b><small>費用はかかりません</small></li>
+        <li><svg class="ico"><use href="#i-person"></use></svg><b>1人参加OK</b><small>初めての方も安心です</small></li>
+        <li><svg class="ico"><use href="#i-friends"></use></svg><b>友達とOK</b><small>誘い合わせての参加も歓迎</small></li>
+        <li><svg class="ico"><use href="#i-family"></use></svg><b>保護者同伴OK</b><small>親子でご参加いただけます</small></li>
+        <li><svg class="ico"><use href="#i-chat"></use></svg><b>在校生と話せる</b><small>リアルな話を直接聞けます</small></li>
+        <li><svg class="ico"><use href="#i-train"></use></svg><b>交通費サポート</b><small>遠方の方向けの制度があります</small></li>
+      </ul>
+      <!-- 要確認: 「服装は自由か」「持ち物の要否」を追加したい枠です。
+           現行サイトのFAQに設問はありますが回答が未記入のため、推測で書かず掲載を見送っています。
+           競合（東京ベルエポック・原宿ベルエポック）はこの2項目をアイコンで明示しています。 -->
+    </section>
+    <section class="section" id="schedule">
+      <h2 class="label">SCHEDULE</h2>
+      <p class="sec-lead">今後の開催は<b data-oc-count>&nbsp;</b>回です。ご都合のよい日を選んで、そのままご予約いただけます。受付は9:30から、プログラムはいずれも10:00〜12:00ごろ。参加費は無料です。</p>
+      <div class="oc-list" data-oc-list>
+        <p class="oc-empty">日程を読み込んでいます。</p>
+      </div>
+      <p class="oc-foot-note">※ 複数日のお申し込みも可能です。ご不明な点は <a data-oc-href="contact" href="https://tochibi.ac.jp/contact/">お問い合わせ</a> ください。</p>
+    </section>
+    <section class="section" id="flow">
+      <h2 class="label">FLOW</h2>
+      <p class="sec-lead">受付は9:30から。プログラムは10:00にはじまり、12:00ごろに終わります。おおよその終了時刻が決まっているので、遠方の方も帰りの予定を立てやすくなっています。</p>
+      <ol class="flow-list">
+        <li><span class="flow-time">9:30</span><h3>受付</h3><p>校舎で受付をして、その日の流れをご案内します。</p></li>
+        <li><span class="flow-time">10:00</span><h3>学校説明</h3><p>栃美の特色、カリキュラム、資格と就職についてご説明します。</p></li>
+        <li><h3>実習体験</h3><p>美容学校ならではの実習カリキュラムを体験していただきます。</p></li>
+        <li><h3>在校生と交流</h3><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
+        <li><span class="flow-time">12:00</span><h3>個別相談・解散</h3><p>入試、学費、奨学金、修学支援制度について個別にご相談いただけます。</p></li>
+      </ol>
+      <!-- 公式日程表より: 受付9:30〜／プログラム10:00〜12:00頃（体験入学・学校説明会・進路相談）。
+           中間ステップの時刻は未公開のため空にしています。確定タイムテーブルをいただきしだい
+           各ステップの flow-time に時刻を入れてください。
+           山野美容芸術短大・東京ベルエポックは全ステップに時刻を明記しています。 -->
+    </section>
+    <section class="section" id="perks">
+      <h2 class="label">SUPPORT</h2>
+      <p class="sec-lead">オープンキャンパスにご参加いただく方へのサポートです。</p>
+      <div class="perks">
+        <div class="perk"><svg class="ico"><use href="#i-yen"></use></svg><div><b>参加費無料</b><span>費用は一切かかりません。</span></div></div>
+        <div class="perk"><svg class="ico"><use href="#i-train"></use></svg><div><b>交通費サポート</b><span>遠方からお越しの方を対象としたサポートがあります。</span></div></div>
+        <div class="perk"><svg class="ico"><use href="#i-friends"></use></svg><div><b>友達・保護者との参加OK</b><span>おひとりでも、どなたとご一緒でも参加できます。</span></div></div>
+        <div class="perk"><svg class="ico"><use href="#i-chat"></use></svg><div><b>在校生と話せる</b><span>授業や学校生活のことを直接聞けます。</span></div></div>
+        <div class="perk"><svg class="ico"><use href="#i-doc"></use></svg><div><b>入試・学費の相談ができる</b><span>入試の種類、学費、奨学金、修学支援制度についてご相談いただけます。</span></div></div>
+      </div>
+      <!-- 要確認: 交通費サポートの対象エリアと金額。
+           東京ベルエポックは栃木県在住者に3,000円（特定日は最大10,000円）を県別の金額表で公開しています。
+           金額を明示できると遠方からの参加判断が一気にしやすくなります。 -->
     </section>
     <section class="section" id="oc">
       <h2 class="label">OPEN CAMPUS</h2>
@@ -1257,54 +1981,40 @@
         </a>
       </div>
     </section>
-    <section class="section" id="schedule">
-      <h2 class="label">SCHEDULE</h2>
-      <div class="schedule-mask">
-        <div class="schedule-track">
-          <a class="schedule-card" href="/opencampus">
-            <span class="category">#OC</span>
-            <div class="card-img curriculum"></div>
-            <div class="date"><b>8/18</b><span>OPEN CAMPUS</span></div>
-            <h3>直近のオープンキャンパス</h3>
-            <p>授業の雰囲気や先生、在校生の様子を一日で知ることができます。</p>
-            <span class="corner-arrow"></span>
-          </a>
-          <a class="schedule-card" href="/admissions">
-            <span class="category">#GUIDE</span>
-            <div class="card-img adinfo"></div>
-            <div class="date"><b>AO</b><span>ENTRY</span></div>
-            <h3>2026 AO入試2次エントリー</h3>
-            <p>出願までの流れや必要書類をわかりやすく確認できます。</p>
-            <span class="corner-arrow"></span>
-          </a>
-          <a class="schedule-card" href="/campuslife">
-            <span class="category">#EVENT</span>
-            <div class="card-img hairshow"></div>
-            <div class="date"><b>FES</b><span>BEAUTY</span></div>
-            <h3>栃美 Beauty Festa</h3>
-            <p>美容の楽しさを伝える象徴的なイベント枠。</p>
-            <span class="corner-arrow"></span>
-          </a>
-          <a class="schedule-card" href="/admissions">
-            <span class="category">#PARENT</span>
-            <div class="card-img points"></div>
-            <div class="date"><b>相談</b><span>SUPPORT</span></div>
-            <h3>学費・就職・資格相談</h3>
-            <p>保護者の意思決定に必要な安心材料をまとめる。</p>
-            <span class="corner-arrow"></span>
-          </a>
+    <section class="parent" id="parent">
+      <span class="sec-eyebrow">FOR PARENTS</span>
+      <h2 class="sec-title">保護者の方へ</h2>
+      <p class="sec-lead">進路選びで気になるのは、卒業後の進路と学費だと思います。オープンキャンパス当日は、保護者の方の個別相談も承っています。</p>
+      <div class="parent-grid">
+        <div class="parent-cell">
+          <h3>就職</h3>
+          <span class="num">100<small>&#37;</small></span>
+          <p>希望者就職率。栃木県下の美容組合が設立した学校として、組合加盟の美容室500店とのつながりがあります。</p>
+        </div>
+        <div class="parent-cell">
+          <h3>国家試験</h3>
+          <span class="num">97〜100<small>&#37;</small></span>
+          <p>美容師国家試験の合格率。美容師国家試験合格安心保障制度により、卒業後も無料でサポートします。</p>
+        </div>
+        <div class="parent-cell">
+          <h3>学費（昼間課程）</h3>
+          <span class="num">1,005,900<small>円</small></span>
+          <p>2年制・4月入学の1年次学費です。このほかに高等課程講習料12,100円と教材費がかかります。</p>
+        </div>
+        <div class="parent-cell">
+          <h3>学費のサポート</h3>
+          <ul>
+            <li>栃美奨学金・奨励金制度</li>
+            <li>日本学生支援機構（公的奨学金）</li>
+            <li>日本政策金融公庫（教育ローン）</li>
+            <li>高等教育の修学支援新制度</li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="section" id="topics">
-      <div class="news-row">
-        <h2 class="label">TOPICS</h2>
-        <div class="news-list">
-          <span>2026.08.06 夏季休業日のご案内</span>
-          <span>2026.07.21 2026 AO入試2次エントリー 開始</span>
-          <span>2026.06.26 接遇・マナーディレクター検定</span>
-        </div>
-        <a class="btn dark" href="/topics">MORE <span>→</span></a>
+      <p class="parent-note">※ 通信課程（3年制・10月入学）は入学前納入金542,000円、中学校卒業者講習6,600円、スクーリング時の教材費が別途150,000円程度かかります。<br>※ 学費のほかに教材費が別途かかります。詳しくは募集要項をご覧ください。</p>
+      <div class="hero-cta-row">
+        <a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCで相談する">オープンキャンパスで相談する</span><span aria-hidden="true">→</span></a>
+        <a class="btn light" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><span>資料を請求する</span><span aria-hidden="true">→</span></a>
       </div>
     </section>
     <section class="concept" id="why">
@@ -1347,6 +2057,57 @@
         </div>
       </div>
     </section>
+    <section class="section" id="faq">
+      <h2 class="label">FAQ</h2>
+      <p class="sec-lead">よくいただくご質問をまとめました。</p>
+      <div class="faq" data-faq>
+        <details open>
+          <summary>一人で参加しても大丈夫ですか？</summary>
+          <div class="answer">もちろん大丈夫です。初めての方も安心して参加できます。</div>
+        </details>
+        <details>
+          <summary>保護者も一緒に参加できますか？</summary>
+          <div class="answer">はい、ご一緒に参加いただけます。当日は学費や奨学金、就職についての個別相談も承っています。</div>
+        </details>
+        <details>
+          <summary>友達と一緒に参加できますか？</summary>
+          <div class="answer">はい、お友達との参加も歓迎しています。おひとりでの参加ももちろん大丈夫です。</div>
+        </details>
+        <details>
+          <summary>参加費はかかりますか？</summary>
+          <div class="answer">かかりません。参加費は無料です。遠方からお越しの方を対象とした交通費サポートもあります。</div>
+        </details>
+        <details>
+          <summary>何を体験できますか？</summary>
+          <div class="answer">回によって内容は変わりますが、さまざまな実習カリキュラムを体験していただけます。ヘア、メイク、ネイルなど、美容学校ならではの授業に触れられます。</div>
+        </details>
+      </div>
+      <!-- 要確認: 以下は競合が軒並み掲載していて効果の高い設問です。
+           学校に回答をご確認のうえ、コメントを外して公開してください。
+
+        Q. 参加したら、栃美を受験しないといけませんか？
+           A案「いいえ。進路を決める前の情報収集としてご参加ください。」
+           ※ 資生堂美容技術専門学校はこの設問をFAQの上位に置いています。
+             比較検討層の心理的障壁を外す定番の設問です。
+
+        Q. 服装は自由ですか？（制服・私服いずれでもよいか）
+        Q. 持ち物は必要ですか？（筆記用具の要否など）
+        Q. 何度でも参加できますか？
+           ※ 現行の申込ページには「複数日のお申し込みが可能です」とあります。
+        Q. 車で行けますか？駐車場はありますか？
+      -->
+    </section>
+    <section class="section" id="topics">
+      <div class="news-row">
+        <h2 class="label">TOPICS</h2>
+        <div class="news-list">
+          <span>2026.08.06 夏季休業日のご案内</span>
+          <span>2026.07.21 2026 AO入試2次エントリー 開始</span>
+          <span>2026.06.26 接遇・マナーディレクター検定</span>
+        </div>
+        <a class="btn dark" href="/topics">MORE <span>→</span></a>
+      </div>
+    </section>
     <section class="access" id="access">
       <div>
         <h2>ACCESS</h2>
@@ -1359,8 +2120,8 @@
       <h2>CONTACT</h2>
       <p>オープンキャンパス予約、資料請求、学費資料、個別相談はこちらから。</p>
       <div class="contact-box">
-        <a class="contact-item" href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt=""><span>8/18 オープンキャンパスを予約する</span><span>→</span></a>
-        <a class="contact-item" href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt=""><span>資料請求をする</span><span>→</span></a>
+        <a class="contact-item" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt=""><span data-oc-tpl="{date} オープンキャンパスを予約する">オープンキャンパスを予約する</span><span>→</span></a>
+        <a class="contact-item" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt=""><span>資料請求をする</span><span>→</span></a>
         <a class="contact-item" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/bosyuyouko.pdf"><img src="/assets/tochibi/icon_shiryo.png" alt=""><span>募集要項PDFを見る</span><span>↗</span></a>
         <a class="contact-item" href="https://tochibi.ac.jp/contact/"><img src="/assets/tochibi/icon_contact.png" alt=""><span>個別相談・お問い合わせ</span><span>→</span></a>
       </div>
@@ -1375,42 +2136,13 @@
         <p>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.028-651-5210</p>
       </div>
       <div class="footer-nav">
-        <a href="/">HOME</a><a href="/opencampus">OC</a><a href="/topics">TOPICS</a><a href="#schedule">SCHEDULE</a><a href="#why">WHY</a><a href="/curriculum">COURSE</a><a href="#access">ACCESS</a><a href="/contact">CONTACT</a><a href="#top">PAGE TOP</a>
+        <a href="/">HOME</a><a href="#schedule">SCHEDULE</a><a href="#flow">FLOW</a><a href="#perks">SUPPORT</a><a href="#parent">保護者の方へ</a><a href="#faq">FAQ</a><a href="/curriculum">COURSE</a><a href="/topics">TOPICS</a><a href="#access">ACCESS</a><a href="/contact">CONTACT</a><a href="#top">PAGE TOP</a>
       </div>
     </footer>
-    <script>
-      (() => {
-        const root = document.getElementById("tochibi-oc-wireframe");
-        const buttons = [...root.querySelectorAll(".keyword .tag[data-filter]")];
-        const cards = [...root.querySelectorAll("[data-filter-grid] .card")];
-        const status = root.querySelector(".filter-status");
-        const labels = {
-          all: "すべてのおすすめコンテンツを表示しています。",
-          "open-campus": "オープンキャンパス関連のコンテンツを表示しています。",
-          tochibi: "栃美の特徴がわかるコンテンツを表示しています。",
-          hair: "ヘア体験・カリキュラムに関するコンテンツを表示しています。",
-          makeup: "メイク体験にもつながるコンテンツを表示しています。",
-          nail: "ネイル体験にもつながるコンテンツを表示しています。",
-          parent: "保護者相談に関するコンテンツを表示しています。",
-          tuition: "学費支援・入学相談に関するコンテンツを表示しています。"
-        };
-
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const filter = button.dataset.filter;
-            buttons.forEach((item) => item.classList.toggle("is-active", item === button));
-            cards.forEach((card) => {
-              const tags = (card.dataset.tags || "").split(/\s+/);
-              card.classList.toggle("is-hidden", filter !== "all" && !tags.includes(filter));
-            });
-            if (status) status.textContent = labels[filter] || labels.all;
-            if (matchMedia("(max-width: 860px)").matches) {
-              root.querySelector("[data-filter-grid]")?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-          });
-        });
-      })();
-    </script>
+    <div class="sticky-cta" data-sticky-cta>
+      <a class="sc-main" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約">オープンキャンパスを予約</span><small data-oc="time">&nbsp;</small></a>
+      <a class="sc-sub" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><span>資料請求</span><small>無料</small></a>
+    </div>
   </div>
 </div>
 </body>
