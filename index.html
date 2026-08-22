@@ -1508,6 +1508,88 @@
       line-height: 1.75;
       color: var(--to-muted);
     }
+    #tochibi-oc-wireframe .stampcard {
+      margin-top: 14px;
+      padding: 28px 26px;
+      background: var(--to-panel);
+      border: 2px solid var(--to-pink);
+    }
+    #tochibi-oc-wireframe .stampcard-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    #tochibi-oc-wireframe .stampcard-head .ico {
+      font-size: 30px;
+      color: var(--to-pink);
+      margin-top: 2px;
+    }
+    #tochibi-oc-wireframe .stampcard-head b {
+      display: block;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+    #tochibi-oc-wireframe .stampcard-head span {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .stampcard-tiers {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin: 20px 0 0;
+      padding: 0;
+    }
+    #tochibi-oc-wireframe .stampcard-tiers li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 16px 18px;
+      background: var(--to-bg);
+      border: 1px solid var(--to-line);
+    }
+    #tochibi-oc-wireframe .stampcard-tiers b {
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    #tochibi-oc-wireframe .stampcard-tiers em {
+      font-style: normal;
+      font-size: 30px;
+      line-height: 1;
+      color: var(--to-pink);
+      margin: 0 2px;
+    }
+    #tochibi-oc-wireframe .stampcard-tiers span {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+    #tochibi-oc-wireframe .stampcard-notes {
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+    #tochibi-oc-wireframe .stampcard-notes li {
+      position: relative;
+      padding-left: 1.2em;
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--to-muted);
+    }
+    #tochibi-oc-wireframe .stampcard-notes li::before {
+      content: "※";
+      position: absolute;
+      left: 0;
+    }
+    #tochibi-oc-wireframe .stampcard-notes b {
+      font-weight: 900;
+      color: var(--to-ink);
+    }
 
     /* ---------- 08 保護者の方へ ---------- */
     #tochibi-oc-wireframe .parent {
@@ -1841,6 +1923,7 @@
     <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6.2 3h7.6l4 4v14H6.2Z"/><path d="M13.8 3v4h4"/><path d="M9.2 12.2h5.6"/><path d="M9.2 15.5h5.6"/><path d="M9.2 18.8h3.4"/></symbol>
     <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6.4" cy="17.6" r="2.6"/><circle cx="6.4" cy="6.4" r="2.6"/><path d="M8.6 8.1 19 18.4"/><path d="M8.6 15.9 19 5.6"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.9v5.4l3.3 2"/></symbol>
+    <symbol id="i-stamp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="5.2"/><path d="m9.8 12.1 1.6 1.7 3-3.4"/></symbol>
   </svg>
   <div class="page" id="top">
     <nav class="side-nav" aria-label="ページナビゲーション">
@@ -1935,6 +2018,25 @@
         <div class="perk"><svg class="ico"><use href="#i-friends"></use></svg><div><b>友達・保護者との参加OK</b><span>おひとりでも、どなたとご一緒でも参加できます。</span></div></div>
         <div class="perk"><svg class="ico"><use href="#i-chat"></use></svg><div><b>在校生と話せる</b><span>授業や学校生活のことを直接聞けます。</span></div></div>
         <div class="perk"><svg class="ico"><use href="#i-doc"></use></svg><div><b>入試・学費の相談ができる</b><span>入試の種類、学費、奨学金、修学支援制度についてご相談いただけます。</span></div></div>
+      </div>
+      <!-- 受験手数料の免除制度。公式日程表（img_opcamp.png）の「特典内容」ブロックに準拠。 -->
+      <div class="stampcard">
+        <div class="stampcard-head">
+          <svg class="ico" aria-hidden="true"><use href="#i-stamp"></use></svg>
+          <div>
+            <b>参加するとスタンプがたまります</b>
+            <span>体験入学やイベントに参加してスタンプを集めると、「受験手数料」が免除になります。</span>
+          </div>
+        </div>
+        <ul class="stampcard-tiers">
+          <li><b>スタンプ<em>3</em>個</b><span>受験手数料が半額免除</span></li>
+          <li><b>スタンプ<em>5</em>個</b><span>受験手数料が全額免除</span></li>
+        </ul>
+        <ul class="stampcard-notes">
+          <li>保護者説明会（学校・奨学金）の同時開催日は<b>スタンプ2倍day</b>、栃美ビューティーフェスタ開催日は<b>スタンプ3倍day</b>です。</li>
+          <li>「AO入試対策講座」を受講すると、AO入試時の課題が免除になります。</li>
+          <li>スタンプは次年度へ持ち越せます。</li>
+        </ul>
       </div>
       <!-- 要確認: 交通費サポートの対象エリアと金額。
            東京ベルエポックは栃木県在住者に3,000円（特定日は最大10,000円）を県別の金額表で公開しています。

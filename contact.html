@@ -27,7 +27,7 @@
   <header class="site-header">
     <a href="/"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></a>
     <nav><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/contact">CONTACT</a></nav>
-    <a class="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
+    <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main>
     <section class="page-hero hero-contact">
@@ -37,10 +37,11 @@
     </section>
     <section class="section contact-list">
       <h2>お問い合わせ</h2>
-      <a href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt="">オープンキャンパス予約<span>→</span></a>
-      <a href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt="">資料請求<span>→</span></a>
-      <a href="https://tochibi.ac.jp/contact/"><img src="/assets/tochibi/icon_contact.png" alt="">個別相談・お問い合わせ<span>→</span></a>
+      <a data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt="">オープンキャンパス予約<span>→</span></a>
+      <a data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt="">資料請求<span>→</span></a>
+      <a data-oc-href="contact" href="https://tochibi.ac.jp/contact/"><img src="/assets/tochibi/icon_contact.png" alt="">個別相談・お問い合わせ<span>→</span></a>
     </section>
+    <section class="cta"><h2>次回のオープンキャンパス</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパス予約</span></a></section>
   </main>
 </body>
 </html>
