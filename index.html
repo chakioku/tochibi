@@ -72,7 +72,12 @@
       width: 100%;
       max-width: none;
       margin: 0;
+      /* 装飾要素の横はみ出しを切る。overflow:hidden はスクロールコンテナを作るため
+         子孫の position:sticky（.side-nav / .topbar）が効かなくなる。
+         clip はスクロールコンテナを作らないので sticky が正しく効く。
+         未対応ブラウザは上段の hidden にフォールバックする。 */
       overflow: hidden;
+      overflow: clip;
     }
     #tochibi-oc-wireframe * { box-sizing: border-box; }
     #tochibi-oc-wireframe img { max-width: 100%; }
@@ -894,6 +899,24 @@
         border-left: 1px solid var(--to-line);
         border-right: 1px solid var(--to-line);
         cursor: pointer;
+      }
+      /* チェックボックスを display:none にすると支援技術・キーボードから
+         到達できなくなるため、視覚的にだけ隠してフォーカス可能な状態を保つ。 */
+      #tochibi-oc-wireframe .menu-check {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+      #tochibi-oc-wireframe .menu-check:focus-visible + .menu-toggle {
+        outline: 3px solid var(--to-blue);
+        outline-offset: -4px;
       }
       #tochibi-oc-wireframe .menu-toggle span,
       #tochibi-oc-wireframe .menu-toggle span::before,
@@ -1928,8 +1951,8 @@
   <div class="page" id="top">
     <nav class="side-nav" aria-label="ページナビゲーション">
       <div class="logo-rail"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></div>
-      <input class="menu-check" type="checkbox" id="tochibi-sp-menu">
-      <label class="menu-toggle" for="tochibi-sp-menu" aria-label="メニューを開閉"><span></span></label>
+      <input class="menu-check" type="checkbox" id="tochibi-sp-menu" aria-label="メニューを開閉">
+      <label class="menu-toggle" for="tochibi-sp-menu"><span></span></label>
       <ul class="side-menu">
         <li><a href="#home">HOME</a></li>
         <li><a href="#schedule">SCHEDULE</a></li>

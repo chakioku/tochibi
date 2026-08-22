@@ -262,6 +262,28 @@
     });
   }
 
+  /* ---------- 7. SPメニューの開閉補助 ---------- */
+  /* 開閉自体はCSS（チェックボックス）で完結しています。
+     ただしCSSだけだとメニュー内のリンクを押しても開いたままになるため、
+     リンク押下時とEscキーで閉じる処理だけをJSで補います。
+     JSが落ちても開閉そのものは動きます。 */
+  function initMenu(root) {
+    var check = root.querySelector(".menu-check");
+    var menu = root.querySelector(".side-menu");
+    if (!check || !menu) return;
+
+    menu.addEventListener("click", function (e) {
+      if (e.target && e.target.closest && e.target.closest("a")) check.checked = false;
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && check.checked) {
+        check.checked = false;
+        check.focus();
+      }
+    });
+  }
+
   /* ---------- 起動 ---------- */
   function boot() {
     var root = document.getElementById("tochibi-oc-wireframe") || document.body;
@@ -271,6 +293,7 @@
     initFilter(root);
     initStickyCta(root);
     initFaq(root);
+    initMenu(root);
     root.setAttribute("data-oc-ready", "true");
   }
 
