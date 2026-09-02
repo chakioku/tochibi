@@ -43,10 +43,62 @@
   }
   </script>
 
+  <!-- ============================================================
+       Google タグマネージャー
+       GTM-XXXXXXX を発行済みのコンテナIDに置き換え、
+       下2箇所（head / body冒頭）のコメントを外してください。
+       予約・資料請求は外部サイト（r-shingaku.com）へ遷移するため、
+       assets/js/oc.js が dataLayer に cta_click イベントを送っています。
+       GTM側で「カスタムイベント: cta_click」をトリガーにGA4イベントを設定してください。
+       送信されるパラメータ: cta_type（reserve/request/contact/pdf）, cta_label, cta_url
+       ============================================================ -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+
+  <!-- FAQ構造化データ。画面のFAQと必ず同じ内容にしてください（不一致はGoogleの違反になります） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "一人で参加しても大丈夫ですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "もちろん大丈夫です。初めての方も安心して参加できます。" }
+      },
+      {
+        "@type": "Question",
+        "name": "保護者も一緒に参加できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "はい、ご一緒に参加いただけます。当日は学費や奨学金、就職についての個別相談も承っています。" }
+      },
+      {
+        "@type": "Question",
+        "name": "友達と一緒に参加できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "はい、お友達との参加も歓迎しています。おひとりでの参加ももちろん大丈夫です。" }
+      },
+      {
+        "@type": "Question",
+        "name": "参加費はかかりますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "かかりません。参加費は無料です。遠方からお越しの方を対象とした交通費サポートもあります。" }
+      },
+      {
+        "@type": "Question",
+        "name": "何を体験できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "回によって内容は変わりますが、さまざまな実習カリキュラムを体験していただけます。ヘア、メイク、ネイルなど、美容学校ならではの授業に触れられます。" }
+      }
+    ]
+  }
+  </script>
+
   <script src="/data/oc-schedule.js" defer></script>
   <script src="/assets/js/oc.js" defer></script>
 </head>
 <body>
+<!--
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 <div id="tochibi-oc-wireframe">
   <style>
     body:has(#tochibi-oc-wireframe) {
@@ -219,7 +271,7 @@
       position: absolute;
       left: 58px;
       bottom: 96px;
-      width: min(690px, calc(100% - 104px));
+      width: min(840px, calc(100% - 104px));
       z-index: 2;
     }
     #tochibi-oc-wireframe .outline {
@@ -239,8 +291,8 @@
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
       padding: 2px 18px 8px;
-      font-size: clamp(36px, 5.2vw, 66px);
-      line-height: 1.08;
+      font-size: clamp(32px, 4.4vw, 58px);
+      line-height: 1.12;
       font-weight: 900;
       letter-spacing: .01em;
       margin: 0;
@@ -650,7 +702,24 @@
       display: block;
       font-size: 30px;
       margin-bottom: 14px;
+      text-shadow: 0 2px 10px rgba(0,0,0,.55);
     }
+    /* 背景写真そのものに「TOCHIBI POINT」「Campus Life」等の文字が
+       焼き込まれているため、下側を強めに落として白文字の可読性を確保する。 */
+    #tochibi-oc-wireframe .info-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.26) 0 24%,
+        rgba(0,0,0,.80) 56%,
+        rgba(0,0,0,.90) 100%
+      );
+    }
+    #tochibi-oc-wireframe .info-panel > * { position: relative; z-index: 1; }
+    #tochibi-oc-wireframe .info-panel h3 { text-shadow: 0 2px 12px rgba(0,0,0,.45); }
     #tochibi-oc-wireframe .info-panel p {
       margin: 0 0 20px;
       line-height: 1.75;
@@ -675,25 +744,31 @@
     #tochibi-oc-wireframe .map-box {
       position: relative;
       min-height: 360px;
-      background:
-        linear-gradient(90deg, transparent 0 17%, rgba(255,255,255,.64) 17% 19%, transparent 19% 52%, rgba(255,255,255,.64) 52% 54%, transparent 54%),
-        linear-gradient(0deg, transparent 0 23%, rgba(255,255,255,.64) 23% 25%, transparent 25% 62%, rgba(255,255,255,.64) 62% 64%, transparent 64%),
-        #dce7ec;
       border: 1px solid var(--to-line);
+      background: #dce7ec;
+      overflow: hidden;
     }
-    #tochibi-oc-wireframe .map-box::before {
-      content: "宇都宮市宿郷2-10-11";
-      position: absolute;
-      left: 28px;
-      top: 26px;
-      background: #fff;
-      padding: 12px 18px;
-      font-weight: 900;
+    #tochibi-oc-wireframe .map-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+    }
+    #tochibi-oc-wireframe .tel-link {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+    #tochibi-oc-wireframe .access-note {
+      margin: 0 0 22px;
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--to-muted);
+      font-weight: 700;
     }
     #tochibi-oc-wireframe .pin {
-      position: absolute;
-      left: 54%;
-      top: 40%;
+      display: none;
       width: 34px;
       height: 34px;
       background: var(--to-pink);
@@ -769,6 +844,33 @@
       gap: 16px 26px;
       align-content: start;
     }
+    #tochibi-oc-wireframe .footer-sns {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+    #tochibi-oc-wireframe .footer-legal {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 22px;
+      margin-top: 8px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.18);
+      font-size: 12px;
+    }
+    #tochibi-oc-wireframe .footer-legal a { border-bottom: 1px solid rgba(255,255,255,.5); }
+    #tochibi-oc-wireframe .footer-legal small {
+      margin-left: auto;
+      font-weight: 400;
+      color: rgba(255,255,255,.66);
+    }
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .footer-legal { gap: 10px 16px; }
+      #tochibi-oc-wireframe .footer-legal small { margin-left: 0; width: 100%; }
+    }
     @keyframes toHeroPan {
       0%, 100% { transform: scale(1) translateX(0); }
       50% { transform: scale(1.045) translateX(-18px); }
@@ -835,7 +937,7 @@
       #tochibi-oc-wireframe .hero-copy {
         left: 42px;
         bottom: 70px;
-        width: min(620px, calc(100% - 84px));
+        width: min(700px, calc(100% - 84px));
       }
       #tochibi-oc-wireframe .next-oc {
         right: 30px;
@@ -1049,9 +1151,11 @@
         position: static;
         writing-mode: horizontal-tb;
         display: inline-block;
-        margin-top: 12px;
+        margin: 0 8px 0 0;
+        padding: 7px 11px;
         border-left: 0;
         border: 1px solid var(--to-line);
+        font-size: 13px;
       }
       #tochibi-oc-wireframe .schedule-mask {
         overflow-x: auto;
@@ -1197,13 +1301,6 @@
         font-size: 15px;
         margin-bottom: 26px;
       }
-      #tochibi-oc-wireframe .map-box::before {
-        left: 12px;
-        right: 12px;
-        top: 12px;
-        text-align: center;
-        font-size: 13px;
-      }
       #tochibi-oc-wireframe .contact-item {
         grid-template-columns: 36px minmax(0, 1fr) 24px;
         font-size: 14px;
@@ -1348,9 +1445,20 @@
     }
     #tochibi-oc-wireframe .oc-card-date {
       display: flex;
+      flex-wrap: wrap;
       align-items: baseline;
       gap: 4px;
       line-height: 1;
+    }
+    /* 年をまたぐ回に添える西暦ラベル。翌年の回だけ「2027年」が付きます。 */
+    #tochibi-oc-wireframe .oc-yr {
+      flex: 0 0 100%;
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      white-space: nowrap;
+      color: var(--to-muted);
     }
     #tochibi-oc-wireframe .oc-card-date b {
       font-size: 46px;
@@ -1481,11 +1589,15 @@
     #tochibi-oc-wireframe .flow-list li:last-child::after { display: none; }
     #tochibi-oc-wireframe .flow-time {
       display: block;
+      min-height: 1.3em;
       font-size: 20px;
       font-weight: 900;
       font-variant-numeric: tabular-nums;
       margin-bottom: 4px;
     }
+    /* 時刻が未確定のステップ。学校さまから時刻をいただいたら
+       is-tbd の span を <span class="flow-time">11:00</span> の形に置き換えてください。 */
+    #tochibi-oc-wireframe .flow-time.is-tbd { visibility: hidden; }
     #tochibi-oc-wireframe .flow-list h3 {
       margin: 0 0 6px;
       font-size: 16px;
@@ -1503,7 +1615,7 @@
     #tochibi-oc-wireframe .perks {
       position: relative;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
       gap: 14px;
     }
     #tochibi-oc-wireframe .perk {
@@ -1931,10 +2043,10 @@
 
     /* 濃紺セクション内の白ボタンは文字色を戻す（白地に白文字を防ぐ） */
     #tochibi-oc-wireframe .parent .btn.light { color: var(--to-ink); }
-    /* KV画像に OPEN CAMPUS! の文字が入っているため、モバイルでは見出しの重複を避ける */
-    @media (max-width: 860px) {
-      #tochibi-oc-wireframe .hero-copy .outline { display: none; }
-    }
+    /* KV画像に OPEN CAMPUS! の文字が焼き込まれているため、
+       袋文字の .outline と二重になる。全幅で非表示にする。
+       KVを文字なしの画像に差し替える場合は、この1行を外せば復活します。 */
+    #tochibi-oc-wireframe .hero-copy .outline { display: none; }
   </style>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7.8" r="3.3"/><path d="M5.5 20.2c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></symbol>
@@ -2023,8 +2135,8 @@
       <ol class="flow-list">
         <li><span class="flow-time">9:30</span><h3>受付</h3><p>校舎で受付をして、その日の流れをご案内します。</p></li>
         <li><span class="flow-time">10:00</span><h3>学校説明</h3><p>栃美の特色、カリキュラム、資格と就職についてご説明します。</p></li>
-        <li><h3>実習体験</h3><p>美容学校ならではの実習カリキュラムを体験していただきます。</p></li>
-        <li><h3>在校生と交流</h3><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
+        <li><span class="flow-time is-tbd" aria-hidden="true">&nbsp;</span><h3>実習体験</h3><p>美容学校ならではの実習カリキュラムを体験していただきます。</p></li>
+        <li><span class="flow-time is-tbd" aria-hidden="true">&nbsp;</span><h3>在校生と交流</h3><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
         <li><span class="flow-time">12:00</span><h3>個別相談・解散</h3><p>入試、学費、奨学金、修学支援制度について個別にご相談いただけます。</p></li>
       </ol>
       <!-- 公式日程表より: 受付9:30〜／プログラム10:00〜12:00頃（体験入学・学校説明会・進路相談）。
@@ -2081,24 +2193,24 @@
       <p class="filter-status" aria-live="polite">すべてのおすすめコンテンツを表示しています。</p>
       <div class="card-grid" data-filter-grid>
         <a class="card" href="/opencampus" data-tags="all open-campus tochibi hair makeup nail">
-          <span class="category">#OC</span>
           <div class="card-img hairshow"></div>
+          <span class="category">#OC</span>
           <span class="tag">#SPECIAL</span>
           <h3>栃美ビューティーフェスタ</h3>
           <p>年に一度のビッグイベント。ヘアメイクやステージを通して、美容の楽しさを体験できます。</p>
           <span class="corner-arrow"></span>
         </a>
         <a class="card" href="/curriculum" data-tags="all open-campus tochibi hair makeup nail">
-          <span class="category">#LESSON</span>
           <div class="card-img curriculum"></div>
+          <span class="category">#LESSON</span>
           <span class="tag">#CURRICULUM</span>
           <h3>実習の雰囲気がわかる体験授業</h3>
           <p>カット、カラー、シャンプー、メイクなど、美容学校ならではの体験ができます。</p>
           <span class="corner-arrow"></span>
         </a>
         <a class="card" href="/admissions" data-tags="all open-campus parent tuition tochibi">
-          <span class="category">#PARENT</span>
           <div class="card-img adinfo"></div>
+          <span class="category">#PARENT</span>
           <span class="tag">#SUPPORT</span>
           <h3>保護者向け相談を同時開催</h3>
           <p>学費、奨学金、修学支援制度、就職まで、親子で気軽に相談できます。</p>
@@ -2237,10 +2349,13 @@
     <section class="access" id="access">
       <div>
         <h2>ACCESS</h2>
-        <p>栃木県美容専門学校<br>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.028-651-5210</p>
+        <p>栃木県美容専門学校<br>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.<a class="tel-link" href="tel:0286515210">028-651-5210</a></p>
+        <!-- 要確認: 宇都宮駅からの所要時間・徒歩分数・駐車場の有無を学校さまに確認のうえ、
+             下の access-note に記載してください。
+        <p class="access-note">JR宇都宮駅東口から徒歩◯分／駐車場◯台</p> -->
         <a class="btn dark" href="/contact">VIEW DETAIL <span>→</span></a>
       </div>
-      <div class="map-box"><span class="pin"></span></div>
+      <div class="map-box"><iframe class="map-frame" title="栃木県美容専門学校の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E5%AE%BF%E9%83%B72-10-11&hl=ja&z=17&output=embed"></iframe></div>
     </section>
     <section class="contact" id="contact">
       <h2>CONTACT</h2>
@@ -2259,10 +2374,17 @@
     <footer class="footer">
       <div>
         <img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校">
-        <p>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.028-651-5210</p>
+        <p>〒321-0945<br>栃木県宇都宮市宿郷2-10-11<br>TEL.<a class="tel-link" href="tel:0286515210">028-651-5210</a></p>
+        <a class="footer-sns" href="https://www.instagram.com/tochibi1958" target="_blank" rel="noopener">Instagram @tochibi1958</a>
       </div>
       <div class="footer-nav">
         <a href="/">HOME</a><a href="#schedule">SCHEDULE</a><a href="#flow">FLOW</a><a href="#perks">SUPPORT</a><a href="/parents">保護者の方へ</a><a href="/admissions">学費・奨学金</a><a href="#faq">FAQ</a><a href="/curriculum">COURSE</a><a href="/topics">TOPICS</a><a href="#access">ACCESS</a><a href="/contact">CONTACT</a><a href="#top">PAGE TOP</a>
+      </div>
+      <div class="footer-legal">
+        <!-- 要確認: プライバシーポリシーのURLを学校さまに確認のうえ、下のリンクを有効にしてください。
+        <a href="https://tochibi.ac.jp/privacy/">プライバシーポリシー</a> -->
+        <a href="https://tochibi.ac.jp/" target="_blank" rel="noopener">栃木県美容専門学校 公式サイト</a>
+        <small>&copy; 栃木県美容専門学校 All Rights Reserved.</small>
       </div>
     </footer>
     <div class="sticky-cta" data-sticky-cta>

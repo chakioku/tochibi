@@ -35,10 +35,15 @@
   var events = data.events
     .map(function (e) {
       var d = new Date(e.date + "T00:00:00");
+      /* 年をまたぐ回（例: 9月時点で見る翌年1/23）は「2027年」を添えて誤解を防ぐ。
+         同じ年の回には付けない。 */
+      var crossYear = d.getFullYear() !== today.getFullYear();
       return {
         raw: e,
         d: d,
         md: (d.getMonth() + 1) + "/" + d.getDate(),
+        yr: d.getFullYear(),
+        crossYear: crossYear,
         wd: WD[d.getDay()],
         iso: e.date,
         status: STATUS[e.status] || STATUS.open
@@ -54,7 +59,8 @@
     var values = next
       ? {
           "date-md":   next.md,
-          "date-full": next.md + "（" + next.wd + "）",
+          "date-full": (next.crossYear ? next.yr + "年" : "") +
+                       next.md + "（" + next.wd + "）",
           "date-long": next.d.getFullYear() + "年" + (next.d.getMonth() + 1) + "月" +
                        next.d.getDate() + "日（" + next.wd + "）",
           "title":     next.raw.title,
@@ -130,6 +136,7 @@
           ' data-tags="' + tags + '">' +
           (i === 0 ? '<span class="oc-next-flag">NEXT</span>' : "") +
           '<div class="oc-card-date">' +
+            (e.crossYear ? '<span class="oc-yr">' + e.yr + "年</span>" : "") +
             '<b>' + e.md + "</b>" +
             '<span class="oc-wd">（' + e.wd + "）</span>" +
           "</div>" +
@@ -284,6 +291,35 @@
     });
   }
 
+  /* ---------- 8. 外部CTAクリックの計測 ---------- */
+  /* 予約・資料請求・PDFは外部サイトへ遷移するため、遷移前に dataLayer へ
+     cta_click を積む。GTMが未設置でも window.dataLayer に溜まるだけで、
+     エラーにはならない。GTM側で「カスタムイベント: cta_click」を
+     トリガーにGA4イベントを作成してください。 */
+  function initTracking(root) {
+    window.dataLayer = window.dataLayer || [];
+    root.addEventListener("click", function (ev) {
+      var a = ev.target && ev.target.closest && ev.target.closest("a[href]");
+      if (!a) return;
+      var href = a.getAttribute("href") || "";
+      if (href.indexOf("http") !== 0) return;
+
+      var type = a.getAttribute("data-oc-href");
+      if (!type) {
+        if (href.indexOf("/form/3522/") > -1) type = "reserve";
+        else if (href.indexOf("/form/3028/") > -1) type = "request";
+        else if (href.slice(-4).toLowerCase() === ".pdf") type = "pdf";
+        else type = "outbound";
+      }
+      window.dataLayer.push({
+        event: "cta_click",
+        cta_type: type,
+        cta_label: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 60),
+        cta_url: href
+      });
+    }, true);
+  }
+
   /* ---------- 起動 ---------- */
   function boot() {
     var root = document.getElementById("tochibi-oc-wireframe") || document.body;
@@ -294,6 +330,7 @@
     initStickyCta(root);
     initFaq(root);
     initMenu(root);
+    initTracking(root);
     root.setAttribute("data-oc-ready", "true");
   }
 
