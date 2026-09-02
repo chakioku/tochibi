@@ -36,14 +36,20 @@
 <body>
   <header class="site-header">
     <a href="/"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></a>
-    <nav><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/contact">CONTACT</a></nav>
+    <nav aria-label="サイト内ナビゲーション"><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/admissions">学費・奨学金</a><a href="/parents">保護者の方へ</a><a href="/topics">TOPICS</a><a href="/contact" aria-current="page">CONTACT</a></nav>
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main>
+    <nav class="crumb" aria-label="パンくずリスト">
+      <a href="/">オープンキャンパス特設サイト</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">お問い合わせ</span>
+    </nav>
     <section class="page-hero hero-contact">
       <p class="eyebrow">CONTACT</p>
       <h1>知りたいことを、すぐ相談。</h1>
       <p>オープンキャンパス、資料請求、個別相談、アクセス情報はこちらから。</p>
+      <div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input">資料請求</a></div>
     </section>
     <section class="section contact-list">
       <h2>お問い合わせ</h2>
@@ -52,6 +58,23 @@
       <a data-oc-href="contact" href="https://tochibi.ac.jp/contact/"><img src="/assets/tochibi/icon_contact.png" alt="">個別相談・お問い合わせ<span>→</span></a>
       <a href="/admissions"><img src="/assets/tochibi/icon_shiryo.png" alt="">学費・奨学金について<span>→</span></a>
       <a href="/parents"><img src="/assets/tochibi/icon_contact.png" alt="">保護者の方へ<span>→</span></a>
+    </section>
+    <section class="section" id="access">
+      <h2>アクセス</h2>
+      <div class="access-grid">
+        <div class="access-info">
+          <dl>
+            <div><dt>所在地</dt><dd>〒321-0945<br>栃木県宇都宮市宿郷2-10-11</dd></div>
+            <div><dt>電話</dt><dd><a href="tel:0286515210">028-651-5210</a></dd></div>
+            <div><dt>受付時間</dt><dd>平日 9:00〜17:00</dd></div>
+          </dl>
+          <!-- 要確認: 受付時間は暫定です。宇都宮駅からの所要時間・徒歩分数・駐車場の有無と
+               あわせて学校さまにご確認のうえ、上の dl に行を追加してください。
+            <div><dt>最寄り駅</dt><dd>JR宇都宮駅東口から徒歩◯分</dd></div>
+            <div><dt>駐車場</dt><dd>◯台</dd></div> -->
+        </div>
+        <div class="access-map"><iframe class="map-frame" title="栃木県美容専門学校の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E5%AE%BF%E9%83%B72-10-11&hl=ja&z=17&output=embed"></iframe></div>
+      </div>
     </section>
     <section class="cta"><h2>次回のオープンキャンパス</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパス予約</span></a></section>
   </main>

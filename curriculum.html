@@ -36,10 +36,15 @@
 <body>
   <header class="site-header">
     <a href="/"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></a>
-    <nav><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/contact">CONTACT</a></nav>
+    <nav aria-label="サイト内ナビゲーション"><a href="/opencampus">OC</a><a href="/curriculum" aria-current="page">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/admissions">学費・奨学金</a><a href="/parents">保護者の方へ</a><a href="/topics">TOPICS</a><a href="/contact">CONTACT</a></nav>
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main>
+    <nav class="crumb" aria-label="パンくずリスト">
+      <a href="/">オープンキャンパス特設サイト</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">カリキュラム</span>
+    </nav>
     <section class="page-hero hero-curriculum">
       <p class="eyebrow">CURRICULUM</p>
       <h1>美容の基礎から表現まで。</h1>
@@ -52,6 +57,9 @@
         <article><span>HAIR</span><h3>ヘアカリキュラム</h3><p>カット、カラー、ワインディングなど、美容師としての基礎技術を磨きます。</p></article>
         <article><span>EXPERT</span><h3>エキスパート</h3><p>現場を意識した応用力と接客力を身につけます。</p></article>
         <article><span>BEAUTY</span><h3>ビューティー</h3><p>メイク、ネイル、トータルビューティーの感性を伸ばします。</p></article>
+        <!-- 要確認: 4枚目の文言はTOPのFEATURES「美容師国家試験の基礎から撮影・ヘアメイクまで」
+             を根拠に暫定で記載しています。学校さまに正式な内容をご確認ください。 -->
+        <article><span>CREATIVE</span><h3>クリエイティブ</h3><p>撮影やヘアメイクなど、表現の幅を広げます。</p></article>
       </div>
     </section>
     <section class="cta"><h2>授業はOCで体験できます</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパス予約</span></a></section>

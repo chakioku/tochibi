@@ -36,14 +36,20 @@
 <body>
   <header class="site-header">
     <a href="/"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></a>
-    <nav><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/contact">CONTACT</a></nav>
+    <nav aria-label="サイト内ナビゲーション"><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife" aria-current="page">LIFE</a><a href="/admissions">学費・奨学金</a><a href="/parents">保護者の方へ</a><a href="/topics">TOPICS</a><a href="/contact">CONTACT</a></nav>
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main>
+    <nav class="crumb" aria-label="パンくずリスト">
+      <a href="/">オープンキャンパス特設サイト</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">キャンパスライフ</span>
+    </nav>
     <section class="page-hero hero-life">
       <p class="eyebrow">CAMPUS LIFE</p>
       <h1>美容を楽しむ毎日。</h1>
       <p>授業だけでなく、行事やコンテスト、Beauty Festaなど、仲間と成長できる時間があります。</p>
+      <div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" href="/opencampus">オープンキャンパス</a></div>
     </section>
     <section class="section">
       <h2>年間イベント</h2>

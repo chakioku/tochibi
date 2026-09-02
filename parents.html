@@ -36,10 +36,15 @@
 <body>
   <header class="site-header">
     <a href="/"><img src="/assets/tochibi/logo_main.png" alt="栃木県美容専門学校"></a>
-    <nav><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/contact">CONTACT</a></nav>
+    <nav aria-label="サイト内ナビゲーション"><a href="/opencampus">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/admissions">学費・奨学金</a><a href="/parents" aria-current="page">保護者の方へ</a><a href="/topics">TOPICS</a><a href="/contact">CONTACT</a></nav>
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main>
+    <nav class="crumb" aria-label="パンくずリスト">
+      <a href="/">オープンキャンパス特設サイト</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">保護者の方へ</span>
+    </nav>
     <section class="page-hero hero-admission" style="--hero:url('/assets/tochibi/img_campuslife.webp')">
       <p class="eyebrow">FOR PARENTS</p>
       <h1>2年間を、<br>先に見てください。</h1>
