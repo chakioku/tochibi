@@ -51,15 +51,83 @@
       <p>入試、イベント、在校生向け案内など、最新情報をまとめて掲載します。</p>
       <div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" href="/opencampus">オープンキャンパス</a></div>
     </section>
-    <section class="section list">
+    <section class="section" id="list">
       <h2>お知らせ</h2>
-      <!-- 要確認: 各お知らせのリンク先URLを学校さまに確認のうえ、
-           <div class="topic-row"> を <a href="URL"> に戻してください。 -->
-      <div class="topic-row"><time>2026.08.06</time><span>夏季休業日のご案内</span></div>
-      <div class="topic-row"><time>2026.07.21</time><span>2026 AO入試2次エントリー 開始</span></div>
-      <div class="topic-row"><time>2026.06.26</time><span>接遇・マナーディレクター検定</span></div>
-      <p class="list-more"><a class="btn dark" href="https://tochibi.ac.jp/" target="_blank" rel="noopener">公式サイトのお知らせを見る</a></p>
+      <p class="sec-lead">入試、イベント、在校生向けの案内など、栃美からの最新情報です。各記事は公式サイトで公開しています。</p>
+
+      <div class="topic-tabs" role="group" aria-label="カテゴリで絞り込む"><button class="topic-tab is-active" type="button" data-topic-filter="all">すべて</button><button class="topic-tab" type="button" data-topic-filter="topics">トピックス</button><button class="topic-tab" type="button" data-topic-filter="info">お知らせ</button><button class="topic-tab" type="button" data-topic-filter="event">イベント</button><button class="topic-tab" type="button" data-topic-filter="to_student">在校生へ</button><button class="topic-tab" type="button" data-topic-filter="etc">その他</button></div>
+      <p class="topic-status" aria-live="polite">すべてのお知らせを表示しています。</p>
+
+      <div class="topic-list" data-topic-list>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e5%a4%8f%e5%ad%a3%e4%bc%91%e6%a5%ad%e6%97%a5%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85%ef%bc%882026%e5%b9%b4%e5%ba%a6%ef%bc%89/" target="_blank" rel="noopener" data-topic-cat="info">
+          <time datetime="2026-08-06">2026.08.06<small>（木）</small></time>
+          <span class="topic-cat is-info">お知らせ</span>
+          <span class="topic-title">夏季休業日のご案内（2026年度）</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e7%86%8a%e6%9c%ac%e5%9c%b0%e9%9c%87%e5%bf%9c%e6%8f%b4%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8/" target="_blank" rel="noopener" data-topic-cat="info">
+          <time datetime="2026-08-01">2026.08.01<small>（土）</small></time>
+          <span class="topic-cat is-info">お知らせ</span>
+          <span class="topic-title">令和8年熊本地震のお見舞いについて</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/2026-ao%e5%85%a5%e8%a9%a62%e6%ac%a1%e3%82%a8%e3%83%b3%e3%83%88%e3%83%aa%e3%83%bc-%e9%96%8b%e5%a7%8b/" target="_blank" rel="noopener" data-topic-cat="info">
+          <time datetime="2026-07-21">2026.07.21<small>（火）</small></time>
+          <span class="topic-cat is-info">お知らせ</span>
+          <span class="topic-title">2026 AO入試2次エントリー 開始</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e6%8e%a5%e9%81%87%ef%bd%a5%e3%83%9e%e3%83%8a%e3%83%bc%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%82%bf%e3%83%bc%e6%a4%9c%e5%ae%9a/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-26">2026.06.26<small>（金）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">接遇･マナーディレクター検定</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e3%81%be%e3%81%a4%e6%af%9b%e3%82%a8%e3%82%af%e3%82%b9%e3%83%86%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%b3%e6%a4%9c%e5%ae%9a/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-24">2026.06.24<small>（水）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">まつ毛エクステンション検定</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e3%83%96%e3%83%ad%e3%83%bc%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%aa%e3%83%b3%e3%82%b0/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-23">2026.06.23<small>（火）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">ブロースタイリング</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/open-campus-2026-2/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-21">2026.06.21<small>（日）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">OPEN CAMPUS 2026</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e9%80%9a%e4%bf%a1%e8%aa%b2%e7%a8%8b3%e5%b9%b4%e7%94%9f%e3%82%b9%e3%82%af%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e9%96%8b%e5%a7%8b/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-18">2026.06.18<small>（木）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">通信課程 3年生スクーリング開始</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e9%80%9a%e4%bf%a1%e7%94%9f%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b%ef%bc%81%e3%80%80-earth-coiffure-beaute%e5%ae%87%e9%83%bd%e5%ae%ae%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-09">2026.06.09<small>（火）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">通信生をご紹介！ EARTH coiffure beaute宇都宮インターパーク店</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+        <a class="topic-row" href="https://tochibi.ac.jp/%e6%a0%a1%e5%86%85%e5%b0%b1%e8%81%b7%e3%82%ac%e3%82%a4%e3%83%80%e3%83%b3%e3%82%b9-3/" target="_blank" rel="noopener" data-topic-cat="topics">
+          <time datetime="2026-06-02">2026.06.02<small>（火）</small></time>
+          <span class="topic-cat is-topics">トピックス</span>
+          <span class="topic-title">校内就職ガイダンス</span>
+          <span class="topic-ext" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <p class="list-more">
+        <a class="btn dark" href="https://tochibi.ac.jp/category/topics/" target="_blank" rel="noopener">公式サイトで一覧を見る</a>
+      </p>
+      <p class="note-line">※ 本ページはオープンキャンパス特設サイトです。お知らせの本文は公式サイトに掲載しています。<br>
+        ※ 掲載しているのは 2026年08月06日 時点の最新10件です。記事の追加・更新は公式サイトが最新です。</p>
     </section>
+
     <section class="cta"><h2>オープンキャンパス開催中</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパス予約</span></a></section>
   </main>
   <footer class="site-footer">
@@ -74,8 +142,7 @@
       </nav>
     </div>
     <div class="sf-legal">
-      <!-- 要確認: プライバシーポリシーのURLを学校さまに確認のうえ、下のリンクを有効にしてください。
-      <a href="https://tochibi.ac.jp/privacy/">プライバシーポリシー</a> -->
+      <a href="https://tochibi.ac.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
       <a href="https://tochibi.ac.jp/" target="_blank" rel="noopener">栃木県美容専門学校 公式サイト</a>
       <small>&copy; 栃木県美容専門学校 All Rights Reserved.</small>
     </div>

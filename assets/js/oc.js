@@ -320,6 +320,43 @@
     }, true);
   }
 
+  /* ---------- 9. トピックスのカテゴリ絞り込み ---------- */
+  /* 記事は静的に書き出してあるため、JSが落ちても全件読める状態を保ちます。 */
+  function initTopics(root) {
+    var tabs = [].slice.call(root.querySelectorAll("[data-topic-filter]"));
+    var list = root.querySelector("[data-topic-list]");
+    if (!tabs.length || !list) return;
+    var status = root.querySelector(".topic-status");
+    var rows = [].slice.call(list.querySelectorAll("[data-topic-cat]"));
+
+    var empty = document.createElement("p");
+    empty.className = "topic-empty";
+    empty.hidden = true;
+    empty.textContent = "このカテゴリのお知らせは、この一覧にはまだありません。公式サイトでご確認ください。";
+    list.appendChild(empty);
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var key = tab.getAttribute("data-topic-filter");
+        tabs.forEach(function (t) { t.classList.toggle("is-active", t === tab); });
+
+        var shown = 0;
+        rows.forEach(function (row) {
+          var hit = key === "all" || row.getAttribute("data-topic-cat") === key;
+          row.classList.toggle("is-hidden", !hit);
+          if (hit) shown++;
+        });
+        empty.hidden = shown > 0;
+
+        if (status) {
+          status.textContent = key === "all"
+            ? "すべてのお知らせを表示しています。"
+            : "「" + tab.textContent + "」のお知らせを" + shown + "件表示しています。";
+        }
+      });
+    });
+  }
+
   /* ---------- 起動 ---------- */
   function boot() {
     var root = document.getElementById("tochibi-oc-wireframe") || document.body;
@@ -331,6 +368,7 @@
     initFaq(root);
     initMenu(root);
     initTracking(root);
+    initTopics(root);
     root.setAttribute("data-oc-ready", "true");
   }
 
