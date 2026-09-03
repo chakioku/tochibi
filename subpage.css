@@ -361,3 +361,7 @@ table.cost.cost-narrow{min-width:0}
 }
 .access-info .dd-note{display:block;margin-top:6px;font-size:12.5px;line-height:1.8;font-weight:700;color:#626262}
 .access-info .dd-note a{color:#1f6fb9;text-decoration:underline;text-underline-offset:2px}
+/* 対象者別セクション内のリンク一覧（section直下から div 配下へ変更した分の調整） */
+.contact-list a:last-child{border-bottom:0}
+.notice-box+.contact-list{margin-top:26px}
+.notice-box h3{margin:0 0 18px;font-size:clamp(19px,2.1vw,23px);line-height:1.45;font-weight:900}

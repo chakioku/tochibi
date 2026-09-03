@@ -51,29 +51,39 @@
       <p>オープンキャンパス、資料請求、個別相談、アクセス情報はこちらから。</p>
       <div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input">資料請求</a></div>
     </section>
-    <section class="section notice-sec">
-      <div class="notice-box">
-        <h2>学校へのお問い合わせについて</h2>
-        <p>教職員との個別のご相談については、平日業務内で承っております。</p>
-        <p>修学の状況など、ご心配な点がございましたら、公式アプリ、または下記「<a href="#form">お問い合わせフォーム</a>」よりお問合せください。</p>
-        <!-- 要確認: 「公式アプリ」の名称とリンク先（App Store / Google Play もしくは案内ページ）を
-             学校さまにご確認のうえ、上の「公式アプリ」をリンクにしてください。 -->
-        <p>なお、お電話での対応については、授業中での教職員対応ができませんので、「<a href="#form">お問い合わせフォーム</a>」よりあらかじめ相談内容と希望される時間をご連絡の上、学校より回答させていただきますので、ご理解とご協力をお願いいたします。</p>
+    <section class="section" id="for-applicants">
+      <h2>受験生・保護者の方へ</h2>
+      <p class="sec-lead">オープンキャンパスのご予約と資料請求は、専用フォームからのお申し込みが確実です。学校生活や入試、学費のご相談は、下の「<a href="#form">お問い合わせフォーム</a>」からお気軽にどうぞ。</p>
+      <div class="contact-list">
+        <a data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt="">オープンキャンパス予約<span>→</span></a>
+        <a data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt="">資料請求<span>→</span></a>
+        <a href="/admissions"><img src="/assets/tochibi/icon_shiryo.png" alt="">学費・奨学金について<span>→</span></a>
+        <a href="/parents"><img src="/assets/tochibi/icon_contact.png" alt="">保護者の方へ<span>→</span></a>
+        <a href="#form"><img src="/assets/tochibi/icon_contact.png" alt="">個別相談・お問い合わせ<span>→</span></a>
       </div>
     </section>
 
-    <section class="section contact-list">
-      <h2>お問い合わせ</h2>
-      <a data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><img src="/assets/tochibi/icon_opcampus.png" alt="">オープンキャンパス予約<span>→</span></a>
-      <a data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input"><img src="/assets/tochibi/icon_shiryo.png" alt="">資料請求<span>→</span></a>
-      <a data-oc-href="contact" href="https://tochibi.ac.jp/contact/"><img src="/assets/tochibi/icon_contact.png" alt="">個別相談・お問い合わせ<span>→</span></a>
-      <a href="/admissions"><img src="/assets/tochibi/icon_shiryo.png" alt="">学費・奨学金について<span>→</span></a>
-      <a href="/parents"><img src="/assets/tochibi/icon_contact.png" alt="">保護者の方へ<span>→</span></a>
+    <section class="section" id="for-students">
+      <h2>在校生・保護者の方へ</h2>
+      <div class="notice-box">
+        <h3>学校へのお問い合わせについて</h3>
+        <p>教職員との個別のご相談については、平日業務内で承っております。</p>
+        <p>修学の状況など、ご心配な点がございましたら、公式LINE、または下記「<a href="#form">お問い合わせフォーム</a>」よりお問合せください。</p>
+        <p>なお、お電話での対応については、授業中での教職員対応ができませんので、「<a href="#form">お問い合わせフォーム</a>」よりあらかじめ相談内容と希望される時間をご連絡の上、学校より回答させていただきますので、ご理解とご協力をお願いいたします。</p>
+      </div>
+      <div class="contact-list">
+        <!-- 要確認: 公式LINEの友だち追加URL（https://lin.ee/xxxxxxx 形式）を
+             学校さまにご確認のうえ、下の href を差し替えてください。
+             URLが判明するまではフォームへのアンカーにしてあります。 -->
+        <a href="#form" data-line-link><img src="/assets/tochibi/icon_contact.png" alt="">公式LINEで相談する<span>→</span></a>
+        <a href="#form"><img src="/assets/tochibi/icon_contact.png" alt="">お問い合わせフォームで相談する<span>→</span></a>
+      </div>
     </section>
+
     <section class="section" id="form">
       <h2>お問い合わせフォーム</h2>
       <p class="sec-lead">項目をご記入のうえ「入力内容を確認する」を押してください。確認画面で内容をご確認いただいてから送信します。</p>
-      <p class="form-note-top">オープンキャンパスのご予約と資料請求は、上の専用フォームからのお申し込みが確実です。こちらのフォームは、学校生活や入試、学費など個別のご相談にご利用ください。</p>
+      <p class="form-note-top">受験生・在校生どちらの方もご利用いただけます。オープンキャンパスのご予約と資料請求は、上の専用フォームからのお申し込みが確実です。</p>
 
       <form class="cform" data-contact-form novalidate>
         <div class="cform-row">
