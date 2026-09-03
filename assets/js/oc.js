@@ -357,6 +357,177 @@
     });
   }
 
+  /* ---------- 10. お問い合わせフォーム ---------- */
+  /* 送信先は Google Apps Script のウェブアプリです。
+     デプロイして得た /exec のURLを下の GAS_ENDPOINT に貼り付けてください。
+     手順は docs/contact-form-setup.md に記載しています。 */
+  var GAS_ENDPOINT = "";
+
+  function initContactForm(root) {
+    var form = root.querySelector("[data-contact-form]");
+    if (!form) return;
+
+    var confirmBox = root.querySelector("[data-form-confirm]");
+    var doneBox = root.querySelector("[data-form-done]");
+    var reviewList = root.querySelector("[data-form-review]");
+    var summary = root.querySelector("[data-form-error]");
+    var sendError = root.querySelector("[data-form-send-error]");
+    var sendBtn = root.querySelector("[data-form-send]");
+    var backBtn = root.querySelector("[data-form-back]");
+    var openedAt = Date.now();
+
+    var FIELDS = [
+      { name: "name",  label: "氏名",           empty: "氏名をご記入ください。" },
+      { name: "kana",  label: "フリガナ",       empty: "フリガナをご記入ください。",
+        test: function (v) { return /^[ァ-ヶー\u3000\s]+$/.test(v); },
+        bad: "フリガナは全角カタカナでご記入ください。" },
+      { name: "email", label: "メールアドレス", empty: "メールアドレスをご記入ください。",
+        test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+        bad: "メールアドレスの形式をご確認ください。" },
+      { name: "body",  label: "お問い合わせ内容", empty: "お問い合わせ内容をご記入ください。" }
+    ];
+
+    function fieldEl(name) { return form.elements[name]; }
+    function errEl(name) { return root.querySelector("#cf-" + name + "-err"); }
+
+    function setError(name, msg) {
+      var el = fieldEl(name), e = errEl(name);
+      if (el && el.setAttribute) el.setAttribute("aria-invalid", msg ? "true" : "false");
+      if (!e) return;
+      e.textContent = msg || "";
+      e.hidden = !msg;
+    }
+
+    function validate() {
+      var bad = [];
+      FIELDS.forEach(function (f) {
+        var v = (fieldEl(f.name).value || "").trim();
+        if (!v) { setError(f.name, f.empty); bad.push(f); return; }
+        if (f.test && !f.test(v)) { setError(f.name, f.bad); bad.push(f); return; }
+        setError(f.name, "");
+      });
+      var agree = fieldEl("agree");
+      var agreeErr = root.querySelector("#cf-agree-err");
+      if (!agree.checked) {
+        agreeErr.textContent = "プライバシーポリシーへの同意が必要です。";
+        agreeErr.hidden = false;
+        bad.push({ name: "agree" });
+      } else {
+        agreeErr.hidden = true;
+      }
+      return bad;
+    }
+
+    function collect() {
+      var g = form.querySelector('input[name="gender"]:checked');
+      return {
+        name:   fieldEl("name").value.trim(),
+        kana:   fieldEl("kana").value.trim(),
+        gender: g ? g.value : "未回答",
+        email:  fieldEl("email").value.trim(),
+        body:   fieldEl("body").value.trim(),
+        page:   location.href,
+        trap:   fieldEl("address2").value,
+        elapsed: Date.now() - openedAt
+      };
+    }
+
+    /* --- 入力 → 確認 --- */
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var bad = validate();
+      if (bad.length) {
+        summary.textContent = "ご記入いただけていない項目が" + bad.length + "件あります。内容をご確認ください。";
+        summary.hidden = false;
+        var first = fieldEl(bad[0].name);
+        if (first && first.focus) first.focus();
+        return;
+      }
+      summary.hidden = true;
+
+      var d = collect();
+      reviewList.innerHTML = "";
+      [["氏名", d.name], ["フリガナ", d.kana], ["性別", d.gender],
+       ["メールアドレス", d.email], ["お問い合わせ内容", d.body]].forEach(function (pair) {
+        var wrap = document.createElement("div");
+        var dt = document.createElement("dt"); dt.textContent = pair[0];
+        var dd = document.createElement("dd"); dd.textContent = pair[1];
+        wrap.appendChild(dt); wrap.appendChild(dd);
+        reviewList.appendChild(wrap);
+      });
+
+      form.hidden = true;
+      confirmBox.hidden = false;
+      sendError.hidden = true;
+      confirmBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    /* --- 確認 → 入力に戻る --- */
+    backBtn.addEventListener("click", function () {
+      confirmBox.hidden = true;
+      form.hidden = false;
+      form.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    /* --- 送信 --- */
+    sendBtn.addEventListener("click", function () {
+      var d = collect();
+
+      /* スパム対策: 隠しフィールドに入力がある、または開いてから3秒未満は送らない */
+      if (d.trap || d.elapsed < 3000) {
+        sendError.textContent = "送信できませんでした。お手数ですが、お電話（028-651-5210）でお問い合わせください。";
+        sendError.hidden = false;
+        return;
+      }
+
+      if (!GAS_ENDPOINT) {
+        sendError.textContent = "フォームの送信先が未設定です。管理者にお問い合わせください。";
+        sendError.hidden = false;
+        return;
+      }
+
+      sendBtn.disabled = true;
+      backBtn.disabled = true;
+      sendBtn.textContent = "送信しています…";
+      sendError.hidden = true;
+
+      /* Content-Type を text/plain にして CORS のプリフライトを避けます */
+      fetch(GAS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          name: d.name, kana: d.kana, gender: d.gender,
+          email: d.email, body: d.body, page: d.page
+        })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res || res.ok !== true) throw new Error((res && res.error) || "unknown");
+          confirmBox.hidden = true;
+          doneBox.hidden = false;
+          doneBox.focus();
+          doneBox.scrollIntoView({ behavior: "smooth", block: "start" });
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: "cta_click", cta_type: "contact_form", cta_label: "お問い合わせ送信" });
+        })
+        .catch(function () {
+          sendBtn.disabled = false;
+          backBtn.disabled = false;
+          sendBtn.textContent = "この内容で送信する";
+          sendError.textContent = "送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。解決しない場合は、お電話（028-651-5210）でお問い合わせください。";
+          sendError.hidden = false;
+        });
+    });
+
+    /* 入力し直したらその項目のエラーを消す */
+    FIELDS.forEach(function (f) {
+      fieldEl(f.name).addEventListener("input", function () { setError(f.name, ""); });
+    });
+    fieldEl("agree").addEventListener("change", function () {
+      root.querySelector("#cf-agree-err").hidden = true;
+    });
+  }
+
   /* ---------- 起動 ---------- */
   function boot() {
     var root = document.getElementById("tochibi-oc-wireframe") || document.body;
@@ -369,6 +540,7 @@
     initMenu(root);
     initTracking(root);
     initTopics(root);
+    initContactForm(root);
     root.setAttribute("data-oc-ready", "true");
   }
 

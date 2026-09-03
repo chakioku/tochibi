@@ -59,6 +59,109 @@
       <a href="/admissions"><img src="/assets/tochibi/icon_shiryo.png" alt="">学費・奨学金について<span>→</span></a>
       <a href="/parents"><img src="/assets/tochibi/icon_contact.png" alt="">保護者の方へ<span>→</span></a>
     </section>
+    <section class="section" id="form">
+      <h2>お問い合わせフォーム</h2>
+      <p class="sec-lead">項目をご記入のうえ「入力内容を確認する」を押してください。確認画面で内容をご確認いただいてから送信します。</p>
+      <p class="form-note-top">オープンキャンパスのご予約と資料請求は、上の専用フォームからのお申し込みが確実です。こちらのフォームは、学校生活や入試、学費など個別のご相談にご利用ください。</p>
+
+      <form class="cform" data-contact-form novalidate>
+        <div class="cform-row">
+          <label class="cform-label" for="cf-name">氏名<span class="req">必須</span></label>
+          <div class="cform-field">
+            <input type="text" id="cf-name" name="name" autocomplete="name" required
+                   aria-describedby="cf-name-err" placeholder="栃木 花子">
+            <p class="cform-err" id="cf-name-err" hidden></p>
+          </div>
+        </div>
+
+        <div class="cform-row">
+          <label class="cform-label" for="cf-kana">フリガナ<span class="req">必須</span></label>
+          <div class="cform-field">
+            <input type="text" id="cf-kana" name="kana" required
+                   aria-describedby="cf-kana-err cf-kana-help" placeholder="トチギ ハナコ">
+            <p class="cform-help" id="cf-kana-help">全角カタカナでご記入ください。</p>
+            <p class="cform-err" id="cf-kana-err" hidden></p>
+          </div>
+        </div>
+
+        <div class="cform-row">
+          <span class="cform-label" id="cf-gender-label">性別</span>
+          <div class="cform-field">
+            <div class="cform-radios" role="radiogroup" aria-labelledby="cf-gender-label">
+              <label><input type="radio" name="gender" value="男性"><span>男性</span></label>
+              <label><input type="radio" name="gender" value="女性"><span>女性</span></label>
+              <label><input type="radio" name="gender" value="回答しない"><span>回答しない</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="cform-row">
+          <label class="cform-label" for="cf-email">メールアドレス<span class="req">必須</span></label>
+          <div class="cform-field">
+            <input type="email" id="cf-email" name="email" autocomplete="email" inputmode="email" required
+                   aria-describedby="cf-email-err cf-email-help" placeholder="example@example.com">
+            <p class="cform-help" id="cf-email-help">迷惑メール対策の設定をされている場合は解除いただくか、<b>tochibi.ac.jp</b> のドメインからのメールを受け取れるよう、ドメイン指定受信の追加登録をお願いします。</p>
+            <p class="cform-err" id="cf-email-err" hidden></p>
+          </div>
+        </div>
+
+        <div class="cform-row">
+          <label class="cform-label" for="cf-body">お問い合わせ内容<span class="req">必須</span></label>
+          <div class="cform-field">
+            <textarea id="cf-body" name="body" rows="8" required
+                      aria-describedby="cf-body-err" placeholder="ご質問やご相談の内容をご記入ください。"></textarea>
+            <p class="cform-err" id="cf-body-err" hidden></p>
+          </div>
+        </div>
+
+        <div class="cform-row">
+          <span class="cform-label">個人情報の取り扱い<span class="req">必須</span></span>
+          <div class="cform-field">
+            <label class="cform-check">
+              <input type="checkbox" name="agree" required aria-describedby="cf-agree-err">
+              <span><a href="https://tochibi.ac.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します。</span>
+            </label>
+            <p class="cform-err" id="cf-agree-err" hidden></p>
+            <p class="cform-help">18歳未満の方は、保護者の方の同意を得たうえでご送信ください。</p>
+          </div>
+        </div>
+
+        <!-- スパム対策。人には見えず、入力されていたら送信を止めます。 -->
+        <div class="cform-trap" aria-hidden="true">
+          <label>ご住所<input type="text" name="address2" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <p class="cform-error-summary" data-form-error hidden role="alert"></p>
+
+        <div class="cform-actions">
+          <button type="submit" class="btn primary" data-form-submit>入力内容を確認する</button>
+        </div>
+      </form>
+
+      <!-- 確認画面 -->
+      <div class="cform-confirm" data-form-confirm hidden>
+        <h3>入力内容の確認</h3>
+        <p class="sec-lead">この内容で送信します。修正する場合は「入力に戻る」を押してください。</p>
+        <dl class="cform-review" data-form-review></dl>
+        <p class="cform-error-summary" data-form-send-error hidden role="alert"></p>
+        <div class="cform-actions">
+          <button type="button" class="btn light" data-form-back>入力に戻る</button>
+          <button type="button" class="btn primary" data-form-send>この内容で送信する</button>
+        </div>
+      </div>
+
+      <!-- 送信完了 -->
+      <div class="cform-done" data-form-done hidden tabindex="-1">
+        <h3>送信しました</h3>
+        <p>お問い合わせありがとうございます。ご記入いただいたメールアドレス宛に、受付内容の控えをお送りしました。</p>
+        <p>担当者より順次ご連絡いたします。数日たっても返信がない場合は、迷惑メールフォルダをご確認のうえ、お電話（<a href="tel:0286515210">028-651-5210</a>）でお問い合わせください。</p>
+        <div class="cform-actions">
+          <a class="btn dark" href="/">トップページへ戻る</a>
+          <a class="btn light" href="/opencampus">オープンキャンパスを見る</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="access">
       <h2>アクセス</h2>
       <div class="access-grid">
