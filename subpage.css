@@ -13,7 +13,7 @@ body{margin:0;background:#f4f4f0;color:#111;font-family:"Arial Narrow","Helvetic
    文字なしの写真素材をいただけたら、各行を
      .hero-career{--hero:url("/assets/tochibi/〇〇.webp")}
    の形に戻すだけで写真表示に切り替わります。 */
-.hero-oc{--hero:url("/assets/tochibi/kv-open-campus-collage.webp")}
+.hero-oc{--hero:url("/assets/tochibi/kv-main.webp")}
 .hero-curriculum{--hero:linear-gradient(150deg,#1f6fb9,#36c0b1)}
 .hero-career{--hero:linear-gradient(150deg,#0f3272,#1f6fb9)}
 .hero-life{--hero:linear-gradient(150deg,#e94686,#ff8c42)}
@@ -421,3 +421,18 @@ table.cost.cost-narrow{min-width:0}
 .pick img{min-height:0;aspect-ratio:3/2}.pick>div{padding:22px 20px 24px}.pick h3{font-size:20px}.pick p{font-size:14.5px}
 .training-list{grid-template-columns:1fr}
 }
+/* オープンキャンパス：写真付きカード・開催レポート */
+.cards article.has-img{padding:0;overflow:hidden}
+.cards article.has-img img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:22px}
+.cards article.has-img>span,.cards article.has-img>h3,.cards article.has-img>p{margin-left:28px;margin-right:28px}
+.cards article.has-img>p{margin-bottom:28px}
+.report-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.report{display:flex;flex-direction:column;background:#fff;box-shadow:0 12px 34px rgba(0,0,0,.06);transition:transform .2s}
+.report:hover{transform:translateY(-4px)}
+.report img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.report>div{padding:18px 22px 22px}
+.report time{font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#e94686}
+.report h3{margin:6px 0 8px;font-size:18px;line-height:1.5;font-weight:900}
+.report p{margin:0;font-size:13.5px;line-height:1.85;color:#555}
+@media(max-width:1024px){.report-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.report-grid{grid-template-columns:1fr}.cards article.has-img>span,.cards article.has-img>h3,.cards article.has-img>p{margin-left:22px;margin-right:22px}}
