@@ -91,6 +91,9 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&text=TOCHIBICampusLife&display=swap">
   <script src="/data/oc-schedule.js" defer></script>
   <script src="/assets/js/oc.js" defer></script>
 </head>
@@ -2048,6 +2051,155 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        袋文字の .outline と二重になる。全幅で非表示にする。
        KVを文字なしの画像に差し替える場合は、この1行を外せば復活します。 */
     #tochibi-oc-wireframe .hero-copy .outline { display: none; }
+
+    /* ---------- CAMPUS LIFE ---------- */
+    #tochibi-oc-wireframe .campus-life {
+      padding: 84px 6% 98px;
+      background: #fff;
+    }
+    #tochibi-oc-wireframe .cl-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+    #tochibi-oc-wireframe .cl-main {
+      position: relative;
+      min-height: 680px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 6% 48px;
+      color: #fff;
+      text-align: center;
+      background: url("/assets/tochibi/life/top-main.webp") center / cover no-repeat;
+    }
+    #tochibi-oc-wireframe .cl-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 38%, rgba(0,0,0,.52) 100%);
+    }
+    #tochibi-oc-wireframe .cl-main > * { position: relative; }
+    #tochibi-oc-wireframe .cl-title {
+      margin: 0 0 30px;
+      line-height: 1;
+      text-shadow: 0 4px 24px rgba(0,0,0,.35);
+    }
+    #tochibi-oc-wireframe .cl-title .cl-serif {
+      display: block;
+      font-family: "Playfair Display", "Didot", "Bodoni 72", "Times New Roman", serif;
+      font-size: clamp(56px, 8.4vw, 124px);
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    #tochibi-oc-wireframe .cl-title .cl-script {
+      display: block;
+      margin-top: -.42em;
+      font-family: "Great Vibes", "Snell Roundhand", "Segoe Script", cursive;
+      font-size: clamp(54px, 7.6vw, 112px);
+      font-weight: 400;
+    }
+    #tochibi-oc-wireframe .cl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(520px, 100%);
+      min-height: 64px;
+      padding: 0 30px 0 40px;
+      border-radius: 999px;
+      background: var(--to-pink);
+      color: #fff;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      box-shadow: 0 12px 28px rgba(233,70,134,.35);
+      transition: transform .2s;
+    }
+    #tochibi-oc-wireframe .cl-btn:hover { transform: translateY(-2px); }
+    #tochibi-oc-wireframe .cl-btn::after {
+      content: "";
+      border-left: 14px solid #fff;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+    }
+    #tochibi-oc-wireframe .cl-side {
+      position: relative;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      gap: 22px;
+      height: 680px;
+    }
+    #tochibi-oc-wireframe .cl-reel {
+      position: relative;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+      mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    }
+    #tochibi-oc-wireframe .cl-reel-track {
+      display: grid;
+      gap: 22px;
+      animation: toReel 36s linear infinite;
+    }
+    #tochibi-oc-wireframe .cl-reel img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    @keyframes toReel {
+      from { transform: translateY(0); }
+      to { transform: translateY(calc(-50% - 11px)); }
+    }
+    #tochibi-oc-wireframe .cl-check {
+      position: absolute;
+      left: -46px;
+      top: 46%;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 96px;
+      height: 96px;
+      border-radius: 50% 50% 50% 8px;
+      background: #a79c90;
+      color: #fff;
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    }
+    #tochibi-oc-wireframe .cl-links {
+      display: grid;
+      gap: 10px;
+    }
+    #tochibi-oc-wireframe .cl-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--to-line);
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    #tochibi-oc-wireframe .cl-links a span { color: var(--to-pink); font-size: 12px; letter-spacing: .08em; }
+    #tochibi-oc-wireframe .cl-links a.cl-insta { color: var(--to-pink); border-bottom: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      #tochibi-oc-wireframe .cl-reel-track { animation: none; }
+    }
+    @media (max-width: 860px) {
+      #tochibi-oc-wireframe .campus-life { padding: 58px 14px 64px; }
+      #tochibi-oc-wireframe .cl-grid { grid-template-columns: 1fr; gap: 26px; }
+      #tochibi-oc-wireframe .cl-main { min-height: 480px; padding: 0 18px 30px; }
+      #tochibi-oc-wireframe .cl-btn { min-height: 56px; padding: 0 22px 0 26px; font-size: 15px; letter-spacing: .1em; }
+      #tochibi-oc-wireframe .cl-side { height: auto; grid-template-rows: auto auto; }
+      #tochibi-oc-wireframe .cl-reel { -webkit-mask-image: none; mask-image: none; }
+      #tochibi-oc-wireframe .cl-reel-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; animation: none; }
+      #tochibi-oc-wireframe .cl-reel-track img.cl-dup { display: none; }
+      #tochibi-oc-wireframe .cl-check { display: none; }
+    }
   </style>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7.8" r="3.3"/><path d="M5.5 20.2c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></symbol>
@@ -2072,6 +2224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#flow">FLOW</a></li>
         <li><a href="#parent">PARENT</a></li>
         <li><a href="#why">WHY</a></li>
+        <li><a href="#campuslife">LIFE</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#access">ACCESS</a></li>
         <li><a href="#contact">CONTACT</a></li>
@@ -2293,6 +2446,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>入学式、レクリエーション、校外研修、栃美 Beauty Festa、校内美容技術コンクールなど、学校生活の楽しさを可視化。</p>
             <a class="btn dark" href="/campuslife">VIEW DETAIL <span>→</span></a>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="campus-life" id="campuslife">
+      <span class="sec-eyebrow">CAMPUS LIFE</span>
+      <h2 class="sec-title">キャンパスライフ</h2>
+      <div class="cl-grid">
+        <div class="cl-main" role="img" aria-label="仮装して集まる栃美の学生たち">
+          <p class="cl-title"><span class="cl-serif">TOCHIBI</span><span class="cl-script">Campus Life</span></p>
+          <a class="cl-btn" href="/campuslife">キャンパスライフを見る</a>
+        </div>
+        <div class="cl-side">
+          <div class="cl-reel"><div class="cl-reel-track"><img src="/assets/tochibi/life/top-side-1.webp" alt="ドレス姿で撮影に臨む学生" loading="lazy"><img src="/assets/tochibi/life/top-side-2.webp" alt="浴衣の着付けを学ぶ学生" loading="lazy"><img src="/assets/tochibi/life/top-side-3.webp" alt="ブライダルヘアメイクの撮影" loading="lazy"><img src="/assets/tochibi/life/top-side-4.webp" alt="校内イベントの様子" loading="lazy"><img class="cl-dup" src="/assets/tochibi/life/top-side-1.webp" alt="" aria-hidden="true" loading="lazy"><img class="cl-dup" src="/assets/tochibi/life/top-side-2.webp" alt="" aria-hidden="true" loading="lazy"><img class="cl-dup" src="/assets/tochibi/life/top-side-3.webp" alt="" aria-hidden="true" loading="lazy"><img class="cl-dup" src="/assets/tochibi/life/top-side-4.webp" alt="" aria-hidden="true" loading="lazy"></div></div>
+          <span class="cl-check" aria-hidden="true">Check!</span>
+          <nav class="cl-links" aria-label="キャンパスライフのページ">
+            <a href="/campuslife/schedule">年間行事 <span>SCHEDULE →</span></a>
+            <a href="/campuslife/special-training">特別講習 <span>SPECIAL TRAINING →</span></a>
+            <a href="/campuslife/campus-map">周辺マップ <span>CAMPUS MAP →</span></a>
+            <a class="cl-insta" href="https://www.instagram.com/tochibi1958" target="_blank" rel="noopener">Instagram @tochibi1958 <span>→</span></a>
+          </nav>
         </div>
       </div>
     </section>
