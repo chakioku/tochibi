@@ -27,6 +27,611 @@
       "source": "/3602-2",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/卒業生をご紹介！　re-fleur　in那須塩原",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%8d%92%e6%a5%ad%e7%94%9f%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b%ef%bc%81%e3%80%80re-fleur%e3%80%80in%e9%82%a3%e9%a0%88%e5%a1%a9%e5%8e%9f",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%8D%92%E6%A5%AD%E7%94%9F%E3%82%92%E3%81%94%E7%B4%B9%E4%BB%8B%EF%BC%81%E3%80%80re-fleur%E3%80%80in%E9%82%A3%E9%A0%88%E5%A1%A9%E5%8E%9F",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/__trashed",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/美容師国家試験-実技",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%be%8e%e5%ae%b9%e5%b8%ab%e5%9b%bd%e5%ae%b6%e8%a9%a6%e9%a8%93-%e5%ae%9f%e6%8a%80",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%BE%8E%E5%AE%B9%E5%B8%AB%E5%9B%BD%E5%AE%B6%E8%A9%A6%E9%A8%93-%E5%AE%9F%E6%8A%80",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/就職フェア　in高田馬場",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%b0%b1%e8%81%b7%e3%83%95%e3%82%a7%e3%82%a2%e3%80%80in%e9%ab%98%e7%94%b0%e9%a6%ac%e5%a0%b4",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%B0%B1%E8%81%B7%E3%83%95%E3%82%A7%E3%82%A2%E3%80%80in%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/実務実習説明会",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%ae%9f%e5%8b%99%e5%ae%9f%e7%bf%92%e8%aa%ac%e6%98%8e%e4%bc%9a",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%AE%9F%E5%8B%99%E5%AE%9F%E7%BF%92%E8%AA%AC%E6%98%8E%E4%BC%9A",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/ヘアメイクマーケティング-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%83%98%e3%82%a2%e3%83%a1%e3%82%a4%e3%82%af%e3%83%9e%e3%83%bc%e3%82%b1%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%83%98%E3%82%A2%E3%83%A1%E3%82%A4%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/美容師国家試験筆記-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%be%8e%e5%ae%b9%e5%b8%ab%e5%9b%bd%e5%ae%b6%e8%a9%a6%e9%a8%93%e7%ad%86%e8%a8%98-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%BE%8E%E5%AE%B9%E5%B8%AB%E5%9B%BD%E5%AE%B6%E8%A9%A6%E9%A8%93%E7%AD%86%E8%A8%98-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/昼間課程-第46期生-卒業式",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%98%bc%e9%96%93%e8%aa%b2%e7%a8%8b-%e7%ac%ac46%e6%9c%9f%e7%94%9f-%e5%8d%92%e6%a5%ad%e5%bc%8f",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%98%BC%E9%96%93%E8%AA%B2%E7%A8%8B-%E7%AC%AC46%E6%9C%9F%E7%94%9F-%E5%8D%92%E6%A5%AD%E5%BC%8F",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/就職レクチャー",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%b0%b1%e8%81%b7%e3%83%ac%e3%82%af%e3%83%81%e3%83%a3%e3%83%bc",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%B0%B1%E8%81%B7%E3%83%AC%E3%82%AF%E3%83%81%E3%83%A3%E3%83%BC",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/lush講習会-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/lush%e8%ac%9b%e7%bf%92%e4%bc%9a-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/lush%E8%AC%9B%E7%BF%92%E4%BC%9A-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/アロマ石けん作りにチャレンジ☆",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%82%a2%e3%83%ad%e3%83%9e%e7%9f%b3%e3%81%91%e3%82%93%e4%bd%9c%e3%82%8a%e3%81%ab%e3%83%81%e3%83%a3%e3%83%ac%e3%83%b3%e3%82%b8%e2%98%86",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%82%A2%E3%83%AD%E3%83%9E%E7%9F%B3%E3%81%91%E3%82%93%E4%BD%9C%E3%82%8A%E3%81%AB%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E2%98%86",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/令和8年度　新入生オリエンテーション",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e4%bb%a4%e5%92%8c8%e5%b9%b4%e5%ba%a6%e3%80%80%e6%96%b0%e5%85%a5%e7%94%9f%e3%82%aa%e3%83%aa%e3%82%a8%e3%83%b3%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E5%BA%A6%E3%80%80%E6%96%B0%E5%85%A5%E7%94%9F%E3%82%AA%E3%83%AA%E3%82%A8%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/昼間課程第48期生　入学式",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%98%bc%e9%96%93%e8%aa%b2%e7%a8%8b%e7%ac%ac48%e6%9c%9f%e7%94%9f%e3%80%80%e5%85%a5%e5%ad%a6%e5%bc%8f",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%98%BC%E9%96%93%E8%AA%B2%E7%A8%8B%E7%AC%AC48%E6%9C%9F%E7%94%9F%E3%80%80%E5%85%A5%E5%AD%A6%E5%BC%8F",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/奨励金授与式・対面式-5",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%a5%a8%e5%8a%b1%e9%87%91%e6%8e%88%e4%b8%8e%e5%bc%8f%e3%83%bb%e5%af%be%e9%9d%a2%e5%bc%8f-5",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%A5%A8%E5%8A%B1%E9%87%91%E6%8E%88%E4%B8%8E%E5%BC%8F%E3%83%BB%E5%AF%BE%E9%9D%A2%E5%BC%8F-5",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/始業式-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%a7%8b%e6%a5%ad%e5%bc%8f-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%A7%8B%E6%A5%AD%E5%BC%8F-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/シザーのお手入れ講習",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%82%b7%e3%82%b6%e3%83%bc%e3%81%ae%e3%81%8a%e6%89%8b%e5%85%a5%e3%82%8c%e8%ac%9b%e7%bf%92",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%82%B7%E3%82%B6%E3%83%BC%E3%81%AE%E3%81%8A%E6%89%8B%E5%85%A5%E3%82%8C%E8%AC%9B%E7%BF%92",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/訪問美容講習会",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e8%a8%aa%e5%95%8f%e7%be%8e%e5%ae%b9%e8%ac%9b%e7%bf%92%e4%bc%9a",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E8%A8%AA%E5%95%8F%E7%BE%8E%E5%AE%B9%E8%AC%9B%E7%BF%92%E4%BC%9A",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/第54回美容師国家試験　第2課題",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%ac%ac54%e5%9b%9e%e7%be%8e%e5%ae%b9%e5%b8%ab%e5%9b%bd%e5%ae%b6%e8%a9%a6%e9%a8%93%e3%80%80%e7%ac%ac2%e8%aa%b2%e9%a1%8c",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%AC%AC54%E5%9B%9E%E7%BE%8E%E5%AE%B9%E5%B8%AB%E5%9B%BD%E5%AE%B6%E8%A9%A6%E9%A8%93%E3%80%80%E7%AC%AC2%E8%AA%B2%E9%A1%8C",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/訪問美容講習会-②",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e8%a8%aa%e5%95%8f%e7%be%8e%e5%ae%b9%e8%ac%9b%e7%bf%92%e4%bc%9a-%e2%91%a1",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E8%A8%AA%E5%95%8F%E7%BE%8E%E5%AE%B9%E8%AC%9B%E7%BF%92%E4%BC%9A-%E2%91%A1",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/和室の畳が新しくなりました-☆",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%92%8c%e5%ae%a4%e3%81%ae%e7%95%b3%e3%81%8c%e6%96%b0%e3%81%97%e3%81%8f%e3%81%aa%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f-%e2%98%86",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%92%8C%E5%AE%A4%E3%81%AE%E7%95%B3%E3%81%8C%E6%96%B0%E3%81%97%E3%81%8F%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F-%E2%98%86",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/校外研修「アナと雪の女王」",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%a0%a1%e5%a4%96%e7%a0%94%e4%bf%ae%e3%80%8c%e3%82%a2%e3%83%8a%e3%81%a8%e9%9b%aa%e3%81%ae%e5%a5%b3%e7%8e%8b%e3%80%8d",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%A0%A1%E5%A4%96%E7%A0%94%E4%BF%AE%E3%80%8C%E3%82%A2%E3%83%8A%E3%81%A8%E9%9B%AA%E3%81%AE%E5%A5%B3%E7%8E%8B%E3%80%8D",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026-～-ao入試対策講座-～",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026-%ef%bd%9e-ao%e5%85%a5%e8%a9%a6%e5%af%be%e7%ad%96%e8%ac%9b%e5%ba%a7-%ef%bd%9e",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026-%EF%BD%9E-ao%E5%85%A5%E8%A9%A6%E5%AF%BE%E7%AD%96%E8%AC%9B%E5%BA%A7-%EF%BD%9E",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/通信生をご紹介！　delight-サロン中村",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e9%80%9a%e4%bf%a1%e7%94%9f%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b%ef%bc%81%e3%80%80delight-%e3%82%b5%e3%83%ad%e3%83%b3%e4%b8%ad%e6%9d%91",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E9%80%9A%E4%BF%A1%E7%94%9F%E3%82%92%E3%81%94%E7%B4%B9%E4%BB%8B%EF%BC%81%E3%80%80delight-%E3%82%B5%E3%83%AD%E3%83%B3%E4%B8%AD%E6%9D%91",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/ウイッグ講習会",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%82%a6%e3%82%a4%e3%83%83%e3%82%b0%e8%ac%9b%e7%bf%92%e4%bc%9a",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%82%A6%E3%82%A4%E3%83%83%E3%82%B0%E8%AC%9B%E7%BF%92%E4%BC%9A",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/校外就職ガイダンス-6",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%a0%a1%e5%a4%96%e5%b0%b1%e8%81%b7%e3%82%ac%e3%82%a4%e3%83%80%e3%83%b3%e3%82%b9-6",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%A0%A1%E5%A4%96%E5%B0%B1%E8%81%B7%E3%82%AC%E3%82%A4%E3%83%80%E3%83%B3%E3%82%B9-6",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao入試エントリー-開始",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%e5%85%a5%e8%a9%a6%e3%82%a8%e3%83%b3%e3%83%88%e3%83%aa%e3%83%bc-%e9%96%8b%e5%a7%8b",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%E5%85%A5%E8%A9%A6%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC-%E9%96%8B%E5%A7%8B",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/校内就職ガイダンス-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%a0%a1%e5%86%85%e5%b0%b1%e8%81%b7%e3%82%ac%e3%82%a4%e3%83%80%e3%83%b3%e3%82%b9-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%A0%A1%E5%86%85%E5%B0%B1%E8%81%B7%E3%82%AC%E3%82%A4%E3%83%80%E3%83%B3%E3%82%B9-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/通信生をご紹介！　-earth-coiffure-beaute宇都宮インターパーク",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e9%80%9a%e4%bf%a1%e7%94%9f%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b%ef%bc%81%e3%80%80-earth-coiffure-beaute%e5%ae%87%e9%83%bd%e5%ae%ae%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E9%80%9A%E4%BF%A1%E7%94%9F%E3%82%92%E3%81%94%E7%B4%B9%E4%BB%8B%EF%BC%81%E3%80%80-earth-coiffure-beaute%E5%AE%87%E9%83%BD%E5%AE%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/通信課程3年生スクーリング開始",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e9%80%9a%e4%bf%a1%e8%aa%b2%e7%a8%8b3%e5%b9%b4%e7%94%9f%e3%82%b9%e3%82%af%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e9%96%8b%e5%a7%8b",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E9%80%9A%E4%BF%A1%E8%AA%B2%E7%A8%8B3%E5%B9%B4%E7%94%9F%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E9%96%8B%E5%A7%8B",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026-2",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/ブロースタイリング",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%83%96%e3%83%ad%e3%83%bc%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%aa%e3%83%b3%e3%82%b0",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%83%96%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/まつ毛エクステンション検定",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%81%be%e3%81%a4%e6%af%9b%e3%82%a8%e3%82%af%e3%82%b9%e3%83%86%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%b3%e6%a4%9c%e5%ae%9a",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E3%81%BE%E3%81%A4%E6%AF%9B%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%A4%9C%E5%AE%9A",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/接遇･マナーディレクター検定",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e6%8e%a5%e9%81%87%ef%bd%a5%e3%83%9e%e3%83%8a%e3%83%bc%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%82%bf%e3%83%bc%e6%a4%9c%e5%ae%9a",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E6%8E%A5%E9%81%87%EF%BD%A5%E3%83%9E%E3%83%8A%E3%83%BC%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E6%A4%9C%E5%AE%9A",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-通信課程入試　願書受付開始",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-%e9%80%9a%e4%bf%a1%e8%aa%b2%e7%a8%8b%e5%85%a5%e8%a9%a6%e3%80%80%e9%a1%98%e6%9b%b8%e5%8f%97%e4%bb%98%e9%96%8b%e5%a7%8b",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-%E9%80%9A%E4%BF%A1%E8%AA%B2%E7%A8%8B%E5%85%A5%E8%A9%A6%E3%80%80%E9%A1%98%E6%9B%B8%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao入試2次エントリー-開始",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%e5%85%a5%e8%a9%a62%e6%ac%a1%e3%82%a8%e3%83%b3%e3%83%88%e3%83%aa%e3%83%bc-%e9%96%8b%e5%a7%8b",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%E5%85%A5%E8%A9%A62%E6%AC%A1%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC-%E9%96%8B%E5%A7%8B",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/熊本地震応援メッセージ",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%86%8a%e6%9c%ac%e5%9c%b0%e9%9c%87%e5%bf%9c%e6%8f%b4%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%E5%BF%9C%E6%8F%B4%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/第54回美容師実技試験",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%ac%ac54%e5%9b%9e%e7%be%8e%e5%ae%b9%e5%b8%ab%e5%ae%9f%e6%8a%80%e8%a9%a6%e9%a8%93",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%AC%AC54%E5%9B%9E%E7%BE%8E%E5%AE%B9%E5%B8%AB%E5%AE%9F%E6%8A%80%E8%A9%A6%E9%A8%93",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/夏季休業日のご案内（2026年度）",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e5%a4%8f%e5%ad%a3%e4%bc%91%e6%a5%ad%e6%97%a5%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85%ef%bc%882026%e5%b9%b4%e5%ba%a6%ef%bc%89",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E5%A4%8F%E5%AD%A3%E4%BC%91%E6%A5%AD%E6%97%A5%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85%EF%BC%882026%E5%B9%B4%E5%BA%A6%EF%BC%89",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/open-campus-2026-3",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/袴のたたみ方",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e8%a2%b4%e3%81%ae%e3%81%9f%e3%81%9f%e3%81%bf%e6%96%b9",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E8%A2%B4%E3%81%AE%E3%81%9F%E3%81%9F%E3%81%BF%E6%96%B9",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/第54回美容師筆記試験",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%e7%ac%ac54%e5%9b%9e%e7%be%8e%e5%ae%b9%e5%b8%ab%e7%ad%86%e8%a8%98%e8%a9%a6%e9%a8%93",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/%E7%AC%AC54%E5%9B%9E%E7%BE%8E%E5%AE%B9%E5%B8%AB%E7%AD%86%E8%A8%98%E8%A9%A6%E9%A8%93",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao入試-追加日程のお知らせ",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%e5%85%a5%e8%a9%a6-%e8%bf%bd%e5%8a%a0%e6%97%a5%e7%a8%8b%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/2026-ao%E5%85%A5%E8%A9%A6-%E8%BF%BD%E5%8A%A0%E6%97%A5%E7%A8%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+      "destination": "/topics",
+      "permanent": true
     }
   ]
 }
