@@ -1,5 +1,32 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/opencampusmoushikomi",
+      "destination": "/opencampus",
+      "permanent": true
+    },
+    {
+      "source": "/shiryoseikyu",
+      "destination": "https://r-shingaku.com/ce/form/3028/input",
+      "permanent": false
+    },
+    {
+      "source": "/category/topics",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/category/topics/:slug",
+      "destination": "/topics",
+      "permanent": true
+    },
+    {
+      "source": "/3602-2",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }

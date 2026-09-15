@@ -365,3 +365,16 @@ table.cost.cost-narrow{min-width:0}
 .contact-list a:last-child{border-bottom:0}
 .notice-box+.contact-list{margin-top:26px}
 .notice-box h3{margin:0 0 18px;font-size:clamp(19px,2.1vw,23px);line-height:1.45;font-weight:900}
+/* 学校紹介・プライバシーポリシー */
+.hero-intro{--hero:linear-gradient(150deg,#e94686,#1f6fb9)}
+.hero-privacy{--hero:linear-gradient(150deg,#626262,#1f6fb9)}
+.intro-message .message-title{margin:-10px 0 28px;font-size:clamp(19px,2.2vw,24px);line-height:1.6;font-weight:900;color:#1f6fb9}
+.intro-message .message-body{max-width:72ch}
+.intro-message .message-body p{margin:0 0 1.2em;font-size:15.5px;line-height:2.05;color:#333}
+.intro-message .message-sign{margin-top:2em!important;text-align:right;font-weight:900}
+.callout a{color:#1f6fb9;text-decoration:underline;text-underline-offset:2px}
+.policy{max-width:880px}
+.policy h2{margin:52px 0 18px;font-size:clamp(21px,2.4vw,28px)}
+.policy p,.policy li{font-size:15px;line-height:2;color:#333}
+.policy ol{margin:0;padding-left:1.6em}
+@media(max-width:820px){.page-hero>h1{margin:0 20px 20px}.intro-message .message-body p,.policy p,.policy li{font-size:14.5px}.policy h2{margin-top:40px}}
