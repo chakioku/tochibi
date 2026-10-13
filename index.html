@@ -825,6 +825,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       border: 1px solid var(--to-line);
       box-shadow: var(--to-shadow);
     }
+    /* ---------- 講師募集・関連リンクバナー（旧公式サイトから移設） ---------- */
+    #tochibi-oc-wireframe .recruit-strip {
+      margin-top: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px 28px;
+      padding: 26px 32px;
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+      border-left: 4px solid var(--to-pink);
+    }
+    #tochibi-oc-wireframe .recruit-strip p { margin: 0; text-align: left; word-break: keep-all; overflow-wrap: anywhere; font-size: 17px; font-weight: 900; line-height: 1.6; }
+    #tochibi-oc-wireframe .recruit-strip small { display: block; font-size: 13px; font-weight: 700; color: var(--to-muted); }
+    #tochibi-oc-wireframe .recruit-strip .btn { min-height: 52px; font-size: 16px; }
+    #tochibi-oc-wireframe .link-banner-row {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    #tochibi-oc-wireframe .link-banner {
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background: var(--to-panel);
+      border: 1px solid var(--to-line);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    #tochibi-oc-wireframe .link-banner:hover,
+    #tochibi-oc-wireframe .link-banner:focus-visible { transform: translateY(-2px); box-shadow: var(--to-shadow); }
+    #tochibi-oc-wireframe .link-banner img { display: block; width: 100%; height: auto; }
+    #tochibi-oc-wireframe .link-banner.kumiai img { max-width: 400px; }
+    #tochibi-oc-wireframe .link-banner.unilife img { max-width: 400px; }
     #tochibi-oc-wireframe .pdf-card.guide { background-image: url("/assets/tochibi/img_cta01.webp"); }
     #tochibi-oc-wireframe .pdf-card.admission { background-image: url("/assets/tochibi/img_cta02.webp"); }
     #tochibi-oc-wireframe .footer {
@@ -1140,9 +1175,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tochibi-oc-wireframe .concept-panel,
       #tochibi-oc-wireframe .access,
       #tochibi-oc-wireframe .pdf-card-row,
+      #tochibi-oc-wireframe .link-banner-row,
       #tochibi-oc-wireframe .footer {
         grid-template-columns: 1fr;
       }
+      #tochibi-oc-wireframe .recruit-strip { padding: 22px 20px; }
+      #tochibi-oc-wireframe .recruit-strip p { font-size: 16px; }
+      #tochibi-oc-wireframe .link-banner { padding: 16px; }
       #tochibi-oc-wireframe .feature-grid {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -2543,6 +2582,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="pdf-card-row">
         <a class="pdf-card guide" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/school_guide.pdf" aria-label="学校案内パンフレット"></a>
         <a class="pdf-card admission" href="https://tochibi.ac.jp/wp-content/themes/tochibi/dl/bosyuyouko.pdf" aria-label="募集要項"></a>
+      </div>
+      <div class="recruit-strip">
+        <p>美容を教えてくださる<wbr>先生を募集しています<small>美容師として培った技術と経験を、次の世代に伝えてみませんか。</small></p>
+        <a class="btn dark" href="/contact#form">講師募集のお問い合わせ <span>→</span></a>
+      </div>
+      <div class="link-banner-row">
+        <a class="link-banner kumiai" href="https://www.tochibi.com/" target="_blank" rel="noopener"><img src="/assets/tochibi/bnr_kumiai.png" alt="栃木県美容業生活衛生同業組合" width="468" height="144" loading="lazy"></a>
+        <a class="link-banner unilife" href="https://unilife.co.jp/link/ref/rjv4meqe" target="_blank" rel="noopener"><img src="/assets/tochibi/bnr_unilife.jpg" alt="UniLife学生マンション｜栃木県美容専門学校に通学便利な学生向けマンション" width="400" height="120" loading="lazy"></a>
       </div>
     </section>
     <footer class="footer">
