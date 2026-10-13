@@ -194,6 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       font-size: 12px;
       letter-spacing: .05em;
     }
+    #tochibi-oc-wireframe .side-menu li.menu-extra { display: none; }
     #tochibi-oc-wireframe .side-menu a {
       width: 100%;
       height: 100%;
@@ -1089,6 +1090,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       #tochibi-oc-wireframe .menu-check:checked ~ .side-menu {
         display: grid;
+      }
+      #tochibi-oc-wireframe .side-menu {
+        max-height: calc(100dvh - 72px);
+        grid-auto-rows: auto;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+      /* SPメニュー下部の講師募集・関連リンク（トップCONTACT欄と同じ内容） */
+      #tochibi-oc-wireframe .side-menu li.menu-extra {
+        grid-column: 1 / -1;
+        writing-mode: horizontal-tb;
+        display: grid;
+        gap: 12px;
+        place-items: stretch;
+        padding: 18px 16px 96px; /* 画面下の固定CTAに隠れないよう余白を確保 */
+        border-right: 0;
+        background: var(--to-bg);
+        letter-spacing: 0;
+      }
+      #tochibi-oc-wireframe .side-menu .menu-extra p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.6;
+        text-align: left;
+      }
+      #tochibi-oc-wireframe .side-menu .menu-extra a {
+        height: auto;
+      }
+      #tochibi-oc-wireframe .side-menu .menu-extra .menu-recruit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 18px;
+        background: #080808;
+        color: #fff;
+        font-size: 14px;
+      }
+      #tochibi-oc-wireframe .side-menu .menu-extra .menu-bnr {
+        display: block;
+        padding: 10px;
+        background: var(--to-panel);
+        border: 1px solid var(--to-line);
+      }
+      #tochibi-oc-wireframe .side-menu .menu-extra .menu-bnr img {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
       }
       #tochibi-oc-wireframe .menu-check:checked + .menu-toggle span {
         transform: rotate(45deg);
@@ -2267,6 +2319,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#access">ACCESS</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li class="menu-extra">
+          <p>美容を教えてくださる<wbr>先生を募集しています</p>
+          <a class="menu-recruit" href="/contact#form">講師募集のお問い合わせ <span aria-hidden="true">→</span></a>
+          <a class="menu-bnr" href="https://www.tochibi.com/" target="_blank" rel="noopener"><img src="/assets/tochibi/bnr_kumiai.png" alt="栃木県美容業生活衛生同業組合" width="468" height="144" loading="lazy"></a>
+          <a class="menu-bnr" href="https://unilife.co.jp/link/ref/rjv4meqe" target="_blank" rel="noopener"><img src="/assets/tochibi/bnr_unilife.jpg" alt="UniLife学生マンション｜栃木県美容専門学校に通学便利な学生向けマンション" width="400" height="120" loading="lazy"></a>
+        </li>
       </ul>
       <a class="rail-cta" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc="date-md">OC</span><br>OC予約</a>
     </nav>
