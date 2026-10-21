@@ -5,6 +5,10 @@
    この配列を読んで表示します。日程を変えるときはこのファイルだけ
    を直してください（ヒーロー・日程一覧・CTA・構造化データに自動反映）。
 
+   2026-10-21: 企画室「OC追加／高3英才教育 スケジュール」（令和8年10月19日）を反映。
+   11/14を追加し、11月以降の回はすべて「プレミアムレセプション（限定予約制）」。2月は未定のため未掲載。
+   同資料の「高3英才教育（FAST PASSビューティークラス）」「大会種目練習会」はOCではないため載せていません。
+
    内容は公式サイトの「OPEN CAMPUS 2026」日程表
    （https://tochibi.ac.jp/opencampus/ の img_opcamp.png）に準拠しています。
    受付は9:30から、プログラムは10:00〜12:00頃です。
@@ -24,7 +28,7 @@
    note        … カードに出す補足。空でよい
    ============================================================= */
 window.TOCHIBI_OC = {
-  updated: "2026-08-22",
+  updated: "2026-10-21",
   reserveUrl: "https://r-shingaku.com/ce/form/3522/input",
   requestUrl: "https://r-shingaku.com/ce/form/3028/input",
   contactUrl: "https://tochibi.ac.jp/contact/",
@@ -58,25 +62,32 @@ window.TOCHIBI_OC = {
       note: "リアルな傷をメイクでどのくらい作れるかチャレンジ"
     },
     {
-      date: "2026-12-13", type: "体験入学", title: "クリスマス レジン",
+      date: "2026-11-14", type: "プレミアムレセプション", title: "オープンキャンパス",
+      start: "10:00", end: "12:00",
+      tags: ["open-campus", "tochibi"],
+      reserveUrl: null, status: "open",
+      note: "限定予約制のプレミアムレセプションです。体験内容は決まりしだいお知らせします"
+    },
+    {
+      date: "2026-12-13", type: "プレミアムレセプション", title: "クリスマス レジン",
       start: "10:00", end: "12:00",
       tags: ["open-campus", "tochibi", "nail"],
       reserveUrl: null, status: "open",
-      note: "レジンでアクセサリーを作ってクリスマスを楽しもう"
+      note: "レジンでアクセサリーを作ってクリスマスを楽しもう。限定予約制です"
     },
     {
-      date: "2027-01-23", type: "体験入学", title: "ヘアエクステ&カット・ヘアアレンジ",
+      date: "2027-01-23", type: "プレミアムレセプション", title: "ヘアエクステ&カット・ヘアアレンジ",
       start: "10:00", end: "12:00",
       tags: ["open-campus", "tochibi", "hair"],
       reserveUrl: null, status: "open",
-      note: "ヘアエクステとカットを体験してみよう"
+      note: "ヘアエクステとカットを体験してみよう。限定予約制です"
     },
     {
-      date: "2027-03-06", type: "スペシャルイベント", title: "カトリーナメイク講座",
+      date: "2027-03-06", type: "プレミアムレセプション", title: "カトリーナメイク講座",
       start: "10:00", end: "12:00",
       tags: ["open-campus", "makeup"],
       reserveUrl: null, status: "open",
-      note: "メキシコ伝統文化のカトリーナメイクに挑戦してみよう。奨学金説明会も同時開催します"
+      note: "メキシコ伝統文化のカトリーナメイクに挑戦してみよう。奨学金説明会も同時開催します。限定予約制です"
     }
   ]
 };

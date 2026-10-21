@@ -557,3 +557,15 @@ a.oc-card:hover,a.oc-card:focus-visible{transform:translateY(-2px);box-shadow:0 
 }
 .ocs .sec-sub.ocs-skills-ttl{margin-top:48px}
 .ocs-parent .tp-label,.ocs-stamp .tp-label{color:#f2c3cf}
+/* ===== 資格・就職：就職先サロン一覧 ===== */
+.salon-box{position:relative;display:grid;gap:22px;padding:34px 36px;background:#f9e3ec;border:2px solid #1d2a6b;border-radius:18px;box-shadow:12px 12px 0 #d8d2d0;background-image:linear-gradient(rgba(255,255,255,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px);background-size:28px 28px}
+.salon-group{display:grid;grid-template-columns:110px minmax(0,1fr);gap:24px;align-items:center}
+.salon-badge{margin:0;width:104px;height:104px;display:grid;place-items:center;background:#fff36b;color:#1d2a6b;font-size:17px;line-height:1.35;font-weight:900;text-align:center;clip-path:polygon(50% 0,57% 7%,66% 2%,70% 11%,80% 9%,81% 19%,91% 20%,89% 30%,98% 34%,93% 43%,100% 50%,93% 57%,98% 66%,89% 70%,91% 80%,81% 81%,80% 91%,70% 89%,66% 98%,57% 93%,50% 100%,43% 93%,34% 98%,30% 89%,20% 91%,19% 81%,9% 80%,11% 70%,2% 66%,7% 57%,0 50%,7% 43%,2% 34%,11% 30%,9% 20%,19% 19%,20% 9%,30% 11%,34% 2%,43% 7%)}
+.salon-list{display:flex;flex-wrap:wrap;margin:0;padding:0;list-style:none;font-size:14px;line-height:1.95;color:#1d2a6b}
+.salon-list li:not(:last-child)::after{content:"、"}
+@media(max-width:820px){
+  .salon-box{padding:24px 18px;box-shadow:6px 6px 0 #d8d2d0}
+  .salon-group{grid-template-columns:1fr;gap:12px;justify-items:start}
+  .salon-badge{width:84px;height:84px;font-size:14px}
+  .salon-list{font-size:13px}
+}
