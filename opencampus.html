@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="授業、先生、在校生、学校の雰囲気まで。進路選びで知りたいことを、実際に見て聞ける栃美のオープンキャンパスです。">
+  <meta name="description" content="美容がもっと好きになる、未来の自分に出会える1日。体験授業、在校生との交流、学費や入試の個別相談まで。栃木県美容専門学校のオープンキャンパス特設ページです。">
   <link rel="canonical" href="https://tochibi-oc-vercel.vercel.app/opencampus">
   <meta name="theme-color" content="#1f6fb9">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -13,13 +13,15 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://tochibi-oc-vercel.vercel.app/opencampus">
   <meta property="og:title" content="オープンキャンパス | 栃木県美容専門学校">
-  <meta property="og:description" content="授業、先生、在校生、学校の雰囲気まで。進路選びで知りたいことを、実際に見て聞ける栃美のオープンキャンパスです。">
-  <meta property="og:image" content="https://tochibi-oc-vercel.vercel.app/assets/tochibi/ogp.jpg">
+  <meta property="og:description" content="美容がもっと好きになる、未来の自分に出会える1日。体験授業、在校生との交流、学費や入試の個別相談まで。栃木県美容専門学校のオープンキャンパス特設ページです。">
+  <meta property="og:image" content="https://tochibi-oc-vercel.vercel.app/assets/tochibi/oc/oc-banner-ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <title>オープンキャンパス | 栃木県美容専門学校</title>
   <link rel="stylesheet" href="/subpage.css">
+  <link rel="preload" as="image" href="/assets/tochibi/oc/oc-banner-pc.webp" media="(min-width:821px)">
+  <link rel="preload" as="image" href="/assets/tochibi/oc/oc-banner-sp.webp" media="(max-width:820px)">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,35 +42,157 @@
     <nav aria-label="サイト内ナビゲーション"><a href="/opencampus" aria-current="page">OC</a><a href="/curriculum">COURSE</a><a href="/shikaku">CAREER</a><a href="/campuslife">LIFE</a><a href="/admissions">学費・奨学金</a><a href="/parents">保護者の方へ</a><a href="/topics">TOPICS</a><a href="/contact">CONTACT</a></nav>
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
-  <main>
+  <main class="ocs">
     <nav class="crumb" aria-label="パンくずリスト">
       <a href="/">オープンキャンパス特設サイト</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">オープンキャンパス</span>
     </nav>
-    <section class="page-hero hero-oc">
-      <p class="eyebrow">OPEN CAMPUS</p>
-      <h1>栃美を一日で体験。</h1>
-      <p>授業、先生、在校生、学校の雰囲気まで。進路選びで知りたいことを、実際に見て聞けるオープンキャンパスです。</p>
-      <div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" href="/parents">保護者の方へ</a></div>
-    </section>
-    <section class="section">
-      <h2>体験できること</h2>
-      <div class="cards">
-        <article class="has-img"><img src="/assets/tochibi/oc/exp-lesson.webp" alt="ヘアカラーの実習をする学生" loading="lazy"><span>#01</span><h3>美容実習体験</h3><p>カット、カラー、シャンプー、メイクなど、美容学校らしい授業に触れられます。</p></article>
-        <article class="has-img"><img src="/assets/tochibi/oc/report-2026-06-21_0.webp" alt="在校生に教わりながら体験する参加者" loading="lazy"><span>#02</span><h3>在校生と話せる</h3><p>学校生活、授業、通学、イベントなど、リアルな声を聞けます。</p></article>
-        <article class="has-img"><img src="/assets/tochibi/card-admissions.webp" alt="説明会の様子" loading="lazy"><span>#03</span><h3>個別相談</h3><p>入試、学費、奨学金、修学支援制度、就職について相談できます。</p></article>
+
+    <!-- ========== KV ========== -->
+    <section class="ocs-kv">
+      <h1 class="visually-hidden">オープンキャンパス｜美容がもっと好きになる！未来の自分に出会える1日。</h1>
+      <picture>
+        <source media="(max-width:820px)" srcset="/assets/tochibi/oc/oc-banner-sp.webp" width="1100" height="1430">
+        <img src="/assets/tochibi/oc/oc-banner-pc.webp" width="1600" height="860" alt="OPEN CAMPUS！美容がもっと好きになる！未来の自分に出会える1日。栃美の在校生の写真">
+      </picture>
+      <div class="ocs-next">
+        <p class="ocs-next-date"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p>
+        <ul class="ocs-next-tags"><li>参加費無料</li><li>友達との参加OK</li><li>保護者との参加OK</li></ul>
+        <div class="ocs-next-btns">
+          <a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a>
+          <a class="btn dark" href="#schedule">開催日程を見る</a>
+        </div>
       </div>
     </section>
+
+    <!-- ========== 3つの安心ポイント ========== -->
+    <section class="section" id="anshin">
+      <p class="ocs-en">POINT</p>
+      <h2>はじめてでも安心。<br>栃美のオープンキャンパス</h2>
+      <div class="ocs-anshin">
+        <article>
+          <span class="no">安心 01</span>
+          <h3>ひとりでも、友達とでも、<br>保護者の方とでも</h3>
+          <p>おひとりでの参加も、友達や保護者の方と一緒の参加も歓迎です。在校生と先生が当日の流れをご案内するので、はじめての方も気軽にお越しください。</p>
+        </article>
+        <article>
+          <span class="no">安心 02</span>
+          <h3>先生の体験授業と、<br>在校生との交流</h3>
+          <p>美容学校ならではの実習を、先生が一から教えます。授業のこと、学校生活のこと、通学のこと。在校生に直接聞けるのもオープンキャンパスならではです。</p>
+        </article>
+        <article>
+          <span class="no">安心 03</span>
+          <h3>参加費無料。<br>交通費サポートも</h3>
+          <p>参加費はかかりません。遠方からお越しの方を対象とした交通費サポートもあります。参加するたびにスタンプがたまり、受験手数料の免除にもつながります。</p>
+        </article>
+      </div>
+      <!-- 要確認: 交通費サポートの対象エリアと金額。金額が分かれば安心03に「1回の参加で最大◯円」の形で明記してください。
+           参考ページ（TBC学院）は金額・回数上限・支給方法（QUOカード等）まで掲載しています。 -->
+    </section>
+
+    <!-- ========== TOCHIBIってどんな学校？ ========== -->
+    <section class="section ocs-tint" id="about">
+      <p class="ocs-en">ABOUT TOCHIBI</p>
+      <h2>TOCHIBIってどんな学校？</h2>
+      <p class="sec-lead">TOCHIBIは、栃木県で唯一の組合立の美容専門学校。美容師を目指すための確かな技術はもちろん、ヘア・メイク・ネイル・アイ・ブライダルなど、美容の世界で活躍するための実践的な学びを大切にしています。</p>
+      <ol class="ocs-points">
+        <li><span>01</span><h3>栃木県で唯一の組合立の学校</h3><p>栃木県下の美容室が組織する美容組合が設立した学校です。地域の美容室とのつながりを活かし、在学中から現場を意識して学べます。</p></li>
+        <li><span>02</span><h3>希望者就職率100%</h3><p>美容業界との信頼関係により、一人ひとりの夢に合わせた就職をサポート。県内はもちろん、東京を含む関東近郊への就職も視野に入れられます。</p></li>
+        <li><span>03</span><h3>国家試験に自信があります</h3><p>美容師に欠かせない国家資格の取得を、伝統ある確かな技術でサポート。美容師国家試験合格安心保障制度も用意しています。</p></li>
+        <li><span>04</span><h3>組合加盟美容室500店とのパイプ</h3><p>組合加盟の美容室500店とのつながりがあり、就職活動にも強みがあります。地域密着の学校だからこそ、現場との距離が近いのが特長です。</p></li>
+        <li><span>05</span><h3>実践的な教育プログラム</h3><p>県内の美容師と触れ合う授業や、現場をイメージした実習を通じて、技術だけでなくプロ意識も育てます。</p></li>
+        <li><span>06</span><h3>美容の幅広い未来を目指せる</h3><p>美容師だけでなく、ヘアカラーリスト、メイクアップアーティスト、ネイリスト、アイリスト、エステティシャンなど、さまざまな職種を目指せます。</p></li>
+      </ol>
+      <h3 class="sec-sub ocs-skills-ttl">TOCHIBIでできるようになること</h3>
+      <ul class="ocs-skills">
+        <li>ヘアアレンジ</li><li>メイク</li><li>ネイル</li><li>サロンワーク</li><li>ブライダル</li><li>作品撮影</li>
+      </ul>
+    </section>
+
+    <!-- ========== オープンキャンパスの種類 ========== -->
+    <section class="section" id="types">
+      <p class="ocs-en">PROGRAM</p>
+      <h2>オープンキャンパスの種類</h2>
+      <div class="cards">
+        <article class="has-img"><img src="/assets/tochibi/oc/report-2026-06-21_0.webp" alt="在校生に教わりながら実習を体験する参加者" loading="lazy"><span>#体験入学</span><h3>体験入学</h3><p>カット、カラー、ネイル、メイクなど、回ごとに変わる実習カリキュラムを体験できます。学校説明と個別相談もあわせて行います。</p></article>
+        <article class="has-img"><img src="/assets/tochibi/life/ev-festa.webp" alt="栃美ビューティーフェスタのステージ" loading="lazy"><span>#スペシャルイベント</span><h3>TOCHIBIビューティフェスタ</h3><p>年に一度のビッグイベント。ヘアメイクやステージを通して、美容の楽しさを体感できます。開催日はスタンプ3倍dayです。</p></article>
+        <article class="has-img"><img src="/assets/tochibi/oc/report-2025-10-11_1.webp" alt="特殊メイクの道具" loading="lazy"><span>#キャラクターメイク講座</span><h3>カトリーナメイク</h3><p>メキシコの伝統文化カトリーナのメイクに挑戦する特別講座です。奨学金説明会も同時に開催します。</p></article>
+      </div>
+    </section>
+
+    <!-- ========== 当日の流れ ========== -->
+    <section class="section ocs-tint" id="flow">
+      <p class="ocs-en">FLOW</p>
+      <h2>当日の流れ</h2>
+      <p class="sec-lead">受付は9:30から。プログラムは10:00にはじまり、12:00ごろに終わります。終了時刻の目安が決まっているので、遠方の方も帰りの予定を立てやすくなっています。</p>
+      <ol class="ocs-flow">
+        <li><span class="t">9:30〜</span><b>受付</b><p>校舎で受付をして、その日の流れをご案内します。</p></li>
+        <li><span class="t">10:00〜</span><b>学校説明</b><p>栃美の特色、カリキュラム、資格と就職についてご説明します。</p></li>
+        <li><span class="t">&nbsp;</span><b>実習体験</b><p>先生と在校生と一緒に、美容学校ならではの実習を体験します。</p></li>
+        <li><span class="t">&nbsp;</span><b>在校生と交流</b><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
+        <li><span class="t">12:00ごろ</span><b>個別相談・終了</b><p>入試、学費、奨学金、修学支援制度について個別にご相談いただけます。</p></li>
+      </ol>
+      <!-- 要確認: 実習体験・在校生交流の開始時刻。確定したら .t に時刻を入れてください。 -->
+      <div class="callout">
+        <h3>保護者の方の説明会も同時開催する回があります</h3>
+        <p>お子さまが実習を体験している間に、保護者の方は学校・奨学金の説明を聞くことができます。同時開催日はスタンプ2倍dayです。保護者の方おひとりでのご参加も歓迎しています。</p>
+      </div>
+    </section>
+
+    <!-- ========== 開催日程 ========== -->
     <section class="section" id="schedule">
+      <p class="ocs-en">SCHEDULE</p>
       <h2>開催日程</h2>
       <p class="sec-lead">今後の開催は<b data-oc-count>&nbsp;</b>回です。ご都合のよい日を選んで、そのままご予約いただけます。受付は9:30から、プログラムはいずれも10:00〜12:00ごろ。参加費は無料です。</p>
       <div class="oc-list" data-oc-list>
         <p class="oc-empty">日程を読み込んでいます。</p>
       </div>
-      <p class="oc-foot-note">※ 複数日のお申し込みも可能です。ご不明な点は <a data-oc-href="contact" href="https://tochibi.ac.jp/contact/">お問い合わせ</a> ください。</p>
+      <p class="oc-foot-note">※ 複数日のお申し込みも可能です。ご不明な点は <a href="/contact">お問い合わせ</a> ください。</p>
     </section>
-    <section class="section" id="report">
+
+    <!-- ========== 参加特典 ========== -->
+    <section class="section ocs-tint" id="perks">
+      <p class="ocs-en">BENEFIT</p>
+      <h2>オープンキャンパス参加特典</h2>
+      <ul class="ocs-perks">
+        <li><b>参加費無料</b><span>費用は一切かかりません。</span></li>
+        <li><b>交通費サポート</b><span>遠方からお越しの方が対象です。</span></li>
+        <li><b>友達・保護者との参加OK</b><span>どなたとご一緒でも参加できます。</span></li>
+        <li><b>在校生と話せる</b><span>授業や学校生活のことを直接聞けます。</span></li>
+        <li><b>入試や学費の相談ができる</b><span>入試の種類、学費、奨学金について相談できます。</span></li>
+      </ul>
+      <div class="ocs-stamp">
+        <div>
+          <b>参加するとスタンプがたまります</b>
+          <p>体験入学やイベントに参加してスタンプを集めると、20,000円の受験手数料が免除になります。スタンプは次年度へ持ち越せます。</p>
+        </div>
+        <ul>
+          <li><span>スタンプ<em>3</em>個</span>受験手数料が半額免除</li>
+          <li><span>スタンプ<em>5</em>個</span>受験手数料が全額免除</li>
+        </ul>
+      </div>
+      <ul class="note">
+        <li>保護者説明会（学校・奨学金）の同時開催日はスタンプ2倍day、栃美ビューティーフェスタ開催日はスタンプ3倍dayです。</li>
+        <li>「AO入試対策講座」を受講すると、AO入試時の課題が免除になります。</li>
+      </ul>
+    </section>
+
+    <!-- ========== 在校生の声 ========== -->
+    <section class="section" id="voice">
+      <p class="ocs-en">VOICE</p>
+      <h2>在校生の声</h2>
+      <!-- 要確認: 公式サイト（/3602-2/）掲載の文言をそのまま移しています。実在の在校生のコメント・写真に差し替える場合はご支給ください。 -->
+      <div class="ocs-voice">
+        <figure><figcaption>美容科 / 女性</figcaption><blockquote>実習が多くて、毎日できることが増えていくのが楽しいです。</blockquote><p>将来の夢：お客様に長く信頼される美容師になること。</p></figure>
+        <figure><figcaption>理容・メンズカット系 / 男性</figcaption><blockquote>メンズカットやスタイリングを学びながら、将来は地元で活躍できる理美容師を目指しています。</blockquote><p>将来の夢：地元に根ざしたメンズ特化サロンで活躍すること。</p></figure>
+        <figure><figcaption>ビューティー系 / 女性</figcaption><blockquote>メイクやネイルなど、好きな美容を幅広く学べるところが魅力です。</blockquote><p>将来の夢：トータルビューティーでお客様を笑顔にすること。</p></figure>
+      </div>
+    </section>
+
+    <!-- ========== 開催レポート ========== -->
+    <section class="section ocs-tint" id="report">
+      <p class="ocs-en">REPORT</p>
       <h2>開催レポート</h2>
       <p class="sec-lead">これまでのオープンキャンパスの様子です。体験内容は回ごとに変わるので、気になるテーマの回を選んで参加できます。</p>
       <div class="report-grid">
@@ -81,7 +205,69 @@
       </div>
       <p class="note-line">※ 写真・内容は公式サイトのお知らせに掲載した開催時のものです。</p>
     </section>
-    <section class="cta"><h2>次回開催</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><p>迷ったら、まずは参加して雰囲気を確かめてください。</p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">予約フォームへ</span></a></section>
+
+    <!-- ========== 保護者の方へ ========== -->
+    <section class="section" id="parents">
+      <p class="ocs-en">FOR PARENTS</p>
+      <h2>保護者の方へ</h2>
+      <p class="sec-lead">学費の支払い、奨学金の利用、教育ローン、入学後にかかる費用、進学後の生活面まで、オープンキャンパス当日に個別相談ができます。</p>
+      <div class="ocs-parent">
+        <div class="total-panel">
+          <div>
+            <span class="tp-label">昼間課程（2年制・4月入学）初年度納入金</span>
+            <span class="tp-num">1,005,900<small>円</small></span>
+            <p class="tp-cap">学費のほかに教材費が別途かかります。</p>
+          </div>
+        </div>
+        <ul class="ocs-parent-links">
+          <li><b>栃美奨学金・奨励金制度</b><span>卒業生家族出願奨学金／後継者育成奨学金／TOCHIBI奨励金</span></li>
+          <li><b>公的奨学金・教育ローン</b><span>日本学生支援機構／日本政策金融公庫／高等教育の修学支援新制度</span></li>
+        </ul>
+      </div>
+      <div class="actions ocs-actions"><a class="btn dark" href="/admissions">学費・奨学金について</a><a class="btn dark" href="/parents">保護者の方へ（詳しく）</a></div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section ocs-tint" id="faq">
+      <p class="ocs-en">FAQ</p>
+      <h2>よくあるご質問</h2>
+      <div class="faq-list">
+        <details open><summary>一人で参加しても大丈夫ですか？</summary><div class="faq-a"><p>もちろん大丈夫です。初めての方も安心して参加できます。</p></div></details>
+        <details><summary>保護者も一緒に参加できますか？</summary><div class="faq-a"><p>はい、ご一緒に参加いただけます。当日は学費や奨学金、就職についての個別相談も承っています。</p></div></details>
+        <details><summary>友達と一緒に参加できますか？</summary><div class="faq-a"><p>はい、お友達との参加も歓迎しています。</p></div></details>
+        <details><summary>参加費はかかりますか？</summary><div class="faq-a"><p>かかりません。参加費は無料です。遠方からお越しの方を対象とした交通費サポートもあります。</p></div></details>
+        <details><summary>何度でも参加できますか？</summary><div class="faq-a"><p>はい。体験内容は回ごとに変わるので、複数日のお申し込みも可能です。参加するたびにスタンプがたまります。</p></div></details>
+      </div>
+      <!-- 要確認: 「服装は自由ですか？」「持ち物は必要ですか？」は公式サイトのFAQに設問だけあり回答が未記入のため、掲載を見送っています。回答をいただきしだい追加します。 -->
+    </section>
+
+    <!-- ========== 申し込み方法 ========== -->
+    <section class="section" id="apply">
+      <p class="ocs-en">ENTRY</p>
+      <h2>オープンキャンパスの申し込み方法</h2>
+      <div class="ocs-apply">
+        <div class="is-main"><b>WEB</b><p>予約フォームから、参加希望日を選んでお申し込みください。</p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">予約フォームへ</a></div>
+        <div><b>電話</b><p class="big"><a href="tel:0286515210">028-651-5210</a></p><p>受付 9:00〜13:00／14:00〜17:00（土・日・祝日を除く）</p></div>
+        <div><b>E-mail</b><p class="big">taiken@tochibi.ac.jp</p><p>氏名／高校名／学年／参加希望日を明記してください。</p></div>
+      </div>
+      <!-- 要確認: 公式LINEからの申し込みに対応する場合は、友だち追加URL（https://lin.ee/…）をいただければ4つ目の窓口として追加します。 -->
+    </section>
+
+    <!-- ========== アクセス ========== -->
+    <section class="section ocs-tint" id="access">
+      <p class="ocs-en">ACCESS</p>
+      <h2>アクセス</h2>
+      <div class="access-grid">
+        <div class="access-info">
+          <p><b>栃木県美容専門学校</b><br>〒321-0945 栃木県宇都宮市宿郷2-10-11</p>
+          <!-- 要確認: JR宇都宮駅からの所要時間・駐車場の有無 -->
+          <a class="btn dark" href="/campuslife/campus-map">学校周辺マップ</a>
+        </div>
+        <div class="access-map"><iframe class="map-frame" title="栃木県美容専門学校の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E5%AE%BF%E9%83%B72-10-11&hl=ja&z=17&output=embed"></iframe></div>
+      </div>
+    </section>
+
+    <section class="cta"><h2>まずはオープンキャンパスで<br>TOCHIBIを体験しよう。</h2><p class="cta-next"><span class="lbl">NEXT OPEN CAMPUS</span><b data-oc="date-full">&nbsp;</b><span class="tm" data-oc="time">&nbsp;</span><span class="ttl" data-oc="title">&nbsp;</span></p><p>迷ったら、まずは参加して雰囲気を確かめてください。</p><div class="actions"><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input"><span data-oc-tpl="{date} のOCを予約する">オープンキャンパスを予約する</span></a><a class="btn dark" data-oc-href="request" href="https://r-shingaku.com/ce/form/3028/input">資料請求</a></div></section>
   </main>
   <footer class="site-footer">
     <div class="sf-main">

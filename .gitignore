@@ -10,3 +10,6 @@ node_modules/
 
 # macOS
 .DS_Store
+
+# バナー書き出しの中間ファイル
+design/oc-banner/out-*.png

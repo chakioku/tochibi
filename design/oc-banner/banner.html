@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- オープンキャンパス特設ページのバナー原稿。render.js で PC / SP の画像に書き出す。
+     旧バナー（kv-open-campus-collage）の構成を踏襲し、色のトーンを落として学生写真をパンフレット素材に差し替えたもの。 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Caveat:wght@700&family=Zen+Kaku+Gothic+New:wght@900&display=block" rel="stylesheet">
+<style>
+:root{
+  --rose:#c9768c;      /* 旧 #e94686 を落ち着かせたローズ */
+  --rose-soft:#f3e3e6;
+  --blue:#5b84ad;      /* 旧 #1f6fb9 */
+  --blue-soft:#e3ebf3;
+  --navy:#26364f;      /* 旧 #0f3272 / 黒 */
+  --sand:#e9dcc9;      /* 旧 イエロー #ffd857 */
+  --paper:#fbf8f4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:var(--w);height:var(--h);overflow:hidden;background:var(--paper);font-family:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;position:relative}
+.ph{position:absolute;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(.97)}
+.ph::after{content:"";position:absolute;inset:0;mix-blend-mode:soft-light;opacity:.35}
+.ph.t-rose::after{background:var(--rose)}
+.ph.t-blue::after{background:var(--blue)}
+.ph.t-sand::after{background:var(--sand)}
+.lbl{position:absolute;font-family:Caveat,cursive;color:#fff;font-size:var(--lbl);transform:rotate(-8deg);text-shadow:0 2px 6px rgba(38,54,79,.35);letter-spacing:.02em;z-index:3}
+.deco{position:absolute;z-index:3;color:#fff;opacity:.9}
+.copy{position:absolute;z-index:4;text-align:center}
+.lead{display:inline-block;font-weight:900;color:var(--navy);font-size:var(--lead);line-height:1.25;transform:rotate(-6deg);letter-spacing:.04em}
+.lead span{background:linear-gradient(transparent 70%,var(--rose-soft) 70%)}
+.oc{font-family:Montserrat,sans-serif;font-style:italic;font-weight:900;line-height:.86;letter-spacing:-.01em;transform:rotate(-6deg);font-size:var(--oc)}
+.oc i{font-style:inherit}
+.c1{color:var(--rose)}.c2{color:var(--blue)}.c3{color:var(--navy)}
+.ribbon{display:inline-block;margin-top:var(--rgap);background:var(--navy);color:#fff;font-weight:900;font-size:var(--rib);padding:.32em 1.1em .36em;transform:rotate(-6deg);clip-path:polygon(3% 0,100% 0,97% 100%,0 100%);letter-spacing:.06em}
+.ribbon b{color:#f2c3cf}
+.bg-blue{position:absolute;background:var(--blue-soft)}
+.bg-rose{position:absolute;background:var(--rose-soft)}
+
+/* ---------- PC 1600x860 ---------- */
+body.pc{--w:1600px;--h:860px;--lbl:46px;--lead:40px;--oc:150px;--rib:30px;--rgap:26px}
+.pc .p1{left:0;top:0;width:500px;height:426px;clip-path:polygon(0 0,100% 0,88% 100%,0 100%)}
+.pc .p2{left:0;top:434px;width:440px;height:426px;clip-path:polygon(0 0,98% 0,84% 100%,0 100%)}
+.pc .p3{left:470px;top:640px;width:640px;height:220px;clip-path:polygon(5% 0,100% 0,96% 100%,0 100%)}
+.pc .p4{left:1110px;top:0;width:490px;height:300px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.pc .p5{left:1066px;top:308px;width:534px;height:290px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.pc .p6{left:1100px;top:606px;width:500px;height:254px;clip-path:polygon(4% 0,100% 0,100% 100%,0 100%)}
+.pc .copy{left:430px;top:58px;width:740px}
+.pc .bg-blue{left:380px;top:0;width:200px;height:640px;clip-path:polygon(40% 0,100% 0,60% 100%,0 100%);opacity:.7}
+.pc .bg-rose{left:960px;top:330px;width:160px;height:320px;clip-path:polygon(60% 0,100% 0,40% 100%,0 100%);opacity:.8}
+
+/* ---------- SP 1100x1430 ---------- */
+body.sp{--w:1100px;--h:1430px;--lbl:52px;--lead:46px;--oc:178px;--rib:38px;--rgap:30px}
+.sp .p1{left:0;top:0;width:560px;height:440px;clip-path:polygon(0 0,100% 0,92% 100%,0 100%)}
+.sp .p4{left:524px;top:0;width:576px;height:440px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.sp .p3{left:0;top:968px;width:640px;height:462px;clip-path:polygon(0 0,100% 0,92% 100%,0 100%)}
+.sp .p6{left:600px;top:968px;width:500px;height:226px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.sp .p2{left:574px;top:1202px;width:526px;height:228px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.sp .p5{display:none}
+.sp .p2 img{object-position:30% 12%!important}
+.sp .copy{left:0;top:458px;width:1100px}
+.sp .bg-blue{left:0;top:440px;width:1100px;height:528px;background:linear-gradient(170deg,var(--paper) 55%,var(--blue-soft) 55%)}
+.sp .bg-rose{display:none}
+</style>
+</head>
+<body>
+<div class="bg-blue"></div><div class="bg-rose"></div>
+
+<div class="ph p1 t-blue"><img src="src/arrange_5D5A1752.jpg" style="object-position:50% 20%"></div>
+<div class="ph p2 t-sand"><img src="src/akutsu_5D5A1007.jpg" style="object-position:30% 25%"></div>
+<div class="ph p3 t-rose"><img src="src/color_5D5A1988.jpg" style="object-position:50% 22%"></div>
+<div class="ph p4 t-rose"><img src="src/nail_5D5A1746.jpg" style="object-position:45% 28%"></div>
+<div class="ph p5 t-sand"><img src="src/sekizawa2.jpg" style="object-position:50% 25%"></div>
+<div class="ph p6 t-blue"><img src="src/wd_5D5A0876.jpg" style="object-position:50% 22%"></div>
+
+<div class="copy">
+  <p class="lead"><span>美容が</span><br><span>もっと好きになる！</span></p>
+  <p class="oc"><i class="c1">O</i><i class="c2">P</i><i class="c3">E</i><i class="c1">N</i><br><i class="c2">C</i><i class="c3">A</i><i class="c1">M</i><i class="c3">P</i><i class="c2">U</i><i class="c1">S</i><i class="c3">!</i></p>
+  <p class="ribbon">未来の自分に<b>出会える</b>1日。</p>
+</div>
+
+<script>
+// ?sp でSP版。ラベルの位置はレイアウトごとに置く
+const sp=location.search.includes('sp');
+document.body.className=sp?'sp':'pc';
+const L=sp?[["Hair",40,330],["Nail",880,330],["Color",40,1330],["Enjoy!",900,1110],["Style",900,1340]]
+          :[["Hair",30,330],["Style",30,770],["Nail",1440,230],["Color",530,800],["Smile",1450,520],["Enjoy!",1420,790]];
+for(const [t,x,y] of L){const e=document.createElement('span');e.className='lbl';e.textContent=t;e.style.left=x+'px';e.style.top=(y-60)+'px';document.body.appendChild(e)}
+</script>
+</body>
+</html>

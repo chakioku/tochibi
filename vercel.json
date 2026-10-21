@@ -25,7 +25,7 @@
     },
     {
       "source": "/3602-2",
-      "destination": "/",
+      "destination": "/opencampus",
       "permanent": true
     },
     {
