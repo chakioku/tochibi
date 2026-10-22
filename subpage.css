@@ -569,3 +569,5 @@ a.oc-card:hover,a.oc-card:focus-visible{transform:translateY(-2px);box-shadow:0 
   .salon-badge{width:84px;height:84px;font-size:14px}
   .salon-list{font-size:13px}
 }
+/* 保護者ページKV：顔が切れないよう上寄せ */
+.hero-parents::after{background-position:50% 30%}
