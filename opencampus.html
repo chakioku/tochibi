@@ -43,6 +43,8 @@
     <a class="reserve" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">OC予約</a>
   </header>
   <main class="ocs">
+    <!-- 確認用：公開前に削除。黄色マーカー（mark.tbd）は学校さまに確認中の値です -->
+    <p class="tbd-note">確認用：<mark class="tbd">黄色マーカー</mark>の部分は、学校さまに確認中の内容です。</p>
     <nav class="crumb" aria-label="パンくずリスト">
       <a href="/">オープンキャンパス特設サイト</a>
       <span aria-hidden="true">/</span>
@@ -70,6 +72,12 @@
     <section class="section" id="anshin">
       <p class="ocs-en">POINT</p>
       <h2>はじめてでも安心。<br>栃美のオープンキャンパス</h2>
+      <ul class="ocs-stats">
+        <li><span>年間のオープンキャンパス参加者</span><b>延べ<mark class="tbd">◯◯◯</mark><small>名</small></b></li>
+        <li><span>入学者のオープンキャンパス参加率</span><b><mark class="tbd">◯◯</mark><small>%</small></b></li>
+        <li><span>おひとり（＋保護者）で参加した方</span><b>約<mark class="tbd">◯</mark><small>割</small></b></li>
+      </ul>
+      <p class="note-line">※ <mark class="tbd">◯◯◯◯</mark>年度 栃木県美容専門学校調べ</p>
       <div class="ocs-anshin">
         <article>
           <span class="no">安心 01</span>
@@ -83,12 +91,11 @@
         </article>
         <article>
           <span class="no">安心 03</span>
-          <h3>参加費無料。<br>交通費サポートも</h3>
-          <p>参加費はかかりません。遠方からお越しの方を対象とした交通費サポートもあります。参加するたびにスタンプがたまり、受験手数料の免除にもつながります。</p>
+          <h3>参加費無料。<br>交通費サポートと駅からの送迎も</h3>
+          <p>参加費はかかりません。1回の参加で最大<mark class="tbd">◯,◯◯◯</mark>円の交通費をサポートします。開催日はJR宇都宮駅から学校まで<mark class="tbd">スタッフがご案内</mark>します。参加するたびにスタンプがたまり、受験手数料の免除にもつながります。</p>
+          <a class="ocs-more" href="#support">交通費・送迎のくわしい案内へ</a>
         </article>
       </div>
-      <!-- 要確認: 交通費サポートの対象エリアと金額。金額が分かれば安心03に「1回の参加で最大◯円」の形で明記してください。
-           参考ページ（TBC学院）は金額・回数上限・支給方法（QUOカード等）まで掲載しています。 -->
     </section>
 
     <!-- ========== TOCHIBIってどんな学校？ ========== -->
@@ -129,14 +136,22 @@
       <ol class="ocs-flow">
         <li><span class="t">9:30〜</span><b>受付</b><p>校舎で受付をして、その日の流れをご案内します。</p></li>
         <li><span class="t">10:00〜</span><b>学校説明</b><p>栃美の特色、カリキュラム、資格と就職についてご説明します。</p></li>
-        <li><span class="t">&nbsp;</span><b>実習体験</b><p>先生と在校生と一緒に、美容学校ならではの実習を体験します。</p></li>
-        <li><span class="t">&nbsp;</span><b>在校生と交流</b><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
+        <li><span class="t"><mark class="tbd">◯:◯◯</mark>〜</span><b>実習体験</b><p>先生と在校生と一緒に、美容学校ならではの実習を体験します。</p></li>
+        <li><span class="t"><mark class="tbd">◯:◯◯</mark>〜</span><b>在校生と交流</b><p>授業のこと、学校生活のこと。在校生に直接聞けます。</p></li>
         <li><span class="t">12:00ごろ</span><b>個別相談・終了</b><p>入試、学費、奨学金、修学支援制度について個別にご相談いただけます。</p></li>
       </ol>
-      <!-- 要確認: 実習体験・在校生交流の開始時刻。確定したら .t に時刻を入れてください。 -->
-      <div class="callout">
-        <h3>保護者の方の説明会も同時開催する回があります</h3>
-        <p>お子さまが実習を体験している間に、保護者の方は学校・奨学金の説明を聞くことができます。同時開催日はスタンプ2倍dayです。保護者の方おひとりでのご参加も歓迎しています。</p>
+      <div class="ocs-parent-session">
+        <div class="ps-head">
+          <span class="ps-tag">保護者の方</span>
+          <h3>保護者説明会を同時開催</h3>
+          <p class="ps-time"><mark class="tbd">◯:◯◯〜◯:◯◯</mark><small>開催回：<mark class="tbd">毎回</mark></small></p>
+        </div>
+        <ul>
+          <li><b>学校説明</b>カリキュラム、国家試験、就職のサポート体制</li>
+          <li><b>学費・奨学金</b>初年度の費用、栃美独自の奨学金、公的奨学金・教育ローン</li>
+          <li><b>校内見学</b>お子さまが使う実習室や設備をご覧いただけます</li>
+        </ul>
+        <p class="ps-note">お子さまが実習を体験している間に参加いただけます。同時開催日はスタンプ2倍day。保護者の方おひとりでのご参加も歓迎しています。</p>
       </div>
     </section>
 
@@ -149,6 +164,22 @@
         <p class="oc-empty">日程を読み込んでいます。</p>
       </div>
       <p class="oc-foot-note">※ 複数日のお申し込みも可能です。ご不明な点は <a href="/contact">お問い合わせ</a> ください。</p>
+    </section>
+
+    <!-- ========== 個別の学校見学 ========== -->
+    <section class="section ocs-visit" id="visit">
+      <div class="ocs-visit-box">
+        <div>
+          <p class="ocs-en">SCHOOL VISIT</p>
+          <h2>日程が合わない方は、<br>個別の学校見学へ</h2>
+          <p>オープンキャンパスの日に来られない方も、学校の見学と個別相談ができます。保護者の方だけのご見学も歓迎です。</p>
+        </div>
+        <dl>
+          <div><dt>受付日時</dt><dd><mark class="tbd">月〜金 ◯:◯◯〜◯:◯◯</mark>（要予約）</dd></div>
+          <div><dt>所要時間</dt><dd><mark class="tbd">約◯分</mark></dd></div>
+          <div><dt>お申し込み</dt><dd><a href="tel:0286515210">028-651-5210</a>（9:00〜13:00／14:00〜17:00）<br>または<a href="/contact#form">お問い合わせフォーム</a></dd></div>
+        </dl>
+      </div>
     </section>
 
     <!-- ========== 参加特典 ========== -->
@@ -171,6 +202,26 @@
           <li><span>スタンプ<em>3</em>個</span>受験手数料が半額免除</li>
           <li><span>スタンプ<em>5</em>個</span>受験手数料が全額免除</li>
         </ul>
+      </div>
+      <div class="ocs-support" id="support">
+        <article>
+          <h3>交通費サポート</h3>
+          <dl>
+            <div><dt>1回の金額</dt><dd>最大<mark class="tbd">◯,◯◯◯</mark>円（お住まいの地域により異なります）</dd></div>
+            <div><dt>対象</dt><dd><mark class="tbd">◯◯市・◯◯町など、学校から◯km以上の地域</mark></dd></div>
+            <div><dt>回数</dt><dd>年度内<mark class="tbd">◯</mark>回まで</dd></div>
+            <div><dt>受け取り方</dt><dd><mark class="tbd">当日、受付でお渡し（QUOカードなど）</mark></dd></div>
+          </dl>
+        </article>
+        <article>
+          <h3>JR宇都宮駅からのご案内</h3>
+          <dl>
+            <div><dt>駅から</dt><dd>JR宇都宮駅から徒歩10分（約1km）</dd></div>
+            <div><dt>送迎</dt><dd>開催日の<mark class="tbd">◯:◯◯〜◯:◯◯</mark>、<mark class="tbd">JR宇都宮駅◯口の改札付近</mark>でスタッフがお待ちしています</dd></div>
+            <div><dt>お車で</dt><dd><mark class="tbd">駐車場あり（◯台）／なし</mark></dd></div>
+          </dl>
+          <p class="ocs-support-note">来校が難しい方は、お気軽にご相談ください。</p>
+        </article>
       </div>
       <ul class="note">
         <li>保護者説明会（学校・奨学金）の同時開催日はスタンプ2倍day、栃美ビューティーフェスタ開催日はスタンプ3倍dayです。</li>
@@ -249,8 +300,9 @@
         <div class="is-main"><b>WEB</b><p>予約フォームから、参加希望日を選んでお申し込みください。</p><a class="btn primary" data-oc-href="reserve" href="https://r-shingaku.com/ce/form/3522/input">予約フォームへ</a></div>
         <div><b>電話</b><p class="big"><a href="tel:0286515210">028-651-5210</a></p><p>受付 9:00〜13:00／14:00〜17:00（土・日・祝日を除く）</p></div>
         <div><b>E-mail</b><p class="big">taiken@tochibi.ac.jp</p><p>氏名／高校名／学年／参加希望日を明記してください。</p></div>
+        <div class="is-line"><b>LINE</b><p>友だち追加のあと、氏名／高校名／学年／参加希望日を送ってください。授業や入試のちょっとした質問にも<mark class="tbd">先生が</mark>お答えします。</p><a class="btn line" href="#apply" data-line-link>公式LINEを友だち追加</a><p class="ocs-line-tbd"><mark class="tbd">友だち追加URLを確認中</mark></p></div>
       </div>
-      <!-- 要確認: 公式LINEからの申し込みに対応する場合は、友だち追加URL（https://lin.ee/…）をいただければ4つ目の窓口として追加します。 -->
+      <!-- 要確認: 公式LINEの友だち追加URL（https://lin.ee/…）。届いたら .btn.line の href を差し替え、マーカーを外してください。 -->
     </section>
 
     <!-- ========== アクセス ========== -->
@@ -259,8 +311,8 @@
       <h2>アクセス</h2>
       <div class="access-grid">
         <div class="access-info">
-          <p><b>栃木県美容専門学校</b><br>〒321-0945 栃木県宇都宮市宿郷2-10-11</p>
-          <!-- 要確認: JR宇都宮駅からの所要時間・駐車場の有無 -->
+          <p><b>栃木県美容専門学校</b><br>〒321-0945 栃木県宇都宮市宿郷2-10-11<br>JR宇都宮駅から徒歩10分（約1km）</p>
+          <p>開催日はJR宇都宮駅から<mark class="tbd">スタッフがご案内します</mark>。くわしくは<a href="#support">交通費・送迎のご案内</a>へ。</p>
           <a class="btn dark" href="/campuslife/campus-map">学校周辺マップ</a>
         </div>
         <div class="access-map"><iframe class="map-frame" title="栃木県美容専門学校の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E5%AE%BF%E9%83%B72-10-11&hl=ja&z=17&output=embed"></iframe></div>
