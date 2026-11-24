@@ -9,6 +9,8 @@
    11/14を追加し、11月以降の回はすべて「プレミアムレセプション（限定予約制）」。2月は未定のため未掲載。
    同資料の「高3英才教育（FAST PASSビューティークラス）」「大会種目練習会」はOCではないため載せていません。
 
+   2026-11-24: 年間スケジュール表のため、4/19・5/24・6/21・8/18（公式サイトの開催レポート）を過去分として追加。
+
    内容は公式サイトの「OPEN CAMPUS 2026」日程表
    （https://tochibi.ac.jp/opencampus/ の img_opcamp.png）に準拠しています。
    受付は9:30から、プログラムは10:00〜12:00頃です。
@@ -39,7 +41,29 @@ window.TOCHIBI_OC = {
     address: "栃木県宇都宮市宿郷2-10-11",
     tel: "028-651-5210"
   },
+  /* 年間スケジュール表で「日程調整中」と出す月（YYYY-MM） */
+  undecided: ["2027-02"],
   events: [
+    {
+      date: "2026-04-19", type: "体験入学", title: "ヘアアレンジ・メイク",
+      start: "10:00", end: "12:00", tags: ["open-campus", "tochibi", "hair", "makeup", "parent"],
+      reserveUrl: null, status: "closed", note: "保護者学校説明会・奨学金説明会を同時開催"
+    },
+    {
+      date: "2026-05-24", type: "体験入学", title: "AO入試対策講座 パーマ実習",
+      start: "10:00", end: "12:00", tags: ["open-campus", "tochibi", "hair"],
+      reserveUrl: null, status: "closed", note: ""
+    },
+    {
+      date: "2026-06-21", type: "体験入学", title: "まつエク・ヘアエクステ&カット",
+      start: "10:00", end: "12:00", tags: ["open-campus", "tochibi", "hair"],
+      reserveUrl: null, status: "closed", note: ""
+    },
+    {
+      date: "2026-08-18", type: "体験入学", title: "ワインディング・浴衣着付け",
+      start: "10:00", end: "12:00", tags: ["open-campus", "tochibi", "hair"],
+      reserveUrl: null, status: "closed", note: ""
+    },
     {
       date: "2026-08-23", type: "体験入学", title: "入試対策講座 ヘアカラー",
       start: "10:00", end: "12:00",

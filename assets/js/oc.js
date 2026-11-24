@@ -14,6 +14,7 @@
      data-oc-href="reserve" | "request" | "contact"
      data-oc-list         → 日程カードの描画先
      data-oc-count        → 今後の開催回数
+     data-oc-year         → 年度の年間スケジュール表（4月〜3月）
    ============================================================= */
 (function () {
   "use strict";
@@ -154,6 +155,45 @@
         "</" + el + ">"
       );
     }).join("");
+  }
+
+  /* ---------- 2b. 年間スケジュール（年度の4月〜3月を一覧） ---------- */
+  var TYPE_CLS = { "体験入学": "t-taiken", "プレミアムレセプション": "t-premium", "スペシャルイベント": "t-special" };
+  function renderYear(root) {
+    var host = root.querySelector("[data-oc-year]");
+    if (!host) return;
+    var fy = today.getMonth() >= 3 ? today.getFullYear() : today.getFullYear() - 1;
+    var undecided = data.undecided || [];
+    var types = [];
+    var cells = [];
+    for (var i = 0; i < 12; i++) {
+      var y = i < 9 ? fy : fy + 1, m = (i + 3) % 12 + 1;
+      var key = y + "-" + (m < 10 ? "0" : "") + m;
+      var inMonth = events.filter(function (e) { return e.yr === y && e.d.getMonth() + 1 === m; });
+      var body;
+      if (inMonth.length) {
+        body = inMonth.map(function (e) {
+          if (types.indexOf(e.raw.type) < 0) types.push(e.raw.type);
+          var past = e.d < today;
+          return '<li class="' + (TYPE_CLS[e.raw.type] || "t-taiken") + (past ? " is-past" : "") + '">' +
+            "<b>" + e.md + "<small>（" + e.wd + "）</small></b>" +
+            "<span>" + e.raw.title + "</span>" +
+            (past ? '<em>終了</em>' : "") + "</li>";
+        }).join("");
+        body = "<ul>" + body + "</ul>";
+      } else if (undecided.indexOf(key) > -1) {
+        body = '<p class="yc-tbd">日程調整中</p>';
+      } else {
+        body = '<p class="yc-none">—</p>';
+      }
+      cells.push('<div class="yc-month"><h3>' + m + "<small>月</small></h3>" + body + "</div>");
+    }
+    var legend = types.map(function (t) {
+      return '<li class="' + (TYPE_CLS[t] || "t-taiken") + '">' + t + (t === "プレミアムレセプション" ? "（限定予約制）" : "") + "</li>";
+    }).join("");
+    host.innerHTML = '<p class="yc-title">' + fy + "年度（" + fy + "年4月〜" + (fy + 1) + "年3月）</p>" +
+      '<ul class="yc-legend">' + legend + '<li class="is-past">終了した回</li></ul>' +
+      '<div class="yc-grid">' + cells.join("") + "</div>";
   }
 
   /* ---------- 3. Event 構造化データ ---------- */
@@ -533,6 +573,7 @@
     var root = document.getElementById("tochibi-oc-wireframe") || document.body;
     fillSlots(root);
     renderList(root);
+    renderYear(root);
     renderJsonLd();
     initFilter(root);
     initStickyCta(root);
